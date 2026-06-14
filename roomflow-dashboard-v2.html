@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roomflow · Investment Advisory</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root {
+  --bg:       #0c0d10;
+  --s1:       #13151a;
+  --s2:       #191c23;
+  --b1:       #21262f;
+  --b2:       #2d3340;
+  --text:     #e3e0d9;
+  --muted:    #78808f;
+  --dim:      #454d5a;
+  --gold:     #c8a04e;
+  --gold-bg:  rgba(200,160,78,.08);
+  --gold-b:   rgba(200,160,78,.25);
+  --green:    #6aab7a;
+  --green-bg: rgba(106,171,122,.08);
+  --green-b:  rgba(106,171,122,.25);
+  --red:      #d96f58;
+  --red-bg:   rgba(217,111,88,.08);
+  --red-b:    rgba(217,111,88,.25);
+  --blue:     #6b84c4;
+  --blue-bg:  rgba(107,132,196,.08);
+  --blue-b:   rgba(107,132,196,.25);
+  --teal:     #4a9898;
+  --lila:     #9478ac;
+  --serif:    Georgia,'Times New Roman',serif;
+  --sans:     'Inter',system-ui,Arial,sans-serif;
+  --mono:     'SF Mono','Fira Code',monospace;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);font-size:14px;line-height:1.5;min-height:100vh}
+button{cursor:pointer;font-family:inherit;border:none;outline:none}
+
+/* LOCK */
+#lock{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:999;flex-direction:column;gap:28px}
+.lock-wordmark{font-family:var(--serif);font-size:20px;letter-spacing:.5px;color:var(--text)}
+.lock-wordmark em{color:var(--gold);font-style:normal}
+.lock-box{width:320px;background:var(--s1);border:1px solid var(--b1);border-radius:12px;padding:32px 28px;text-align:center}
+.lock-icon{font-size:32px;margin-bottom:14px;opacity:.5}
+.lock-h{font-family:var(--serif);font-size:17px;margin-bottom:5px}
+.lock-p{font-size:11.5px;color:var(--muted);margin-bottom:22px;line-height:1.55}
+.lock-input{width:100%;background:var(--bg);border:1px solid var(--b2);color:var(--text);border-radius:6px;padding:10px 13px;font-size:13px;font-family:var(--mono);letter-spacing:2px;margin-bottom:10px;transition:border-color .2s}
+.lock-input:focus{border-color:var(--gold);outline:none}
+.lock-btn{width:100%;background:var(--gold);color:#0c0d10;border-radius:6px;padding:10px;font-size:12px;font-weight:700;letter-spacing:1px;transition:opacity .2s}
+.lock-btn:hover{opacity:.82}
+.lock-err{font-size:11px;color:var(--red);margin-top:8px;min-height:15px}
+.lock-foot{font-size:10px;color:var(--dim);text-align:center;max-width:240px;line-height:1.6}
+
+/* APP */
+#app{display:none}
+#app.on{display:block}
+
+/* TOPBAR */
+.topbar{position:sticky;top:0;z-index:100;background:rgba(12,13,16,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--b1);height:54px;padding:0 28px;display:flex;align-items:center;justify-content:space-between}
+.wordmark{font-family:var(--serif);font-size:16px}
+.wordmark em{color:var(--gold);font-style:normal}
+.topbar-r{display:flex;align-items:center;gap:14px}
+.topbar-meta{font-size:11px;color:var(--muted)}
+.chip{display:inline-flex;align-items:center;font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;border:1px solid;letter-spacing:.4px}
+.chip-gold{color:var(--gold);border-color:var(--gold-b);background:var(--gold-bg)}
+.chip-green{color:var(--green);border-color:var(--green-b);background:var(--green-bg)}
+.chip-red{color:var(--red);border-color:var(--red-b);background:var(--red-bg)}
+.chip-blue{color:var(--blue);border-color:var(--blue-b);background:var(--blue-bg)}
+
+/* LAYOUT */
+.wrap{max-width:1300px;margin:0 auto;padding:32px 28px 72px}
+
+/* HERO */
+.hero{background:radial-gradient(130% 160% at 85% -15%,#1a2030 0%,#111419 55%,#0d1014 100%);border:1px solid var(--b2);border-radius:12px;padding:26px 30px 22px;margin-bottom:22px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;top:-80px;right:-80px;width:260px;height:260px;background:radial-gradient(circle,rgba(200,160,78,.1) 0%,transparent 68%);pointer-events:none}
+.eyebrow{font-size:9.5px;letter-spacing:3px;color:var(--gold);font-weight:700;text-transform:uppercase;margin-bottom:9px}
+.hero-title{font-family:var(--serif);font-size:32px;color:#f2efe8;line-height:1.05;margin-bottom:5px}
+.hero-sub{font-size:12.5px;color:var(--muted);margin-bottom:16px;line-height:1.6}
+.chips-row{display:flex;flex-wrap:wrap;gap:7px}
+
+/* SECTION DIVIDER */
+.sec{font-size:9.5px;letter-spacing:2.5px;color:var(--dim);text-transform:uppercase;font-weight:600;margin:28px 0 12px;display:flex;align-items:center;gap:10px}
+.sec::after{content:'';flex:1;height:1px;background:var(--b1)}
+
+/* KPI STRIP */
+.kpi-row{display:grid;grid-template-columns:repeat(6,1fr);gap:9px;margin-bottom:18px}
+.kpi{background:var(--s1);border:1px solid var(--b1);border-radius:9px;padding:14px 15px 12px}
+.kpi-lab{font-size:9px;letter-spacing:1.2px;color:var(--muted);text-transform:uppercase;margin-bottom:7px}
+.kpi-val{font-size:21px;font-weight:700;line-height:1;margin-bottom:4px}
+.kpi-sub{font-size:10px;color:var(--muted);line-height:1.4}
+.c-green{color:var(--green)} .c-gold{color:var(--gold)} .c-red{color:var(--red)} .c-blue{color:var(--blue)} .c-text{color:var(--text)}
+
+/* CARDS */
+.grid-2{display:grid;grid-template-columns:1.4fr 1fr;gap:12px;margin-bottom:12px}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:12px}
+.grid-eq{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.card{background:var(--s1);border:1px solid var(--b1);border-radius:9px;padding:18px 20px}
+.card-title{font-family:var(--serif);font-size:14.5px;color:#eeebe3;margin-bottom:2px}
+.card-sub{font-size:10.5px;color:var(--muted);margin-bottom:14px}
+
+/* BAR ROWS */
+.bar-row{display:flex;align-items:center;margin-bottom:11px}
+.bar-lbl{width:175px;flex-shrink:0}
+.bar-lbl-main{font-size:11px;color:var(--text)}
+.bar-lbl-sub{font-size:9.5px;color:var(--muted);display:block;margin-top:1px}
+.bar-track{flex:1;height:13px;background:#0a0c0f;border-radius:3px;margin:0 11px;overflow:hidden}
+.bar-fill{height:100%;border-radius:3px;width:0;transition:width 1.1s cubic-bezier(.4,0,.2,1)}
+.bar-val{width:95px;text-align:right;font-size:11px;font-weight:700}
+
+/* DONUT */
+.donut-wrap{display:flex;align-items:center;gap:18px}
+.donut-rel{position:relative;width:155px;height:155px;flex-shrink:0;border-radius:50%}
+.donut-fallback{position:absolute;inset:0;border-radius:50%;background:conic-gradient(var(--cg-stops))}
+.donut-fallback::after{content:'';position:absolute;inset:0;margin:auto;width:68%;height:68%;top:16%;left:16%;background:var(--s1);border-radius:50%}
+.bar-fallback{height:100%;border-radius:3px;display:flex}
+.bar-fallback span{height:100%;display:block}
+.donut-ctr{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none}
+.donut-num{font-family:var(--serif);font-size:19px;color:#f0ede6;line-height:1}
+.donut-unit{font-size:9px;color:var(--muted);margin-top:2px}
+.leg{display:flex;align-items:center;margin-bottom:7px;font-size:11px}
+.leg-dot{width:8px;height:8px;border-radius:2px;margin-right:8px;flex-shrink:0}
+.leg-name{flex:1;color:var(--text)}
+.leg-val{color:var(--muted);font-size:10px}
+
+/* RISK */
+.risk{display:flex;margin-bottom:9px}
+.risk-bar{width:4px;border-radius:3px;margin-right:11px;flex-shrink:0;align-self:stretch;min-height:28px}
+.risk-t{font-size:11.5px;color:var(--text);font-weight:600;margin-bottom:2px}
+.risk-d{font-size:10.5px;color:var(--muted);line-height:1.4}
+.risk-red .risk-bar{background:var(--red)}
+.risk-orange .risk-bar{background:var(--gold)}
+.risk-green .risk-bar{background:var(--green)}
+
+/* TABLE */
+.tbl{width:100%;border-collapse:collapse}
+.tbl th{font-size:8.5px;letter-spacing:1.2px;color:var(--muted);text-transform:uppercase;text-align:left;padding:5px 9px;border-bottom:1px solid var(--b2);font-weight:600}
+.tbl td{font-size:11px;color:var(--text);padding:6px 9px;border-bottom:1px solid var(--b1);vertical-align:top;line-height:1.4}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tr:hover td{background:rgba(255,255,255,.015)}
+.td-nr{color:var(--gold);font-weight:700;font-family:var(--mono);font-size:9.5px;white-space:nowrap}
+.td-dim{color:var(--muted);font-size:10px}
+.pill{display:inline-block;font-size:9px;padding:2px 8px;border:1px solid;border-radius:10px;font-weight:600;white-space:nowrap}
+.pill-ok{color:var(--green);border-color:var(--green-b)}
+.pill-err{color:var(--red);border-color:var(--red-b)}
+.pill-warn{color:var(--gold);border-color:var(--gold-b)}
+
+/* ECKDATEN */
+.eck{width:100%;border-collapse:collapse}
+.eck td{padding:5px 0;border-bottom:1px solid var(--b1);font-size:11px}
+.eck tr:last-child td{border-bottom:none}
+.eck-k{color:var(--muted);width:42%}
+.eck-v{color:var(--text)}
+
+/* NOTE */
+.note{background:#110e09;border:1px solid #3a2a18;border-left:3px solid var(--gold);border-radius:5px;padding:11px 14px;font-size:11px;color:#d4c9b4;line-height:1.6;margin-top:12px}
+
+/* PROGRESS */
+.prog-wrap{display:flex;align-items:center;gap:10px;margin-bottom:13px}
+.prog-track{flex:1;height:7px;background:#0a0c0f;border-radius:4px;overflow:hidden}
+.prog-fill{height:100%;background:var(--green);border-radius:4px;transition:width 1s ease}
+.prog-label{font-size:10.5px;color:var(--muted);white-space:nowrap}
+
+/* SCORE GAUGES */
+.scores{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.score-item{background:var(--s2);border:1px solid var(--b1);border-radius:9px;padding:14px 10px;text-align:center}
+.score-val{font-size:28px;font-weight:700;font-family:var(--serif);line-height:1}
+.score-lab{font-size:9.5px;color:var(--muted);margin-top:5px;letter-spacing:.3px}
+
+/* NEXT STEPS */
+.steps{counter-reset:step}
+.step{display:flex;gap:13px;margin-bottom:11px;align-items:flex-start}
+.step-n{width:22px;height:22px;border-radius:50%;background:var(--gold-bg);border:1px solid var(--gold-b);color:var(--gold);font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.step-t{font-size:11.5px;color:var(--text);font-weight:600;margin-bottom:2px}
+.step-d{font-size:10.5px;color:var(--muted);line-height:1.4}
+
+/* CONCEPT BLOCKS (Architektur / Mobilität / Lage – aus Mappe Text) */
+.concept-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.concept{background:var(--s2);border:1px solid var(--b1);border-radius:9px;padding:15px 16px}
+.concept-icon{font-size:18px;margin-bottom:8px;display:block}
+.concept-h{font-size:12px;font-weight:700;color:var(--text);margin-bottom:8px;font-family:var(--serif)}
+.concept-p{font-size:10.5px;color:var(--muted);line-height:1.6;margin-bottom:8px}
+.concept-p:last-child{margin-bottom:0}
+.concept-p b{color:var(--text);font-weight:600}
+
+/* SOURCE TAG */
+.src-tag{display:inline-block;font-size:8.5px;letter-spacing:1px;color:var(--dim);text-transform:uppercase;border:1px solid var(--b1);border-radius:3px;padding:1px 6px;margin-left:8px;vertical-align:middle;font-weight:600}
+
+/* GALLERY (Renderings/Grundrisse) */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.gallery-item{position:relative;border-radius:7px;overflow:hidden;border:1px solid var(--b1);aspect-ratio:4/3;background:var(--s2)}
+.gallery-item img{width:100%;height:100%;object-fit:cover;display:block}
+.gallery-cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.75));color:#fff;font-size:9.5px;padding:14px 8px 6px;letter-spacing:.3px}
+
+/* LAGE INFO LIST */
+.lage-list{display:flex;flex-direction:column;gap:9px}
+.lage-row{display:flex;gap:10px;align-items:flex-start}
+.lage-ico{width:26px;height:26px;border-radius:6px;background:var(--gold-bg);border:1px solid var(--gold-b);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
+.lage-t{font-size:11px;color:var(--text);font-weight:600}
+.lage-d{font-size:10px;color:var(--muted);line-height:1.4}
+
+/* FOOTER */
+.footer{border-top:1px solid var(--b1);padding-top:18px;margin-top:44px;display:flex;justify-content:space-between;align-items:center;font-size:10px;color:var(--dim)}
+.conf{font-size:9px;letter-spacing:2px;color:var(--dim);text-transform:uppercase;text-align:center;margin-top:7px}
+
+/* ANIM */
+@keyframes fi{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.fi{animation:fi .45s ease forwards}
+.fi2{animation:fi .45s .08s ease both}
+.fi3{animation:fi .45s .16s ease both}
+.fi4{animation:fi .45s .24s ease both}
+
+/* RESPONSIVE */
+@media(max-width:1080px){.kpi-row{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:780px){
+  .grid-2,.grid-3,.grid-eq{grid-template-columns:1fr}
+  .kpi-row{grid-template-columns:repeat(2,1fr)}
+  .scores{grid-template-columns:repeat(2,1fr)}
+  .wrap{padding:18px 14px 48px}
+  .topbar{padding:0 14px}
+}
+</style>
+</head>
+<body>
+
+<!-- ░░ LOCK ░░ -->
+<div id="lock">
+  <div class="lock-wordmark">Room<em>flow</em> · Investment Advisory</div>
+  <div class="lock-box">
+    <div class="lock-icon">🔐</div>
+    <div class="lock-h">Vertraulicher Bericht</div>
+    <div class="lock-p">Dieser Report ist passwortgeschützt.<br>Bitte geben Sie Ihren Zugangscode ein.</div>
+    <input id="pw" class="lock-input" type="password" placeholder="Zugangscode" maxlength="60" autocomplete="off">
+    <button class="lock-btn" onclick="unlock()">Öffnen →</button>
+    <div class="lock-err" id="err"></div>
+  </div>
+  <div class="lock-foot">Roomflow · Real Estate Investment Advisory<br>Vertraulich · Nur für den adressierten Empfänger</div>
+</div>
+
+<!-- ░░ APP ░░ -->
+<div id="app">
+  <header class="topbar">
+    <div class="wordmark">Room<em>flow</em></div>
+    <div class="topbar-r">
+      <span class="topbar-meta" id="tb-meta"></span>
+      <span class="chip chip-gold" id="tb-status"></span>
+    </div>
+  </header>
+  <main class="wrap" id="root"></main>
+</div>
+
+<script>
+// ══════════════════════════════════════════════════════════════
+//  PROJEKT-DATEN  (von n8n / Mistral befüllt)
+// ══════════════════════════════════════════════════════════════
+const PROJEKTE = [
+{
+  id: "alzenau-2024",
+  token: "rf-alz-2024",
+
+  // ── Meta ────────────────────────────────────────────────
+  name:       "Wohnen an der Burg — Alzenau",
+  untertitel: "Neubau · ca. 86 WE + Gewerbe · ca. 5.500 m² Wohnfläche",
+  ort:        "Alzenau, Lkr. Aschaffenburg (Bayern)",
+  architekt:  "Michael Landes Architekt",
+  status:     "Projektentwicklung",
+  datum:      "Mai 2026",
+  quelle:     "Projektmappe Landes Architekt, 05.05.2026",
+
+  chips: [
+    { text:"Betreutes Wohnen + Gewerbe", style:"green" },
+    { text:"GFZ 2,5 < 3,0 · Verdichtungsreserve", style:"gold" },
+    { text:"Kein bindendes Baurecht", style:"red" },
+    { text:"Direkterwerb von der Stadt", style:"blue" }
+  ],
+
+  // ── KPIs (6 Stück – erste Zeile) ─────────────────────
+  kpis: [
+    { lab:"Verkaufserlös (GDV)",   val:"28,57 Mio. €", sub:"Wohnen 24,75 + Gewerbe 3,83", color:"c-green" },
+    { lab:"Grundstückswert",       val:"1,65 Mio. €",  sub:"3.000 m² × 550 €/m² BRW",    color:"c-gold"  },
+    { lab:"Baukosten (Ansatz)",    val:"20,35 Mio. €", sub:"Architektenansatz ohne BNK",  color:"c-gold"  },
+    { lab:"Entwicklermarge",       val:"≈ 0 %",        sub:"Vollkosten · USt-Szenario neg.", color:"c-red" },
+    { lab:"Wohnfläche",            val:"5.500 m²",     sub:"ca. 86 WE · 60–90 m²/WE",    color:"c-text"  },
+    { lab:"Verkaufspreis / m²",    val:"4.500 €/m²",   sub:"Annahme – zu validieren",     color:"c-gold"  }
+  ],
+
+  // ── Kostenvergleich (Balken) ──────────────────────────
+  kosten: [
+    { lab:"Verkaufserlös (GDV)",      sub:"5.500 m² Wohnen + 850 m² Gewerbe",          val:28.57, pct:100,  color:"#6aab7a" },
+    { lab:"Kosten – Architektenansatz",sub:"Grundstück + reine Baukosten",              val:21.85, pct:76.5, color:"#c8a04e" },
+    { lab:"Kosten – Investoren-Vollkosten", sub:"inkl. BNK · Finanz. · Vertrieb · Puffer", val:28.51, pct:99.8, color:"#d96f58" }
+  ],
+
+  // ── Flächenstruktur (Donut) ───────────────────────────
+  flaechen: {
+    bgf: 9750,
+    items: [
+      { name:"Wohnen",        m2:6500, pct:67, color:"#c8a04e" },
+      { name:"Garage/Parken", m2:1550, pct:16, color:"#4a9898" },
+      { name:"Gewerbe",       m2:850,  pct:9,  color:"#6b84c4" },
+      { name:"Dachterrasse",  m2:850,  pct:9,  color:"#9478ac" }
+    ]
+  },
+
+  // ── Baukostenaufschlüsselung (Bar Chart) ─────────────
+  baukosten_detail: [
+    { pos:"BGF Wohnen",       formel:"6.500 m² × 2.500 €",  wert:16.25 },
+    { pos:"BGF Gewerbe",      formel:"850 m² × 2.000 €",    wert:1.70  },
+    { pos:"BGF Parken",       formel:"1.550 m² × 1.000 €",  wert:1.55  },
+    { pos:"BGF Dachterrasse", formel:"850 m² × 1.000 €",    wert:0.85  },
+    { pos:"Grundstück",       formel:"3.000 m² × 550 €",    wert:1.65  },
+    { pos:"BNK ~15 %",        formel:"auf Baukosten",        wert:3.05  },
+    { pos:"Zwischenfinanzierung", formel:"~24–30 Monate",   wert:1.50  },
+    { pos:"Vertrieb ~3,5 %",  formel:"auf GDV",             wert:1.00  },
+    { pos:"Risikopuffer ~5 %",formel:"auf Baukosten",       wert:1.02  }
+  ],
+
+  // ── Eckdaten ──────────────────────────────────────────
+  eckdaten: [
+    { k:"Grundstück",       v:"ca. 3.000 m² · BRW 550 €/m²" },
+    { k:"BGF gesamt",       v:"ca. 9.750 m²" },
+    { k:"BGF Wohnen",       v:"ca. 6.500 m²" },
+    { k:"BGF Gewerbe",      v:"ca. 850 m²" },
+    { k:"BGF Garage",       v:"ca. 1.550 m²" },
+    { k:"Wohnfläche",       v:"ca. 5.500 m²" },
+    { k:"Apartments",       v:"ca. 86 WE · 60–90 m²" },
+    { k:"GRZ / GFZ",        v:"ca. 0,8 / 2,5 < 3,0" },
+    { k:"Gebäudehöhe",      v:"ca. 17,00 m · 3 Häuser auf Sockel" },
+    { k:"Stellplätze",      v:"51 Sockel + 12 Straße (Garage 78)" },
+    { k:"Fahrrad",          v:"ca. 150 Stück" },
+    { k:"Nutzung",          v:"Betreutes Wohnen + Gewerbe (Apotheke/Arzt/Café)" },
+    { k:"Energie / Bau",    v:"Mischbau Massiv/Holz/Modul · Gründächer · PV möglich" },
+    { k:"Einsparpotenzial", v:"ca. 150.000 € (Bodenaushub, Annahme)" }
+  ],
+
+  // ── Risikomatrix ──────────────────────────────────────
+  risiken: [
+    { level:"red",    t:"USt-Behandlung (Bauträgerverkauf)",    d:"Bei USt-freiem Wohnungsverkauf (§4 Nr.9a UStG) nicht abziehbare Vorsteuer → +3,87 Mio. € reale Kosten. Marge kippt negativ." },
+    { level:"red",    t:"Baunebenkosten KG 700 fehlen",         d:"HOAI, Statik, TGA, Projektsteuerung nicht in 2.500 €/m² enthalten. Ansatz ~15 % ≈ 3,05 Mio. €." },
+    { level:"orange", t:"Zwischenfinanzierung nicht kalkuliert", d:"Bauzeitzinsen ~24–30 Monate fehlen vollständig. Grobansatz ~1,5 Mio. €." },
+    { level:"orange", t:"Vertrieb / Vermarktung fehlt",          d:"Kein Vertriebsbudget angesetzt. ~3,5 % GDV ≈ 1,0 Mio. €." },
+    { level:"orange", t:"Verkaufspreis 4.500 €/m² unvalidiert", d:"Für Alzenau (≈19.000 EW) am oberen Rand. Gegen Gutachterausschuss Aschaffenburg zu prüfen." },
+    { level:"orange", t:"Baurecht formal nicht gesichert",       d:"Bauantrag laut Mappe noch nicht final genehmigt. Stadt hat Entwurf laut S.16 aber bereits wohlwollend geprüft; GFZ 2,3 < 3,0 liegt innerhalb des Rahmens, geringfügige Abweichungen als genehmigungsfähig beschrieben." },
+    { level:"orange", t:"Baukostensteigerung / Puffer fehlt",    d:"Kein Risikopuffer in den 20,35 Mio. €. Ansatz ~5 % ≈ 1,02 Mio. €." },
+    { level:"orange", t:"Verwertung Betreutes Wohnen offen",     d:"Service-/Pflegekomponente ändert Käuferkreis & Preislogik (Faktor statt €/m²)." },
+    { level:"green",  t:"Parken: Mieteinnahmen",                  d:"51 Sockelplätze × 100 €/Mt = 5.100 €/Mt (61.200 €/Jahr) — separater Ertragswert." }
+  ],
+
+  // ── Dokumentenstatus ──────────────────────────────────
+  dokumente: [
+    { nr:"D-01", name:"Projektmappe Wohnen an der Burg",          quelle:"Michael Landes Architekt", seiten:"21 S.", status:"ok",   hinweis:"Städtebau, Grundrisse EG–5.OG, Visualisierungen, Lageplan" },
+    { nr:"D-02", name:"Zahlen & Fakten (S. 19)",                   quelle:"Architekt",                seiten:"1 S.",  status:"ok",   hinweis:"Vorvertragliche Kostenschätzung — nicht prüfbar belegt" },
+    { nr:"—",    name:"Bebauungsplan / Befreiungslage",             quelle:"Stadt Alzenau",            seiten:"—",     status:"err",  hinweis:"Baurechtsnachweis fehlt" },
+    { nr:"—",    name:"Grundstückskaufvertrag / Reservierung",      quelle:"Stadt Alzenau",            seiten:"—",     status:"err",  hinweis:"Erwerbskondition, Bindung an Wettbewerbsgewinner" },
+    { nr:"—",    name:"Baugrundgutachten",                          quelle:"—",                        seiten:"—",     status:"err",  hinweis:"Bodenaushub-Einsparung 150 T€ = ungeprüfte Annahme" },
+    { nr:"—",    name:"Detaillierte Baukostenberechnung DIN 276",   quelle:"—",                        seiten:"—",     status:"err",  hinweis:"BNK / Finanzierung fehlen vollständig" },
+    { nr:"—",    name:"Vermarktungs-/Verwertungskonzept",           quelle:"—",                        seiten:"—",     status:"err",  hinweis:"Betreutes Wohnen: Einzel- vs. Globalverkauf offen" },
+    { nr:"—",    name:"Wohnflächenberechnung WoFlV je WE",          quelle:"—",                        seiten:"—",     status:"err",  hinweis:"86 WE nicht einzeln belegt" },
+    { nr:"—",    name:"Energiekonzept / GEG-Nachweis",              quelle:"—",                        seiten:"—",     status:"err",  hinweis:"Neubaustandard, PV, Gründach — kein Nachweis" }
+  ],
+
+  // ── Lage & Region (Mappe S. 16 — "Projektbeschreibung") ──
+  lage_info: [
+    { ico:"📍", t:"Region", d:"Landkreis Aschaffenburg, Bayern · ca. 19.000 Einwohner · zwischen den Metropolregionen Frankfurt am Main und Rhein-Main." },
+    { ico:"🏙️", t:"Standort im Stadtgefüge", d:"Liegenschaft „An der Burg 3\" direkt am Innenstadtrand von Alzenau. Fußläufig zu Marktplatz, Stadtbibliothek, Restaurants, Cafés, Rathaus und Kirche." },
+    { ico:"🚉", t:"ÖPNV-Anbindung", d:"Bahnhaltestelle Kahlgrundbahn fußläufig erreichbar. Anbindung nach Hanau und Frankfurt a.M. Bus BAB 66 Frankfurt–Würzburg ca. 10 Min." },
+    { ico:"🚗", t:"Verkehr / Erreichbarkeit", d:"Über Anschlussstelle BAB 45 mit dem Auto in ca. 10 Min., mit ÖPNV ca. 40 Min. nach Hanau, ca. 15 Min. nach Aschaffenburg, ca. 20 Min. nach Frankfurt." },
+    { ico:"🏛️", t:"Status / Verfahren", d:"Aus städtebaulichem Wettbewerb hervorgegangenes Projekt. Stadt hat Bauantrag wohlwollend geprüft; Entwurf liegt innerhalb GFZ 2,3 < 3,0. Geringfügige Abweichungen nach Bebauungsplan grundsätzlich genehmigungsfähig." }
+  ],
+
+  // ── Architektur-Konzept (Mappe S. 17 — "Idee Architektur") ──
+  konzept_architektur: [
+    {
+      icon:"🏗️", h:"Städtebau",
+      p:[ "Drei Häuser auf gemeinsamem Sockel, in die Hanglage eingebettet — <b>übernehmen den Maßstab der ortsüblichen Bebauung</b>.",
+          "Zwischen den Gebäuden entstehen <b>begrünte Hofgärten</b>, zu denen sich die Wohnungen über Loggien und Glasfassaden öffnen.",
+          "Fassaden zur Stadt: verputzt, farbig, in Anlehnung an den bayerischen Barock Alzenaus. Hohe französische Fenster bringen viel Licht in die Wohnungen." ]
+    },
+    {
+      icon:"🌳", h:"Nachhaltigkeit / Bauweise",
+      p:[ "<b>Mischkonstruktion</b> aus Massivbau, Holzbau und Modulelementen — verringert die Bauzeit deutlich.",
+          "Nachwachsender Rohstoff Holz: nachhaltige Bauweise, gesundes Raumklima, guter Schall-/Wärmeschutz.",
+          "<b>Begrünte Dachflächen</b> — auf den Dachflächen der Häuser zudem <b>Photovoltaik-Anlagen möglich</b>." ]
+    },
+    {
+      icon:"🏠", h:"Wohnungen & Erschließung",
+      p:[ "Zeitgenössische Wohnungen <b>ca. 60–90 m²</b>. Erschließung von der Straße „An der Burg\".",
+          "Alle Wohnungen über Treppen <b>und Aufzüge</b> erreichbar, mit Balkonen oder Loggien.",
+          "Sockelgeschoss erhält von Westen eine <b>Arkade</b> als Vorbereich für Café und Erdgeschoss-Nutzungen (z.B. Apotheke, Arztpraxen, Therapiezentren)." ]
+    }
+  ],
+
+  // ── Mobilitätskonzept (Mappe S. 18 — "Konzeptbeschreibung Mobilität") ──
+  konzept_mobilitaet: [
+    { t:"ÖPNV-Vernetzung", d:"Anschluss an gut ausgebautes ÖPNV-Netz: Kahlgrundbahn-Haltestelle und Busbahnhof in wenigen Schritten. Citybus-Linien verbinden alle Stadtteile; RMV-Anbindung nach Hanau und Frankfurt a.M." },
+    { t:"Fahrrad & Sharing", d:"Sichere, überdachte Fahrradabstellplätze, zusätzlich Bike-Station im Untergeschoss. Carsharing-Station geplant (Fokus Elektrofahrzeuge, z.B. mobileeee.de)." },
+    { t:"E-Mobilität", d:"Ladepunkte für Elektrofahrzeuge an einigen Parkplätzen zur Unterstützung des Umstiegs auf nachhaltige Antriebe." },
+    { t:"Ebenerdige Parkgarage", d:"Statt Tiefgarage: kostengünstiger (felsiger Boden), keine Aufzüge/Rampen/Lüftungssysteme nötig → geringerer Energieaufwand, geringere Wartungskosten, bessere Luftqualität." },
+    { t:"Fazit Mobilität", d:"Förderung von ÖPNV, Carsharing und E-Mobilität reduziert PKW-Verkehr, verbessert Lebensqualität der Bewohner und ermöglicht laut Mappe eine Reduzierung der erforderlichen PKW-Stellplätze." }
+  ],
+
+  // ── Methodik-Hinweis ──────────────────────────────────
+  methodik: "Alle Werte aus Projektmappe S. 19 verbatim übernommen. Ergänzte Positionen (BNK ~15 %, GrESt 3,5 %, Notar ~1,5 %, Zwischenfinanzierung ~1,5 Mio. €, Vertrieb ~3,5 % GDV, Puffer ~5 %) sind Schätzwerte. USt-Szenario: Bei Bauträger-Wohnungsverkauf (USt-frei) nicht abziehbare Vorsteuer bis ~3,87 Mio. € — Marge negativ. Kein Ersatz für rechtliche/steuerliche Prüfung.",
+
+  koordinaten: { lat:50.0938, lng:9.0697 }
+}
+];
+
+// ══════════════════════════════════════════════════════════════
+//  AUTH
+// ══════════════════════════════════════════════════════════════
+let P = null;
+
+function urlToken(){ return new URLSearchParams(location.search).get('token') || new URLSearchParams(location.search).get('t'); }
+
+function unlock(){
+  const v = document.getElementById('pw').value.trim();
+  const t = urlToken() || v;
+  P = PROJEKTE.find(x => x.token === t);
+  if(P){
+    document.getElementById('lock').style.display='none';
+    document.getElementById('app').classList.add('on');
+    render(P);
+  } else {
+    document.getElementById('err').textContent = 'Ungültiger Zugangscode.';
+  }
+}
+document.getElementById('pw').addEventListener('keydown', e=>{ if(e.key==='Enter') unlock(); document.getElementById('err').textContent=''; });
+window.addEventListener('DOMContentLoaded', ()=>{ const t=urlToken(); if(t){ document.getElementById('pw').value=t; unlock(); }});
+
+// ══════════════════════════════════════════════════════════════
+//  RENDER
+// ══════════════════════════════════════════════════════════════
+function render(p){
+  document.getElementById('tb-meta').textContent = `${p.ort} · ${p.datum}`;
+  document.getElementById('tb-status').textContent = p.status;
+
+  document.getElementById('root').innerHTML = `
+
+  <!-- HERO -->
+  <div class="hero fi">
+    <div class="eyebrow">Objekt-Report · ${p.status} · Roomflow</div>
+    <h1 class="hero-title">${p.name}</h1>
+    <p class="hero-sub">${p.untertitel} · ${p.ort} · ${p.architekt}</p>
+    <div class="chips-row">${p.chips.map(c=>`<span class="chip chip-${c.style}">${c.text}</span>`).join('')}</div>
+  </div>
+
+  <!-- KPIs -->
+  <div class="sec fi2">Kennzahlen auf einen Blick</div>
+  <div class="kpi-row fi2">
+    ${p.kpis.map(k=>`<div class="kpi"><div class="kpi-lab">${k.lab}</div><div class="kpi-val ${k.color}">${k.val}</div><div class="kpi-sub">${k.sub}</div></div>`).join('')}
+  </div>
+
+  <!-- CHARTS ROW 1 -->
+  <div class="sec fi3">Wirtschaftliche Analyse</div>
+  <div class="grid-2 fi3">
+    <div class="card">
+      <div class="card-title">GDV vs. Kostenansätze</div>
+      <div class="card-sub">Architektenansatz gespiegelt · Vollkosten ergänzt</div>
+      ${p.kosten.map(r=>`
+        <div class="bar-row">
+          <div class="bar-lbl"><span class="bar-lbl-main">${r.lab}</span><span class="bar-lbl-sub">${r.sub}</span></div>
+          <div class="bar-track"><div class="bar-fill" style="background:${r.color}" data-w="${r.pct}"></div></div>
+          <div class="bar-val" style="color:${r.color}">${r.val.toFixed(2)} Mio. €</div>
+        </div>`).join('')}
+      <div class="note">Kernbefund: Die scheinbare Marge von 6,72 Mio. € aus dem Architektenansatz löst sich in der Vollkostenbetrachtung auf. Bei nicht abziehbarer Vorsteuer (Bauträger-Regelfall) wird die Marge negativ.</div>
+    </div>
+    <div class="card">
+      <div class="card-title">Flächenstruktur (BGF ${p.flaechen.bgf.toLocaleString('de-DE')} m²)</div>
+      <div class="card-sub">Verteilung der Bruttogeschossfläche</div>
+      <div class="donut-wrap">
+        <div class="donut-rel" style="--cg-stops:${donutGradient(p.flaechen.items)}">
+          <div class="donut-fallback"></div>
+          <canvas id="donut" width="155" height="155" style="position:relative"></canvas>
+          <div class="donut-ctr"><div class="donut-num">${p.flaechen.bgf.toLocaleString('de-DE')}</div><div class="donut-unit">m² BGF</div></div>
+        </div>
+        <div style="flex:1">
+          ${p.flaechen.items.map(a=>`<div class="leg"><span class="leg-dot" style="background:${a.color}"></span><span class="leg-name">${a.name}</span><span class="leg-val">${a.m2.toLocaleString('de-DE')} m² · ${a.pct}%</span></div>`).join('')}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BAUKOSTENAUFSCHLÜSSELUNG -->
+  <div class="grid-eq fi3">
+    <div class="card">
+      <div class="card-title">Baukostenaufschlüsselung</div>
+      <div class="card-sub">Architektenansatz + ergänzte Vollkosten-Positionen in Mio. €</div>
+      <canvas id="barChart" height="200"></canvas>
+      <div id="barFallback" style="display:none">
+        ${(()=>{ const max = Math.max(...p.baukosten_detail.map(b=>b.wert)); return p.baukosten_detail.map(b=>`
+          <div class="bar-row" style="margin-bottom:8px">
+            <div class="bar-lbl" style="width:150px"><span class="bar-lbl-main">${b.pos}</span><span class="bar-lbl-sub">${b.formel}</span></div>
+            <div class="bar-track"><div class="bar-fallback" style="width:${(b.wert/max*100).toFixed(1)}%"><span style="background:${b.wert>=2.5?'#c8a04e':b.wert>=1.4?'#6b84c4':'#d96f58'};width:100%"></span></div></div>
+            <div class="bar-val">${b.wert.toFixed(2)} Mio. €</div>
+          </div>`).join(''); })()}
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title">Eckdaten Entwurf</div>
+      <div class="card-sub">Aus Projektmappe S. 19 — Michael Landes Architekt</div>
+      <table class="eck">
+        ${p.eckdaten.map(e=>`<tr><td class="eck-k">${e.k}</td><td class="eck-v">${e.v}</td></tr>`).join('')}
+      </table>
+    </div>
+  </div>
+
+  <!-- LAGE & STANDORT -->
+  <div class="sec fi4">Lage & Standort <span class="src-tag">Quelle: Mappe S. 16</span></div>
+  <div class="card fi4">
+    <div class="card-title">Projektbeschreibung — Lage & Verfahrensstand</div>
+    <div class="card-sub">Wörtlich/sinngemäß aus der Projektmappe übernommen</div>
+    <div class="lage-list">
+      ${p.lage_info.map(l=>`<div class="lage-row"><div class="lage-ico">${l.ico}</div><div><div class="lage-t">${l.t}</div><div class="lage-d">${l.d}</div></div></div>`).join('')}
+    </div>
+  </div>
+
+  <!-- RISIKO + DOKUMENTE -->
+  <div class="sec">Risikobewertung & Dokumentenstatus</div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Plausibilitäts- & Risikomatrix</div>
+      <div class="card-sub">Ampelbewertung nach Ergebnisrelevanz · Rot = ergebniskritisch</div>
+      ${p.risiken.map(r=>`<div class="risk risk-${r.level}"><div class="risk-bar"></div><div><div class="risk-t">${r.t}</div><div class="risk-d">${r.d}</div></div></div>`).join('')}
+    </div>
+    <div class="card">
+      <div class="card-title">Dokumentenindex & Vollständigkeit</div>
+      <div class="card-sub">Vorliegende vs. fehlende ankaufsrelevante Unterlagen</div>
+      ${docsProgress(p.dokumente)}
+      <table class="tbl">
+        <thead><tr><th>Nr.</th><th>Dokument</th><th>Seiten</th><th>Status</th></tr></thead>
+        <tbody>
+          ${p.dokumente.map(d=>`<tr>
+            <td class="td-nr">${d.nr}</td>
+            <td>${d.name}<br><span class="td-dim">${d.hinweis}</span></td>
+            <td class="td-dim" style="white-space:nowrap">${d.seiten}</td>
+            <td><span class="pill ${d.status==='ok'?'pill-ok':'pill-err'}">${d.status==='ok'?'vorhanden':'fehlt'}</span></td>
+          </tr>`).join('')}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ARCHITEKTUR-KONZEPT -->
+  <div class="sec">Architektur- & Nachhaltigkeitskonzept <span class="src-tag">Quelle: Mappe S. 17</span></div>
+  <div class="concept-grid">
+    ${p.konzept_architektur.map(c=>`
+      <div class="concept">
+        <span class="concept-icon">${c.icon}</span>
+        <div class="concept-h">${c.h}</div>
+        ${c.p.map(t=>`<div class="concept-p">${t}</div>`).join('')}
+      </div>`).join('')}
+  </div>
+
+  <!-- MOBILITÄTSKONZEPT -->
+  <div class="sec">Mobilitätskonzept <span class="src-tag">Quelle: Mappe S. 18</span></div>
+  <div class="card">
+    <div class="card-title">Konzeptbeschreibung Mobilität</div>
+    <div class="card-sub">ÖPNV, Sharing, E-Mobilität & ebenerdige Parkgarage statt Tiefgarage</div>
+    ${p.konzept_mobilitaet.map(m=>`<div class="risk risk-green"><div class="risk-bar"></div><div><div class="risk-t">${m.t}</div><div class="risk-d">${m.d}</div></div></div>`).join('')}
+  </div>
+
+  <!-- METHODIK -->
+  <div class="sec">Methodik & Hinweise</div>
+  <div class="card">
+    <div class="card-title">Annahmen & Quellbasis</div>
+    <div class="card-sub">${p.quelle}</div>
+    <p style="font-size:11px;color:var(--muted);line-height:1.65">${p.methodik}</p>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span>Roomflow · Real Estate Investment Advisory</span>
+    <span>${p.name} · ${p.datum} · Analyse ersetzt keine rechtl./steuerl. Prüfung</span>
+  </div>
+  <div class="conf">vertraulich · nur für den adressierten empfänger · nicht zur weitergabe bestimmt</div>
+  `;
+
+  setTimeout(()=>{
+    animBars();
+    try { initDonut(p); } catch(e){ console.warn('Donut chart skipped:', e); }
+    try { initBar(p); }   catch(e){ console.warn('Bar chart skipped:', e); }
+  }, 60);
+}
+
+// ── Conic-gradient fallback for donut (used if Chart.js fails to load) ──
+function donutGradient(items){
+  let acc = 0;
+  const stops = items.map(a=>{
+    const start = acc; acc += a.pct;
+    return `${a.color} ${start}% ${acc}%`;
+  });
+  return stops.join(',');
+}
+
+// ── Docs progress bar ────────────────────────────────────────
+function docsProgress(docs){
+  const ok = docs.filter(d=>d.status==='ok').length;
+  const t  = docs.length;
+  const pct = Math.round(ok/t*100);
+  return `<div class="prog-wrap"><div class="prog-track"><div class="prog-fill" style="width:${pct}%"></div></div><span class="prog-label">${ok} / ${t} Dokumente (${pct}%)</span></div>`;
+}
+
+// ── Donut chart ───────────────────────────────────────────────
+function initDonut(p){
+  const el = document.getElementById('donut');
+  if(!el) return;
+  if(typeof Chart === 'undefined'){ el.style.display='none'; return; }
+  el.style.background = 'transparent';
+  new Chart(el,{
+    type:'doughnut',
+    data:{
+      labels: p.flaechen.items.map(a=>a.name),
+      datasets:[{ data:p.flaechen.items.map(a=>a.m2), backgroundColor:p.flaechen.items.map(a=>a.color), borderColor:'#13151a', borderWidth:2, hoverOffset:4 }]
+    },
+    options:{ cutout:'68%', plugins:{ legend:{display:false}, tooltip:{ callbacks:{label:c=>` ${c.label}: ${c.raw.toLocaleString('de-DE')} m²`} } }, animation:{duration:900} }
+  });
+  // Chart.js succeeded — hide the CSS conic-gradient fallback behind it
+  const fb = el.previousElementSibling;
+  if(fb && fb.classList.contains('donut-fallback')) fb.style.display='none';
+}
+
+// ── Bar chart (Baukostenaufschlüsselung) ──────────────────────
+function initBar(p){
+  const el = document.getElementById('barChart');
+  if(!el) return;
+  if(typeof Chart === 'undefined'){
+    el.style.display='none';
+    const fb = document.getElementById('barFallback');
+    if(fb) fb.style.display='block';
+    return;
+  }
+  const labels = p.baukosten_detail.map(b=>b.pos);
+  const vals   = p.baukosten_detail.map(b=>b.wert);
+  const colors = ['#c8a04e','#c8a04e','#c8a04e','#c8a04e','#6b84c4','#d96f58','#d96f58','#d96f58','#d96f58'];
+  new Chart(el,{
+    type:'bar',
+    data:{
+      labels,
+      datasets:[{ data:vals, backgroundColor:colors.map(c=>c+'bb'), borderColor:colors, borderWidth:1, borderRadius:3 }]
+    },
+    options:{
+      indexAxis:'y', responsive:true, maintainAspectRatio:true,
+      plugins:{ legend:{display:false}, tooltip:{callbacks:{label:c=>` ${c.raw.toFixed(2)} Mio. €`}} },
+      scales:{
+        x:{ ticks:{color:'#78808f',font:{size:9},callback:v=>v+' Mio.'}, grid:{color:'#1c2028'} },
+        y:{ ticks:{color:'#78808f',font:{size:9}}, grid:{color:'#1c2028'} }
+      },
+      animation:{duration:900}
+    }
+  });
+}
+
+// ── Animate bar fills ─────────────────────────────────────────
+function animBars(){
+  document.querySelectorAll('.bar-fill[data-w]').forEach(el=>{
+    const w = el.dataset.w;
+    setTimeout(()=> el.style.width = w+'%', 120);
+  });
+}
+</script>
+</body>
+</html>
