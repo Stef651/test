@@ -343,5 +343,301 @@
       "projektstatus": "Wettbewerbsgewinner, Bauantrag in Vorbereitung",
       "untertitel": "An der Burg Alzenau"
     }
+  },
+  {
+    "id": "test-projekt-und-dashboard-2",
+    "token": "rf-test-projekt-un-2026",
+    "ordner_name": "Test Projekt und Dashboard 2",
+    "ordner_path": "/#thirdskin/5001 datenräume automation braun/automation projektmanagement und dynamic dashboarding/test projekt und dashboard 2",
+    "generiert_am": "2026-06-17T16:43:00.696Z",
+    "quelle_dateien": [
+      "Roomflow_Banken-Teaser_Hoffeldstr93.pdf"
+    ],
+    "extraction_version": "3.0",
+    "name": "Hoffeldstraße 93",
+    "untertitel": "Aufteiler-Konzept in der Düsseldorfer Innenstadt",
+    "ort": "Düsseldorf-Flingern Nord",
+    "architekt": "Roomflow",
+    "status": "Finanzierungsanfrage",
+    "datum": "2026-06-01",
+    "quelle": "Roomflow_Banken-Teaser_Hoffeldstr93.pdf",
+    "chips": [
+      {
+        "text": "13 Einheiten",
+        "style": "gold"
+      },
+      {
+        "text": "Genehmigungsfrei §250 BauGB",
+        "style": "green"
+      },
+      {
+        "text": "Mietspiegel +6,4 % YoY",
+        "style": "green"
+      },
+      {
+        "text": "Energieklasse C",
+        "style": "red"
+      },
+      {
+        "text": "24 Monate Projektlaufzeit",
+        "style": "blue"
+      }
+    ],
+    "kpis": [
+      {
+        "lab": "Verkaufserlös (GDV)",
+        "val": "2,69 Mio. €",
+        "sub": "",
+        "color": "c-gold"
+      },
+      {
+        "lab": "Grundstückswert",
+        "val": "1,50 Mio. €",
+        "sub": "(Kaufpreis)",
+        "color": "c-text"
+      },
+      {
+        "lab": "Baukosten",
+        "val": "850 T€",
+        "sub": "(inkl. Umwandlung)",
+        "color": "c-text"
+      },
+      {
+        "lab": "Marge/Entwicklerertrag",
+        "val": "137 T€",
+        "sub": "(Netto-Profit)",
+        "color": "c-green"
+      },
+      {
+        "lab": "Wohnfläche",
+        "val": "708 m²",
+        "sub": "(13 Einheiten)",
+        "color": "c-text"
+      },
+      {
+        "lab": "Verkaufspreis/m²",
+        "val": "3.800 €",
+        "sub": "(Ø, konservativ)",
+        "color": "c-text"
+      }
+    ],
+    "kosten": [
+      {
+        "lab": "Verkaufserlös (GDV)",
+        "sub": "",
+        "val": 2690000,
+        "pct": 100,
+        "color": "#c8a04e"
+      },
+      {
+        "lab": "Kosten (Architektenansatz)",
+        "sub": "(Baukosten + Grundstück)",
+        "val": 2390000,
+        "pct": 88.8,
+        "color": "#4a9898"
+      },
+      {
+        "lab": "Kosten (Investoren-Vollkosten)",
+        "sub": "(inkl. Finanzierung, Steuern)",
+        "val": 2550000,
+        "pct": 94.8,
+        "color": "#6b84c4"
+      }
+    ],
+    "flaechen": {
+      "bgf": 846,
+      "items": [
+        {
+          "name": "Wohnfläche (13 Einheiten)",
+          "m2": 708,
+          "pct": 83.7,
+          "color": "#c8a04e"
+        },
+        {
+          "name": "Gewerbe (Bestand)",
+          "m2": 138,
+          "pct": 16.3,
+          "color": "#4a9898"
+        }
+      ]
+    },
+    "baukosten_detail": [
+      {
+        "pos": "EG-Umwandlung (Gewerbe → 2 Wohnungen)",
+        "formel": "277 T€",
+        "wert": 277000
+      },
+      {
+        "pos": "WEG-Aufteilung (Notar, Pläne)",
+        "formel": "37 T€",
+        "wert": 37000
+      },
+      {
+        "pos": "Nachgenehmigung (Bauantrag, Nachweise)",
+        "formel": "15 T€",
+        "wert": 15000
+      },
+      {
+        "pos": "Stellplatzablöse (2 SP × 13,5 T€)",
+        "formel": "27 T€",
+        "wert": 27000
+      },
+      {
+        "pos": "Mietentwicklung (Modernisierungsanreize)",
+        "formel": "21 T€",
+        "wert": 21000
+      }
+    ],
+    "eckdaten": [
+      {
+        "k": "Baujahr",
+        "v": "1927/28"
+      },
+      {
+        "k": "Energieklasse",
+        "v": "C"
+      },
+      {
+        "k": "Bestandseinheiten",
+        "v": "11 Wohnungen + 1 Gewerbe (138 m²)"
+      },
+      {
+        "k": "Zielzustand",
+        "v": "13 Wohnungen (708 m² Wohnfläche)"
+      },
+      {
+        "k": "Projektlaufzeit",
+        "v": "24 Monate"
+      },
+      {
+        "k": "LTC (Loan-to-Cost)",
+        "v": "70 %"
+      },
+      {
+        "k": "EK-ROI (p.a.)",
+        "v": "30 % (über 24 Monate)"
+      },
+      {
+        "k": "Mietspiegel Flingern",
+        "v": "12,96 €/m² (SOLL)"
+      },
+      {
+        "k": "Bestandsmiete Ø",
+        "v": "9,12 €/m² (IST)"
+      },
+      {
+        "k": "Hebepotenzial Miete",
+        "v": "+204 % (83.688 € p.a.)"
+      }
+    ],
+    "risiken": [
+      {
+        "level": "red",
+        "t": "§250 BauGB-Verschärfung NRW",
+        "d": "Aufteilungsantrag muss vor 31.12.2026 gestellt werden (§878 BGB analog)."
+      },
+      {
+        "level": "orange",
+        "t": "Marktverschiebung Verkaufspreise",
+        "d": "Konservative Kalkulation mit 3.800 €/m² Ø (Sicherheitspuffer 8 %)."
+      },
+      {
+        "level": "orange",
+        "t": "Bauverzögerung EG-Umwandlung",
+        "d": "Vorab-Bauvoranfrage und Festpreis-Generalunternehmer vorgesehen."
+      },
+      {
+        "level": "orange",
+        "t": "Idziak-Bestandsmieter (1993)",
+        "d": "32-jähriges Mietverhältnis, praktisch unkündbar (§574 BGB). Einheit vermietet verkauft, Discount einkalkuliert."
+      },
+      {
+        "level": "orange",
+        "t": "Mieter-Vorkaufsrecht §577 BGB",
+        "d": "Erwartung 0–2 Käufe, Abfindungen einkalkuliert."
+      },
+      {
+        "level": "green",
+        "t": "Marktabsorption 24 Monate",
+        "d": "Vor-Reservierungen vor Vermarktungsstart geplant."
+      },
+      {
+        "level": "green",
+        "t": "Genehmigungsfreie Aufteilung",
+        "d": "NRW-Rechtslage aktuell genehmigungsfrei (§250 BauGB)."
+      }
+    ],
+    "dokumente": [
+      {
+        "nr": "1",
+        "name": "Roomflow_Banken-Teaser_Hoffeldstr93.pdf",
+        "quelle": "PDF",
+        "seiten": "1-9",
+        "status": "ok",
+        "hinweis": ""
+      }
+    ],
+    "lage_info": [
+      {
+        "ico": "location",
+        "t": "Lage und Anbindung",
+        "d": "Eckhaus Hoffeldstraße/Austraße in Düsseldorf-Flingern Nord. Etablierter Stadtteil mit starkem Mietwachstum (+6,4 % YoY). Hervorragende ÖPNV-Anbindung und urbane Infrastruktur."
+      },
+      {
+        "ico": "building",
+        "t": "Objektcharakteristik",
+        "d": "Mehrfamilienhaus Baujahr 1927/28 mit zwei Schaufensterfronten (Eckhaus). Energieeffizienzklasse C. Aktuell 11 Wohnungen und 1 Gewerbeeinheit (138 m²)."
+      }
+    ],
+    "konzept_architektur": [
+      {
+        "icon": "merge",
+        "h": "Umwandlung Gewerbe zu Wohnraum",
+        "p": [
+          "EG-Ladenlokal (138 m²) wird in 2 separate Wohnungen à ~69 m² umgewandelt.",
+          "Nutzungsänderung mit eigenständigen Eingängen durch Eckhaus-Lage ermöglicht.",
+          "Bauantrag für Nutzungsänderung erforderlich."
+        ]
+      },
+      {
+        "icon": "split",
+        "h": "WEG-Aufteilung",
+        "p": [
+          "Notarielle Teilungserklärung, Aufteilungsplan und Abgeschlossenheitsbescheinigung für 13 Einheiten.",
+          "Aktuell genehmigungsfrei in NRW (§250 BauGB).",
+          "Fristkritisch: Aufteilungsantrag vor 31.12.2026."
+        ]
+      },
+      {
+        "icon": "checklist",
+        "h": "Nachgenehmigung und Auflagen",
+        "p": [
+          "Bauantrag für Nutzungsänderung mit Lärmschutz-, Brandschutz- und Belichtungsnachweisen.",
+          "Stellplatzablöse für 2 zusätzliche Stellplätze (13,5 T€/SP).",
+          "Modernisierungsmaßnahmen zur Mieterhöhung (Ziel: 11,50 €/m²)."
+        ]
+      }
+    ],
+    "konzept_mobilitaet": [
+      {
+        "t": "ÖPNV-Anbindung",
+        "d": "Hervorragende Anbindung an den öffentlichen Nahverkehr in Düsseldorf-Flingern Nord. Kurze Wege zu U-Bahn, Straßenbahn und Buslinien."
+      },
+      {
+        "t": "Stellplatzregelung",
+        "d": "Stellplatzpflicht nach Düsseldorfer Satzung: 1 Stellplatz pro 100 m² Wohnfläche. Aufgrund begrenzter Grundstücksfläche wird eine Ablöse von 13,5 T€ pro Stellplatz gezahlt (insgesamt 2 Stellplätze für EG-Umwandlung)."
+      }
+    ],
+    "methodik": "Verarbeitet wurde die Datei 'Roomflow_Banken-Teaser_Hoffeldstr93.pdf' (Seiten 1-9). Widersprüche: Keine. Fehlende Werte: Detaillierte Baukostenaufschlüsselung (nur Summen), exakte Wohnflächen pro Einheit, Gutachter-Wertgutachten.",
+    "_meta_raw": {
+      "projekt_name": "Hoffeldstraße 93",
+      "ort": "Düsseldorf-Flingern Nord",
+      "bundesland": "Nordrhein-Westfalen",
+      "architekt": "Roomflow",
+      "datum_mappe": "06/2026",
+      "objekttyp": "Mehrfamilienhaus (Aufteiler-Projekt)",
+      "projektstatus": "Finanzierungsanfrage",
+      "untertitel": "Aufteiler-Konzept in der Düsseldorfer Innenstadt"
+    }
   }
 ]
