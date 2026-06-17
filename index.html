@@ -477,6 +477,53 @@ window.addEventListener('DOMContentLoaded', async ()=>{
 // ══════════════════════════════════════════════════════════════
 //  RENDER
 // ══════════════════════════════════════════════════════════════
+// ── KPI-Wert-Formatierung ─────────────────────────────────────
+// Wandelt rohe Zahlen (28575000) in lesbare Werte um (28,57 Mio. €)
+function formatKpiVal(val) {
+  if (!val && val !== 0) return '—';
+  // Wenn bereits formatierter String (z.B. "5.500 m²", "4.500 €/m²") → direkt zurückgeben
+  if (typeof val === 'string') {
+    // Nur reine Zahlen-Strings umwandeln (z.B. "28575000 €" oder "28.575.000 €")
+    const cleaned = val.replace(/[€\s]/g, '').replace(/\./g, '').replace(',', '.');
+    const num = parseFloat(cleaned);
+    if (isNaN(num) || val.includes('m²') || val.includes('/m²') || val.includes('%')) {
+      return val; // Bereits lesbar oder Einheit vorhanden → unverändert
+    }
+    if (num >= 1000000) {
+      return (num / 1000000).toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' Mio. €';
+    }
+    if (num >= 1000) {
+      return num.toLocaleString('de-DE') + ' €';
+    }
+    return val;
+  }
+  // Zahl direkt
+  if (typeof val === 'number') {
+    if (val >= 1000000) {
+      return (val / 1000000).toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' Mio. €';
+    }
+    if (val >= 1000) {
+      return val.toLocaleString('de-DE') + ' €';
+    }
+    return val.toString();
+  }
+  return String(val);
+}
+
+// ── Balken-Wert-Formatierung ──────────────────────────────────
+// Werte in kosten[] sind bereits in Mio. € (nach Normalisierung)
+function formatBarVal(val) {
+  if (!val && val !== 0) return '—';
+  const num = typeof val === 'number' ? val : parseFloat(String(val).replace(/[€\s]/g, '').replace(',', '.'));
+  if (isNaN(num)) return String(val);
+  // Werte > 1000 sind rohe Euro-Beträge, umrechnen
+  if (num > 1000) {
+    return (num / 1000000).toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' Mio. €';
+  }
+  // Werte <= 1000 sind bereits in Mio.
+  return num.toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' Mio. €';
+}
+
 function render(p){
   // Null-Safety: alle Felder absichern
   p.chips = p.chips || [];
@@ -491,7 +538,18 @@ function render(p){
   p.lage_info = p.lage_info || [];
   p.konzept_architektur = p.konzept_architektur || [];
   p.konzept_mobilitaet = p.konzept_mobilitaet || [];
-  p.kosten = (p.kosten || []).map(r => ({...r, val: r.val||0, pct: r.pct||0, sub: r.sub||'', color: r.color||'#c8a04e'}));
+  p.kosten = (p.kosten || []).map(r => {
+    // val: normalize to number in Mio.
+    let val = r.val || 0;
+    if (typeof val === 'string') {
+      const cleaned = parseFloat(val.replace(/[€\s.]/g, '').replace(',', '.'));
+      val = isNaN(cleaned) ? 0 : cleaned;
+    }
+    // If val > 10000 it's in raw euros, convert to Mio.
+    const valMio = val > 10000 ? val / 1000000 : val;
+    // pct: if missing but val > 0, calculate from first item (GDV)
+    return {...r, val: valMio, pct: r.pct||0, sub: r.sub||'', color: r.color||'#c8a04e'};
+  });
   document.getElementById('tb-meta').textContent = `${p.ort||''} · ${p.datum||''}`;
   document.getElementById('tb-status').textContent = p.status||'';
 
@@ -508,7 +566,7 @@ function render(p){
   <!-- KPIs -->
   <div class="sec fi2">Kennzahlen auf einen Blick</div>
   <div class="kpi-row fi2">
-    ${p.kpis.map(k=>`<div class="kpi"><div class="kpi-lab">${k.lab||''}</div><div class="kpi-val ${k.color||'c-text'}">${k.val||'—'}</div><div class="kpi-sub">${k.sub||''}</div></div>`).join('')}
+    ${p.kpis.map(k=>`<div class="kpi"><div class="kpi-lab">${k.lab||''}</div><div class="kpi-val ${k.color||'c-text'}">${formatKpiVal(k.val)}</div><div class="kpi-sub">${k.sub||''}</div></div>`).join('')}
   </div>
 
   <!-- CHARTS ROW 1 -->
@@ -521,7 +579,7 @@ function render(p){
         <div class="bar-row">
           <div class="bar-lbl"><span class="bar-lbl-main">${r.lab}</span><span class="bar-lbl-sub">${r.sub}</span></div>
           <div class="bar-track"><div class="bar-fill" style="background:${r.color}" data-w="${r.pct}"></div></div>
-          <div class="bar-val" style="color:${r.color}">${typeof r.val === 'number' ? r.val.toFixed(2) + ' Mio. €' : '—'}</div>
+          <div class="bar-val" style="color:${r.color}">${formatBarVal(r.val)}</div>
         </div>`).join('')}
       <div class="note">Kernbefund: Die scheinbare Marge von 6,72 Mio. € aus dem Architektenansatz löst sich in der Vollkostenbetrachtung auf. Bei nicht abziehbarer Vorsteuer (Bauträger-Regelfall) wird die Marge negativ.</div>
     </div>
@@ -571,7 +629,7 @@ function render(p){
     <div class="card-title">Projektbeschreibung — Lage & Verfahrensstand</div>
     <div class="card-sub">Wörtlich/sinngemäß aus der Projektmappe übernommen</div>
     <div class="lage-list">
-      ${p.lage_info.map(l=>`<div class="lage-row"><div class="lage-ico">${l.ico}</div><div><div class="lage-t">${l.t}</div><div class="lage-d">${l.d}</div></div></div>`).join('')}
+      ${p.lage_info.map(l=>`<div class="lage-row"><div class="lage-ico">${mapIco(l.ico)}</div><div><div class="lage-t">${l.t}</div><div class="lage-d">${l.d}</div></div></div>`).join('')}
     </div>
   </div>
 
@@ -606,7 +664,7 @@ function render(p){
   <div class="concept-grid">
     ${p.konzept_architektur.map(c=>`
       <div class="concept">
-        <span class="concept-icon">${c.icon}</span>
+        <span class="concept-icon">${mapIco(c.icon)}</span>
         <div class="concept-h">${c.h}</div>
         ${c.p.map(t=>`<div class="concept-p">${t}</div>`).join('')}
       </div>`).join('')}
@@ -641,6 +699,38 @@ function render(p){
     try { initDonut(p); } catch(e){ console.warn('Donut chart skipped:', e); }
     try { initBar(p); }   catch(e){ console.warn('Bar chart skipped:', e); }
   }, 60);
+}
+
+// ── Icon-Name zu Emoji Mapping ───────────────────────────────
+function mapIco(ico) {
+  if (!ico) return '📍';
+  // Bereits Emoji → direkt zurückgeben
+  if ([...ico].some(c => c.codePointAt(0) > 127)) return ico;
+  // Material Icon Namen → Emoji
+  const map = {
+    'location': '📍', 'location-city': '🏙️', 'location-on': '📍',
+    'nature': '🌳', 'nature-people': '🌳', 'park': '🌳', 'eco': '🌿',
+    'shopping-cart': '🛒', 'store': '🏪', 'local-shopping': '🛍️',
+    'business': '🏢', 'work': '💼', 'factory': '🏭',
+    'school': '🎓', 'education': '🎓', 'library-books': '📚',
+    'train': '🚉', 'directions-transit': '🚉', 'directions-bus': '🚌',
+    'directions-car': '🚗', 'traffic': '🚦', 'local-parking': '🅿️',
+    'noise': '🔊', 'volume-up': '🔊', 'warning': '⚠️',
+    'infrastructure': '🏗️', 'build': '🔧', 'construction': '🏗️',
+    'sustainability': '♻️', 'wb-sunny': '☀️', 'energy': '⚡',
+    'community': '🤝', 'people': '👥', 'group': '👥',
+    'design': '🎨', 'architecture': '🏛️', 'home': '🏠',
+    'flexibility': '🔄', 'settings': '⚙️', 'tune': '🎛️',
+    'mobility': '🚲', 'directions-bike': '🚲', 'electric-car': '⚡',
+    'account-balance': '🏛️', 'apartment': '🏢', 'domain': '🏢',
+  };
+  // Versuche direkten Match
+  if (map[ico]) return map[ico];
+  // Versuche Teilstring-Match
+  for (const [key, emoji] of Object.entries(map)) {
+    if (ico.includes(key) || key.includes(ico)) return emoji;
+  }
+  return '📌'; // Fallback
 }
 
 // ── Conic-gradient fallback for donut (used if Chart.js fails to load) ──
