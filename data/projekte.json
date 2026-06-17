@@ -1,1 +1,343 @@
-[]
+[
+  {
+    "id": "test-projekt-und-dashboard-1",
+    "token": "rf-test-projekt-un-2026",
+    "ordner_name": "Test Projekt und Dashboard 1",
+    "ordner_path": "/#thirdskin/5001 datenräume automation braun/automation projektmanagement und dynamic dashboarding/test projekt und dashboard 1",
+    "generiert_am": "2026-06-17T15:59:40.524Z",
+    "quelle_dateien": [
+      "Alzenau-Mappe-aktuell-05-05-2026-Landes-korrekt.pdf"
+    ],
+    "extraction_version": "3.0",
+    "name": "Wohnen an der Burg",
+    "untertitel": "An der Burg Alzenau",
+    "ort": "Alzenau",
+    "architekt": "Michael Landes Architekt",
+    "status": "Wettbewerbssieger, Bauantrag in Vorbereitung",
+    "datum": "2026-05-05",
+    "quelle": "Alzenau-Mappe-aktuell-05-05-2026-Landes-korrekt.pdf",
+    "chips": [
+      {
+        "text": "Betreutes Wohnen",
+        "style": "green"
+      },
+      {
+        "text": "Stadtzentrum",
+        "style": "gold"
+      },
+      {
+        "text": "Barrierefrei",
+        "style": "green"
+      },
+      {
+        "text": "Nachhaltige Bauweise",
+        "style": "green"
+      },
+      {
+        "text": "Mobilitätskonzept",
+        "style": "blue"
+      },
+      {
+        "text": "GFZ-Potenzial (2,3/3,0)",
+        "style": "gold"
+      }
+    ],
+    "kpis": [
+      {
+        "lab": "Verkaufserlös (GDV)",
+        "val": "28.575.000 €",
+        "sub": null,
+        "color": "c-green"
+      },
+      {
+        "lab": "Grundstückswert",
+        "val": "1.650.000 €",
+        "sub": null,
+        "color": "c-text"
+      },
+      {
+        "lab": "Baukosten",
+        "val": "20.350.000 €",
+        "sub": null,
+        "color": "c-red"
+      },
+      {
+        "lab": "Marge/Entwicklerertrag",
+        "val": "6.575.000 €",
+        "sub": "(23,0%)",
+        "color": "c-gold"
+      },
+      {
+        "lab": "Wohnfläche",
+        "val": "5.500 m²",
+        "sub": null,
+        "color": "c-text"
+      },
+      {
+        "lab": "Verkaufspreis/m²",
+        "val": "4.500 €",
+        "sub": null,
+        "color": "c-text"
+      }
+    ],
+    "kosten": [
+      {
+        "lab": "Verkaufserlös (GDV)",
+        "sub": null,
+        "val": 28575000,
+        "pct": 100,
+        "color": "#4a9898"
+      },
+      {
+        "lab": "Kosten Architektenansatz",
+        "sub": null,
+        "val": 22000000,
+        "pct": 77,
+        "color": "#c8a04e"
+      },
+      {
+        "lab": "Kosten Investoren-Vollkosten",
+        "sub": "inkl. Grundstück",
+        "val": 23650000,
+        "pct": 83,
+        "color": "#6b84c4"
+      }
+    ],
+    "flaechen": {
+      "bgf": 9750,
+      "items": [
+        {
+          "name": "Wohnen",
+          "m2": 6500,
+          "pct": 66.7,
+          "color": "#4a9898"
+        },
+        {
+          "name": "Gewerbe",
+          "m2": 850,
+          "pct": 8.7,
+          "color": "#c8a04e"
+        },
+        {
+          "name": "Parken",
+          "m2": 1550,
+          "pct": 15.9,
+          "color": "#6b84c4"
+        },
+        {
+          "name": "Dachterrasse",
+          "m2": 850,
+          "pct": 8.7,
+          "color": "#9478ac"
+        }
+      ]
+    },
+    "baukosten_detail": [
+      {
+        "pos": "Wohnen (BGF)",
+        "formel": "6.500 m² × 2.500 €",
+        "wert": 16250000
+      },
+      {
+        "pos": "Gewerbe (BGF)",
+        "formel": "850 m² × 2.000 €",
+        "wert": 1700000
+      },
+      {
+        "pos": "Parken (BGF)",
+        "formel": "1.550 m² × 1.000 €",
+        "wert": 1550000
+      },
+      {
+        "pos": "Dachterrasse (BGF)",
+        "formel": "850 m² × 1.000 €",
+        "wert": 850000
+      },
+      {
+        "pos": "Bodenaushub (Einsparung)",
+        "formel": "Schuttannahme durch Dritte",
+        "wert": -150000
+      }
+    ],
+    "eckdaten": [
+      {
+        "k": "Grundstücksgröße",
+        "v": "ca. 3.000 m²"
+      },
+      {
+        "k": "Bodenrichtwert",
+        "v": "550 €/m²"
+      },
+      {
+        "k": "GFZ (ausgenutzt/max.)",
+        "v": "2,3 / 3,0"
+      },
+      {
+        "k": "Wohneinheiten",
+        "v": "ca. 80–100 (geschätzt)"
+      },
+      {
+        "k": "Stellplätze (PKW)",
+        "v": "51"
+      },
+      {
+        "k": "Barrierefreiheit",
+        "v": "vollständig"
+      },
+      {
+        "k": "Bauweise",
+        "v": "Massivbau, Holzbau, Modulelemente"
+      },
+      {
+        "k": "Dachbegrünung",
+        "v": "ja, inkl. Photovoltaik-Option"
+      },
+      {
+        "k": "Bauzeitverkürzung",
+        "v": "durch Modulelemente"
+      },
+      {
+        "k": "Kaufkraftkennziffer",
+        "v": "124,1"
+      },
+      {
+        "k": "Bauvoranfrage",
+        "v": "nicht erforderlich"
+      },
+      {
+        "k": "Bebauungsplan-Abweichungen",
+        "v": "geringfügig (Befreiungen)"
+      }
+    ],
+    "risiken": [
+      {
+        "level": "orange",
+        "t": "Bodenbeschaffenheit",
+        "d": "Felsiger Untergrund könnte Aushubkosten erhöhen, Einsparung durch Schuttannahme Dritter geplant."
+      },
+      {
+        "level": "green",
+        "t": "Stadtkooperation",
+        "d": "Schnelle Genehmigung und Unterstützung bei Stellplatzreduzierung."
+      },
+      {
+        "level": "orange",
+        "t": "Vermietung Gewerbe",
+        "d": "Abhängigkeit von lokaler Nachfrage für Apotheken, Arztpraxen und Gastronomie."
+      },
+      {
+        "level": "green",
+        "t": "GFZ-Potenzial",
+        "d": "Möglichkeit zur Flächenaufstockung (GFZ 2,3/3,0)."
+      }
+    ],
+    "dokumente": [
+      {
+        "nr": "1",
+        "name": "Alzenau-Mappe-aktuell-05-05-2026-Landes-korrekt.pdf",
+        "quelle": "Architektenmappe",
+        "seiten": "1–21",
+        "status": "ok",
+        "hinweis": null
+      }
+    ],
+    "lage_info": [
+      {
+        "ico": "location-city",
+        "t": "Stadtzentrum Alzenau",
+        "d": "Direktlage zur Burg Alzenau (1 Min. Fußweg), Marktplatz, Rathaus, Kirche und Stadtbibliothek. Historischer Stadtkern mit Fachwerkhäusern und hoher Aufenthaltsqualität."
+      },
+      {
+        "ico": "shopping-cart",
+        "t": "Einzelhandel & Versorgung",
+        "d": "Supermarkt (3 Min.), Apotheke, Cafés, Restaurants und Wochenmarkt in unmittelbarer Nähe. Kaufkraftkennziffer 124,1."
+      },
+      {
+        "ico": "tree",
+        "t": "Freizeit & Naherholung",
+        "d": "Generationenpark (4 Min.), Kahlal-Naherholungsgebiet, Hallen-/Freibad, Sportanlagen, Rad- und Wanderwege."
+      },
+      {
+        "ico": "industry",
+        "t": "Wirtschaftsstandort",
+        "d": "Technologie-Standort im Grünen mit Unternehmen aus Umwelttechnik, Elektronik und Maschinenbau. Hohe Dichte an Gewerbebetrieben."
+      },
+      {
+        "ico": "school",
+        "t": "Bildung & Soziales",
+        "d": "Schulen, Internat, Kindergärten, Musikschule, Kleinkunstbühne und medizinische Versorgung vor Ort."
+      }
+    ],
+    "konzept_architektur": [
+      {
+        "icon": "city",
+        "h": "Städtebauliche Einbindung",
+        "p": [
+          "Drei Häuser auf Sockel in Hanglage, angepasst an ortsüblichen Maßstab.",
+          "Hofgärten mit Grünflächen zwischen Gebäuden, Öffnung der Wohnungen über Loggien und Glasfassaden.",
+          "Fassaden: Holzkonstruktion innen, verputzte Farbfassaden außen (Anlehnung an bayerischen Barock).",
+          "Arkadengang im Sockelgeschoss als Vorbereich für Café und Gewerberäume."
+        ]
+      },
+      {
+        "icon": "home",
+        "h": "Wohnkonzept",
+        "p": [
+          "Barrierefreie Wohnungen (60–90 m²), alle mit Aufzug und Balkon/Loggia erschlossen.",
+          "Gemeinschaftsflächen für betreutes Wohnen im Sockelgeschoss.",
+          "Nachhaltige Materialien (Holz) für gesundes Raumklima, Schall- und Wärmeschutz."
+        ]
+      },
+      {
+        "icon": "leaf",
+        "h": "Nachhaltigkeit & Grün",
+        "p": [
+          "Begrünte Höfe, Dächer und Terrassen für Mikroklima und Wohnatmosphäre.",
+          "Vertikalbegrünter Sichtschutz zur Bahnstrecke, Baumreihe entlang der Straße.",
+          "Photovoltaik-Option auf Dachflächen."
+        ]
+      },
+      {
+        "icon": "hard-hat",
+        "h": "Bauweise & Effizienz",
+        "p": [
+          "Mischkonstruktion aus Massivbau, Holzbau und Modulelementen zur Bauzeitverkürzung.",
+          "Ebenerdige Parkgarage (kostengünstig, barrierefrei, natürlich belüftet)."
+        ]
+      }
+    ],
+    "konzept_mobilitaet": [
+      {
+        "t": "ÖPNV-Anbindung",
+        "d": "Kahlgrundbahn (4 Min. Fußweg) mit Anbindung an Hanau/Frankfurt am Main. Busbahnhof (gegenüber) mit Citybus-Linien zu allen Stadtteilen und überregionalen Zielen (Aschaffenburg, Kahl). RMV-Anbindung vorhanden."
+      },
+      {
+        "t": "Fahrradinfrastruktur",
+        "d": "Überdachte Fahrradabstellplätze und Bike-Station im Untergeschoss. Förderung des Fahrrads als Hauptverkehrsmittel für kurze Wege."
+      },
+      {
+        "t": "Carsharing & E-Mobilität",
+        "d": "Carsharing-Station mit Fokus auf Elektrofahrzeuge (z. B. Anbieter mobileeee.de). Ladepunkte für E-Autos an ausgewählten Parkplätzen."
+      },
+      {
+        "t": "Barrierefreie Parklösung",
+        "d": "Ebenerdige Parkgarage (51 Stellplätze) ohne Treppen/Aufzüge, ideal für mobilitätseingeschränkte Personen und Familien. Geringere Bau- und Wartungskosten im Vergleich zu Tiefgarage."
+      },
+      {
+        "t": "Fußläufige Erreichbarkeit",
+        "d": "Alle wesentlichen Einrichtungen (Supermarkt, Arztpraxen, Freizeitangebote) in 1–4 Minuten zu Fuß erreichbar. Reduzierung des Pkw-Verkehrs durch urbane Dichte."
+      }
+    ],
+    "methodik": "Verarbeitet: Alzenau-Mappe-aktuell-05-05-2026-Landes-korrekt.pdf (Seiten 1–21). Keine numerischen Widersprüche festgestellt. Flächen- und Kostenangaben aus Seite 19 übernommen. Projektstatus und Konzeptbeschreibungen aus Seiten 16–18 extrahiert.",
+    "_meta_raw": {
+      "projekt_name": "Wohnen an der Burg",
+      "ort": "Alzenau",
+      "bundesland": "Bayern",
+      "architekt": "Michael Landes Architekt",
+      "datum_mappe": "2026-05-05",
+      "objekttyp": "Wohnanlage mit Service (Betreutes Wohnen) und Gewerbeflächen",
+      "projektstatus": "Wettbewerbssieger, Bauantrag in Vorbereitung",
+      "untertitel": "An der Burg Alzenau"
+    }
+  }
+]
