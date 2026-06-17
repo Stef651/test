@@ -477,27 +477,62 @@ window.addEventListener('DOMContentLoaded', async ()=>{
 // ══════════════════════════════════════════════════════════════
 //  RENDER
 // ══════════════════════════════════════════════════════════════
+// ── Projekt-Daten normalisieren (Mistral-Output bereinigen) ──
+function normalizeProject(p) {
+  // KPI vals: strings wie "85.000.000 €" → bleibt als String (formatKpiVal verarbeitet es)
+  // KPI vals: strings wie "85000000 €" → bleibt als String (formatKpiVal verarbeitet es)  
+  // Kosten vals: numbers wie 85000000 → werden zu 85 (Mio.) normalisiert
+  if (p.kosten) {
+    // Berechne max val für pct-Berechnung falls pct fehlt
+    const maxVal = Math.max(...p.kosten.map(k => {
+      const v = typeof k.val === 'number' ? k.val : parseFloat(String(k.val||0).replace(/[€\s.]/g,'').replace(',','.'));
+      return isNaN(v) ? 0 : v;
+    }));
+    p.kosten = p.kosten.map(k => {
+      let val = typeof k.val === 'number' ? k.val : parseFloat(String(k.val||0).replace(/[€\s.]/g,'').replace(',','.'));
+      if (isNaN(val)) val = 0;
+      // Rohe Euro → Mio.
+      const valMio = val > 10000 ? val / 1000000 : val;
+      // pct neu berechnen wenn fehlt oder 0
+      const maxMio = maxVal > 10000 ? maxVal / 1000000 : maxVal;
+      const pct = (k.pct && k.pct > 0) ? k.pct : (maxMio > 0 ? (valMio / maxMio * 100) : 0);
+      return {...k, val: valMio, pct: Math.min(pct, 100), sub: k.sub||'', color: k.color||'#c8a04e'};
+    });
+  }
+  // Baukosten detail: wert in Mio. normalisieren
+  if (p.baukosten_detail) {
+    p.baukosten_detail = p.baukosten_detail.map(b => ({
+      ...b,
+      wert: b.wert > 10000 ? b.wert / 1000000 : (b.wert||0)
+    }));
+  }
+  return p;
+}
+
 // ── KPI-Wert-Formatierung ─────────────────────────────────────
 // Wandelt rohe Zahlen (28575000) in lesbare Werte um (28,57 Mio. €)
 function formatKpiVal(val) {
-  if (!val && val !== 0) return '—';
-  // Wenn bereits formatierter String (z.B. "5.500 m²", "4.500 €/m²") → direkt zurückgeben
+  if (val === null || val === undefined || val === '') return '—';
+  // Strings mit Einheiten direkt zurückgeben (m², €/m², %, Stück etc.)
   if (typeof val === 'string') {
-    // Nur reine Zahlen-Strings umwandeln (z.B. "28575000 €" oder "28.575.000 €")
+    if (val.includes('m²') || val.includes('/m²') || val.includes('%') || 
+        val.includes('Stück') || val.includes('WE') || val === '—' || val === '≈ 0 %') {
+      return val;
+    }
+    // Zahl aus String extrahieren (entfernt €, Leerzeichen, Tausenderpunkte)
     const cleaned = val.replace(/[€\s]/g, '').replace(/\./g, '').replace(',', '.');
     const num = parseFloat(cleaned);
-    if (isNaN(num) || val.includes('m²') || val.includes('/m²') || val.includes('%')) {
-      return val; // Bereits lesbar oder Einheit vorhanden → unverändert
-    }
+    if (isNaN(num)) return val; // Nicht-numerisch → unverändert
     if (num >= 1000000) {
-      return (num / 1000000).toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' Mio. €';
+      const mio = num / 1000000;
+      return mio.toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' Mio. €';
     }
     if (num >= 1000) {
       return num.toLocaleString('de-DE') + ' €';
     }
     return val;
   }
-  // Zahl direkt
+  // Nummer direkt
   if (typeof val === 'number') {
     if (val >= 1000000) {
       return (val / 1000000).toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' Mio. €';
@@ -505,7 +540,7 @@ function formatKpiVal(val) {
     if (val >= 1000) {
       return val.toLocaleString('de-DE') + ' €';
     }
-    return val.toString();
+    return val.toLocaleString('de-DE');
   }
   return String(val);
 }
@@ -513,18 +548,18 @@ function formatKpiVal(val) {
 // ── Balken-Wert-Formatierung ──────────────────────────────────
 // Werte in kosten[] sind bereits in Mio. € (nach Normalisierung)
 function formatBarVal(val) {
-  if (!val && val !== 0) return '—';
-  const num = typeof val === 'number' ? val : parseFloat(String(val).replace(/[€\s]/g, '').replace(',', '.'));
-  if (isNaN(num)) return String(val);
-  // Werte > 1000 sind rohe Euro-Beträge, umrechnen
-  if (num > 1000) {
-    return (num / 1000000).toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' Mio. €';
-  }
-  // Werte <= 1000 sind bereits in Mio.
+  if (val === null || val === undefined) return '—';
+  let num = typeof val === 'number' ? val : parseFloat(String(val).replace(/[€\s]/g, '').replace(',', '.'));
+  if (isNaN(num) || num === 0) return '—';
+  // Rohe Euro-Beträge (> 10.000) → in Mio. umrechnen
+  if (num > 10000) num = num / 1000000;
+  // Bereits in Mio. → formatieren
   return num.toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' Mio. €';
 }
 
 function render(p){
+  // Daten normalisieren (Mistral-Output bereinigen)
+  p = normalizeProject(p);
   // Null-Safety: alle Felder absichern
   p.chips = p.chips || [];
   p.kpis = p.kpis || [];
@@ -538,18 +573,7 @@ function render(p){
   p.lage_info = p.lage_info || [];
   p.konzept_architektur = p.konzept_architektur || [];
   p.konzept_mobilitaet = p.konzept_mobilitaet || [];
-  p.kosten = (p.kosten || []).map(r => {
-    // val: normalize to number in Mio.
-    let val = r.val || 0;
-    if (typeof val === 'string') {
-      const cleaned = parseFloat(val.replace(/[€\s.]/g, '').replace(',', '.'));
-      val = isNaN(cleaned) ? 0 : cleaned;
-    }
-    // If val > 10000 it's in raw euros, convert to Mio.
-    const valMio = val > 10000 ? val / 1000000 : val;
-    // pct: if missing but val > 0, calculate from first item (GDV)
-    return {...r, val: valMio, pct: r.pct||0, sub: r.sub||'', color: r.color||'#c8a04e'};
-  });
+  p.kosten = p.kosten || [];
   document.getElementById('tb-meta').textContent = `${p.ort||''} · ${p.datum||''}`;
   document.getElementById('tb-status').textContent = p.status||'';
 
@@ -722,6 +746,16 @@ function mapIco(ico) {
     'design': '🎨', 'architecture': '🏛️', 'home': '🏠',
     'flexibility': '🔄', 'settings': '⚙️', 'tune': '🎛️',
     'mobility': '🚲', 'directions-bike': '🚲', 'electric-car': '⚡',
+    'leaf': '🌿', 'eco-leaf': '🌿', 'tree': '🌳', 'forest': '🌲',
+    'hard-hat': '👷', 'engineering': '⚙️', 'handyman': '🔧',
+    'industry': '🏭', 'factory': '🏭', 'industrial': '🏭',
+    'city': '🏙️', 'urban': '🏙️', 'skyline': '🏙️',
+    'accessibility': '♿', 'accessible': '♿',
+    'parking': '🅿️', 'local-parking': '🅿️',
+    'bolt': '⚡', 'flash-on': '⚡', 'electric-bolt': '⚡',
+    'restaurant': '🍽️', 'local-cafe': '☕', 'coffee': '☕',
+    'medical': '🏥', 'local-hospital': '🏥', 'health': '🏥',
+    'info': 'ℹ️', 'help': '❓', 'star': '⭐',
     'account-balance': '🏛️', 'apartment': '🏢', 'domain': '🏢',
   };
   // Versuche direkten Match
