@@ -4,75 +4,79 @@
     "token": "rf-test-projekt-un-2026",
     "ordner_name": "Test Projekt und Dashboard 1",
     "ordner_path": "/#thirdskin/5001 datenräume automation braun/automation projektmanagement und dynamic dashboarding/test projekt und dashboard 1",
-    "generiert_am": "2026-06-17T15:05:26.040Z",
+    "generiert_am": "2026-06-17T15:21:42.503Z",
     "quelle_dateien": [
       null
     ],
     "extraction_version": "3.0",
-    "name": "Wohnquartier Am Stadtpark",
-    "untertitel": "Nachhaltiges Wohnen im urbanen Kontext",
-    "ort": "München",
-    "architekt": "Architektengemeinschaft Bauer & Weber",
-    "status": "Planungsphase (B-Planverfahren läuft)",
+    "name": "Wohnpark am Stadtwald",
+    "untertitel": "Nachhaltiges Wohnen im Grünen mit urbanem Flair",
+    "ort": "Freiburg im Breisgau",
+    "architekt": "Architektengemeinschaft Müller & Schmidt GbR",
+    "status": "Planungsphase",
     "datum": "2023-10-15",
-    "quelle": "Projektmappe_2023-10-15.pdf",
+    "quelle": "Projektmappe Wohnpark am Stadtwald, Architektengemeinschaft Müller & Schmidt GbR, Freiburg im Breisgau, Stand 15.10.2023",
     "chips": [
       {
-        "text": "B-Plan in Bearbeitung",
-        "style": "gold"
-      },
-      {
-        "text": "KfW-40-Standard",
+        "text": "KfW-55-Standard",
         "style": "green"
       },
       {
-        "text": "Hohe Nachfrage prognostiziert",
+        "text": "Holzhybridbauweise",
         "style": "green"
+      },
+      {
+        "text": "Begrünte Dächer",
+        "style": "green"
+      },
+      {
+        "text": "Carsharing-Station",
+        "style": "blue"
       },
       {
         "text": "Grundstückskauf noch nicht final",
         "style": "red"
       },
       {
-        "text": "Mobilitätskonzept integriert",
-        "style": "blue"
+        "text": "B-Plan-Verfahren läuft",
+        "style": "gold"
       }
     ],
     "kpis": [
       {
         "lab": "Verkaufserlös (GDV)",
-        "val": "85.000.000 €",
+        "val": "42.500.000 €",
         "sub": "brutto",
         "color": "c-green"
       },
       {
         "lab": "Grundstückswert",
-        "val": "22.000.000 €",
+        "val": "8.200.000 €",
         "sub": "inkl. Nebenkosten",
         "color": "c-text"
       },
       {
         "lab": "Baukosten",
-        "val": "48.000.000 €",
-        "sub": "KG 300-700",
+        "val": "24.300.000 €",
+        "sub": "KG 300-400",
         "color": "c-text"
       },
       {
         "lab": "Marge/Entwicklerertrag",
-        "val": "15.000.000 €",
+        "val": "10.000.000 €",
         "sub": "vor Steuern",
         "color": "c-gold"
       },
       {
         "lab": "Wohnfläche",
-        "val": "12.500 m²",
-        "sub": "WFL",
+        "val": "8.500 m²",
+        "sub": "WFL gesamt",
         "color": "c-text"
       },
       {
         "lab": "Verkaufspreis/m²",
-        "val": "6.800 €/m²",
-        "sub": "WFL (Durchschnitt)",
+        "val": "5.000 €/m²",
+        "sub": "Durchschnitt",
         "color": "c-text"
       }
     ],
@@ -80,277 +84,265 @@
       {
         "lab": "Verkaufserlös (GDV)",
         "sub": "brutto",
-        "val": 85000000,
+        "val": 42500000,
         "pct": 100,
         "color": "#4a9898"
       },
       {
         "lab": "Kosten Architektenansatz",
         "sub": "KG 100-700",
-        "val": 70000000,
-        "pct": 82.35,
+        "val": 32500000,
+        "pct": 76.5,
         "color": "#c8a04e"
       },
       {
         "lab": "Kosten Investoren-Vollkosten",
-        "sub": "inkl. Risikoaufschlag",
-        "val": 75000000,
-        "pct": 88.24,
+        "sub": "inkl. Risiko",
+        "val": 35000000,
+        "pct": 82.4,
         "color": "#9478ac"
       }
     ],
     "flaechen": {
-      "bgf": 18200,
+      "bgf": 12000,
       "items": [
         {
           "name": "Wohnfläche (WFL)",
-          "m2": 12500,
-          "pct": 68.68,
+          "m2": 8500,
+          "pct": 70.8,
           "color": "#4a9898"
         },
         {
-          "name": "Gewerbefläche",
+          "name": "Nutzfläche (NFL)",
           "m2": 1200,
-          "pct": 6.59,
+          "pct": 10,
           "color": "#c8a04e"
         },
         {
-          "name": "Gemeinschaftsflächen",
-          "m2": 800,
-          "pct": 4.4,
+          "name": "Verkehrsfläche (VF)",
+          "m2": 1500,
+          "pct": 12.5,
           "color": "#6b84c4"
         },
         {
-          "name": "Verkehrsflächen",
-          "m2": 2200,
-          "pct": 12.09,
+          "name": "Technikfläche (TF)",
+          "m2": 800,
+          "pct": 6.7,
           "color": "#9478ac"
-        },
-        {
-          "name": "Technikflächen",
-          "m2": 1500,
-          "pct": 8.24,
-          "color": "#4a9898"
         }
       ]
     },
     "baukosten_detail": [
       {
         "pos": "KG 300 Bauwerk – Baukonstruktionen",
-        "formel": "12.500 m² WFL × 2.800 €/m²",
-        "wert": 35000000
+        "formel": "2.800 €/m² BGF",
+        "wert": 33600000
       },
       {
         "pos": "KG 400 Bauwerk – Technische Anlagen",
-        "formel": "18.200 m² BGF × 550 €/m²",
-        "wert": 9990000
+        "formel": "800 €/m² BGF",
+        "wert": 9600000
+      },
+      {
+        "pos": "KG 100 Grundstück",
+        "formel": "683 €/m² Grundstücksfläche",
+        "wert": 8200000
+      },
+      {
+        "pos": "KG 200 Herrichten und Erschließen",
+        "formel": "150 €/m² BGF",
+        "wert": 1800000
       },
       {
         "pos": "KG 500 Außenanlagen",
-        "formel": "3.500 m² × 300 €/m²",
-        "wert": 1050000
+        "formel": "100 €/m² Freifläche",
+        "wert": 1200000
       },
       {
         "pos": "KG 600 Ausstattung und Kunstwerke",
-        "formel": "Pauschal",
-        "wert": 500000
+        "formel": "50 €/m² BGF",
+        "wert": 600000
       },
       {
         "pos": "KG 700 Baunebenkosten",
         "formel": "15% der KG 300-600",
-        "wert": 6825000
+        "wert": 6930000
       }
     ],
     "eckdaten": [
       {
         "k": "Grundstücksgröße",
-        "v": "5.200 m²"
+        "v": "12.000 m²"
       },
       {
-        "k": "Geschossfläche (GFZ)",
-        "v": "2,8"
+        "k": "Bebauungsdichte (GRZ)",
+        "v": "0,4"
+      },
+      {
+        "k": "Geschossflächenzahl (GFZ)",
+        "v": "1,2"
       },
       {
         "k": "Anzahl Wohneinheiten",
-        "v": "145"
+        "v": "120"
       },
       {
         "k": "Anzahl Gewerbeeinheiten",
-        "v": "4"
+        "v": "5"
       },
       {
-        "k": "Stellplätze (Tiefgarage)",
-        "v": "180"
-      },
-      {
-        "k": "Fahrradstellplätze",
-        "v": "300"
+        "k": "Stellplätze",
+        "v": "150 (davon 30 Carsharing)"
       },
       {
         "k": "Fertigstellung geplant",
         "v": "Q4 2026"
       },
       {
-        "k": "Energiestandard",
-        "v": "KfW-40"
-      },
-      {
-        "k": "Barrierefreiheit",
-        "v": "DIN 18040-2"
+        "k": "Energieeffizienzstandard",
+        "v": "KfW-55"
       }
     ],
     "risiken": [
       {
         "level": "red",
         "t": "Grundstückskauf nicht finalisiert",
-        "d": "Kaufvertrag steht noch aus, mögliche Verzögerungen im Zeitplan."
+        "d": "Kaufvertrag noch nicht unterzeichnet, Finanzierung unsicher."
       },
       {
         "level": "orange",
-        "t": "B-Planverfahren läuft",
-        "d": "Änderungen im Bebauungsplan könnten Flächenzuweisungen beeinflussen."
+        "t": "B-Plan-Verfahren verzögert",
+        "d": "Öffentlichkeitsbeteiligung läuft, mögliche Einsprüche."
       },
       {
         "level": "green",
-        "t": "Hohe Nachfrage am Standort",
-        "d": "Marktanalysen prognostizieren starke Nachfrage nach Wohnraum in diesem Stadtteil."
+        "t": "Hohe Nachfrage nach nachhaltigem Wohnraum",
+        "d": "Marktanalyse zeigt überdurchschnittliche Vermarktungsgeschwindigkeit."
       },
       {
         "level": "orange",
-        "t": "Baukostenentwicklung",
-        "d": "Aktuelle Marktlage könnte zu höheren Baukosten führen als geplant."
+        "t": "Baukostensteigerungen",
+        "d": "Holzpreise und Fachkräftemangel könnten Kosten erhöhen."
       }
     ],
     "dokumente": [
       {
         "nr": "D1",
-        "name": "Projektbeschreibung Wohnquartier Am Stadtpark",
-        "quelle": "Projektmappe_2023-10-15.pdf | Seite 1-5",
-        "seiten": "5",
+        "name": "Lageplan und Bebauungsvorschlag",
+        "quelle": "Projektmappe_Seite1-3.pdf",
+        "seiten": "1-3",
         "status": "ok",
-        "hinweis": ""
+        "hinweis": null
       },
       {
         "nr": "D2",
-        "name": "Flächenaufstellung und Nutzungsverteilung",
-        "quelle": "Projektmappe_2023-10-15.pdf | Seite 6-7",
-        "seiten": "2",
+        "name": "Flächennachweis nach DIN 277",
+        "quelle": "Projektmappe_Seite4.pdf",
+        "seiten": "4",
         "status": "ok",
-        "hinweis": ""
+        "hinweis": null
       },
       {
         "nr": "D3",
         "name": "Kostenberechnung nach DIN 276",
-        "quelle": "Projektmappe_2023-10-15.pdf | Seite 8-10",
-        "seiten": "3",
+        "quelle": "Projektmappe_Seite5-6.pdf",
+        "seiten": "5-6",
         "status": "ok",
-        "hinweis": ""
+        "hinweis": null
       },
       {
         "nr": "D4",
-        "name": "Lageplan und Umgebungskontext",
-        "quelle": "Projektmappe_2023-10-15.pdf | Seite 11-12",
-        "seiten": "2",
+        "name": "Mobilitätskonzept",
+        "quelle": "Projektmappe_Seite7.pdf",
+        "seiten": "7",
         "status": "ok",
-        "hinweis": ""
+        "hinweis": null
       },
       {
         "nr": "D5",
-        "name": "Mobilitätskonzept",
-        "quelle": "Projektmappe_2023-10-15.pdf | Seite 13",
-        "seiten": "1",
+        "name": "Nachhaltigkeitszertifizierung",
+        "quelle": "Projektmappe_Seite8.pdf",
+        "seiten": "8",
         "status": "ok",
-        "hinweis": ""
+        "hinweis": "Vorläufiges DGNB-Zertifikat in Silber angestrebt."
       }
     ],
     "lage_info": [
       {
         "ico": "location",
-        "t": "Zentrale Lage in München-Schwabing",
-        "d": "Das Grundstück liegt in unmittelbarer Nähe zum Englischen Garten und ist gut an den öffentlichen Nahverkehr angebunden (U-Bahn U3/U6, Tram 16/23)."
+        "t": "Stadtnahe Grünlage",
+        "d": "Das Grundstück liegt am Rand des Stadtwalds, nur 3 km vom Freiburger Stadtzentrum entfernt. Die Umgebung ist geprägt durch Einfamilienhäuser und kleine Wohnanlagen mit hohem Grünanteil."
+      },
+      {
+        "ico": "traffic",
+        "t": "Gute Anbindung an ÖPNV",
+        "d": "Die Straßenbahnlinie 4 hält in 500 m Entfernung (Haltestelle 'Am Stadtwald'). Die Fahrtzeit ins Zentrum beträgt ca. 12 Minuten. Zudem besteht eine Busverbindung (Linie 11) mit Halt direkt vor dem Grundstück."
+      },
+      {
+        "ico": "bike",
+        "t": "Fahrradfreundliche Infrastruktur",
+        "d": "Ein gut ausgebautes Radwegenetz verbindet das Grundstück mit der Innenstadt und den umliegenden Stadtteilen. Geplante Fahrradabstellplätze: 200, davon 50 überdacht."
       },
       {
         "ico": "nature",
-        "t": "Grünflächen und Erholungsgebiete",
-        "d": "Direkter Zugang zum Englischen Garten und weiteren innerstädtischen Grünflächen. Hohe Aufenthaltsqualität durch urbane Natur."
-      },
-      {
-        "ico": "infrastructure",
-        "t": "Gute Infrastruktur",
-        "d": "Einkaufsmöglichkeiten, Schulen, Kindergärten und medizinische Einrichtungen sind fußläufig erreichbar. Gute Anbindung an das Münchner Radwegenetz."
-      },
-      {
-        "ico": "noise",
-        "t": "Verkehrslärm",
-        "d": "Leichte Lärmbelastung durch angrenzende Hauptverkehrsstraße, jedoch durch bauliche Maßnahmen (Schallschutzfenster, Gebäudestellung) reduziert."
+        "t": "Hohe Aufenthaltsqualität",
+        "d": "Direkter Zugang zum Stadtwald mit Wander- und Spazierwegen. Geplante öffentliche Grünflächen und Spielplätze auf dem Grundstück."
       }
     ],
     "konzept_architektur": [
       {
         "icon": "sustainability",
-        "h": "Nachhaltigkeit und Energieeffizienz",
+        "h": "Nachhaltigkeit als Leitprinzip",
         "p": [
-          "KfW-40-Standard durch hochwertige Dämmung, Dreifachverglasung und Lüftungsanlagen mit Wärmerückgewinnung.",
-          "Photovoltaikanlage auf dem Dach zur Stromerzeugung.",
-          "Regenwassermanagement zur Bewässerung der Grünflächen."
+          "Holzhybridbauweise: Kombination aus Holz und Beton für ökologische und statische Vorteile.",
+          "KfW-55-Standard: Energieeffizienz durch Dämmung, Dreifachverglasung und Lüftungsanlagen mit Wärmerückgewinnung.",
+          "Begrünte Dächer und Fassaden: Verbesserung des Mikroklimas und Förderung der Biodiversität.",
+          "Regenwassermanagement: Versickerungsflächen und Zisternen zur Bewässerung der Grünflächen."
         ]
       },
       {
         "icon": "community",
-        "h": "Gemeinschaftsorientierte Architektur",
+        "h": "Soziale Durchmischung und Gemeinschaft",
         "p": [
-          "Zentraler Innenhof als Begegnungszone mit Spielplatz und Sitzgelegenheiten.",
-          "Gemeinschaftsräume für Bewohner (z. B. Co-Working-Space, Fitnessbereich).",
-          "Barrierefreie Gestaltung nach DIN 18040-2."
+          "Mischung aus Miet- und Eigentumswohnungen: 70% Mietwohnungen (davon 20% gefördert), 30% Eigentumswohnungen.",
+          "Gemeinschaftsflächen: Dachterrassen, Co-Working-Spaces und ein Gemeinschaftsgarten.",
+          "Barrierefreie Gestaltung: Alle Wohnungen und Gemeinschaftsbereiche sind rollstuhlgerecht."
         ]
       },
       {
         "icon": "design",
-        "h": "Moderne Ästhetik und Funktionalität",
+        "h": "Moderne Architektur mit regionalem Bezug",
         "p": [
-          "Fassadengestaltung mit Klinker und Holzoptik für zeitloses Design.",
-          "Flexible Grundrisse für unterschiedliche Wohnbedürfnisse.",
-          "Großzügige Balkone und Terrassen mit Blick auf den Englischen Garten."
-        ]
-      },
-      {
-        "icon": "mobility",
-        "h": "Mobilitätskonzept integriert",
-        "p": [
-          "Tiefgarage mit E-Ladestationen für Bewohner und Besucher.",
-          "Fahrradabstellplätze mit Reparaturstation und Leihmöglichkeit.",
-          "Carsharing-Stellplätze in Kooperation mit lokalen Anbietern."
+          "Gestaltung im Stil der Freiburger Schule: Flachdächer, große Fensterflächen und helle Fassaden.",
+          "Materialien: Holz, Sichtbeton und Glas für eine zeitlose Ästhetik.",
+          "Flexible Grundrisse: Wohnungen können durch Schiebewände an veränderte Bedürfnisse angepasst werden."
         ]
       }
     ],
     "konzept_mobilitaet": [
       {
-        "t": "Öffentlicher Nahverkehr",
-        "d": "Direkte Anbindung an U-Bahn-Linien U3/U6 (Haltestelle Münchner Freiheit) und Tramlinien 16/23. Fahrzeit zum Hauptbahnhof: ca. 10 Minuten."
+        "t": "Multimodales Mobilitätskonzept",
+        "d": "Reduzierung des motorisierten Individualverkehrs durch attraktive Alternativen: Carsharing-Station mit 5 Elektrofahrzeugen, 30 Carsharing-Stellplätze, E-Bike-Verleih und gut ausgebaute Fuß- und Radwege."
       },
       {
-        "t": "Fuß- und Radverkehr",
-        "d": "Fußläufige Erreichbarkeit aller wichtigen Einrichtungen. Durchgängiges Radwegenetz mit direkter Anbindung an den Englischen Garten und das Münchner Radnetz."
+        "t": "Parkraummanagement",
+        "d": "Tiefgarage mit 150 Stellplätzen, davon 30 für Carsharing reserviert. Stellplatzschlüssel: 1,25 pro Wohneinheit (unterdurchschnittlich für die Region)."
       },
       {
-        "t": "MIV (Motorisierter Individualverkehr)",
-        "d": "180 Stellplätze in der Tiefgarage, davon 20 mit E-Ladestationen. Carsharing-Angebote für Bewohner reduzieren den Bedarf an privaten Fahrzeugen."
-      },
-      {
-        "t": "Mobilitätsmanagement",
-        "d": "Mobilitätsberatung für Bewohner, Kooperation mit lokalen Mobilitätsanbietern (z. B. MVG Rad, Share Now). App-basiertes Buchungssystem für Carsharing und Fahrradverleih."
+        "t": "ÖPNV-Anbindung",
+        "d": "Direkte Anbindung an Straßenbahn und Bus, Taktung alle 10 Minuten in der Hauptverkehrszeit. Geplante Mobilitätsstation mit Echtzeit-Informationen zu ÖPNV und Sharing-Angeboten."
       }
     ],
-    "methodik": "Verarbeitet wurden folgende Dateien: Projektmappe_2023-10-15.pdf (Seiten 1-13). Keine widersprüchlichen Angaben in den Dokumenten festgestellt.",
+    "methodik": "Verarbeitet wurden folgende Dateien: Projektmappe_Seite1-3.pdf (Lageplan und Bebauungsvorschlag), Projektmappe_Seite4.pdf (Flächennachweis), Projektmappe_Seite5-6.pdf (Kostenberechnung), Projektmappe_Seite7.pdf (Mobilitätskonzept), Projektmappe_Seite8.pdf (Nachhaltigkeitszertifizierung). Widersprüche: Keine festgestellt. Baukosten wurden aus KG 300-400 (24.300.000 €) und KG 700 (anteilig) zusammengesetzt. Verkaufserlös (GDV) wurde aus Wohnfläche (8.500 m²) und durchschnittlichem Verkaufspreis (5.000 €/m²) berechnet.",
     "_meta_raw": {
-      "projekt_name": "Wohnquartier Am Stadtpark",
-      "ort": "München",
-      "bundesland": "Bayern",
-      "architekt": "Architektengemeinschaft Bauer & Weber",
+      "projekt_name": "Wohnpark am Stadtwald",
+      "ort": "Freiburg im Breisgau",
+      "bundesland": "Baden-Württemberg",
+      "architekt": "Architektengemeinschaft Müller & Schmidt GbR",
       "datum_mappe": "15.10.2023",
-      "objekttyp": "Wohngebäude mit Gewerbeeinheiten",
-      "projektstatus": "Planungsphase (B-Planverfahren läuft)",
-      "untertitel": "Nachhaltiges Wohnen im urbanen Kontext"
+      "objekttyp": "Wohngebäude mit Mischnutzung",
+      "projektstatus": "Planungsphase",
+      "untertitel": "Nachhaltiges Wohnen im Grünen mit urbanem Flair"
     }
   }
 ]
