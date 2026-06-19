@@ -639,5 +639,250 @@
       "projektstatus": "Finanzierungsanfrage",
       "untertitel": "Aufteiler-Konzept in der Düsseldorfer Innenstadt"
     }
+  },
+  {
+    "id": "test-projekt-und-dashboard-3",
+    "token": "rf-test-projekt-un-2026",
+    "ordner_name": "Test Projekt und Dashboard 3",
+    "ordner_path": "/#thirdskin/5001 datenräume automation braun/automation projektmanagement und dynamic dashboarding/test projekt und dashboard 3",
+    "generiert_am": "2026-06-19T21:43:22.809Z",
+    "quelle_dateien": [
+      "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf"
+    ],
+    "extraction_version": "3.0",
+    "name": "Altenheim Gesamt mit Mitteltrakt und Kloster",
+    "untertitel": "",
+    "ort": "Obernzell",
+    "architekt": null,
+    "status": "unvollständig",
+    "datum": "2025-11-06",
+    "quelle": "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf",
+    "chips": [
+      {
+        "text": "Pflegeeinrichtung",
+        "style": "green"
+      },
+      {
+        "text": "Denkmalschutz (Kloster)",
+        "style": "gold"
+      },
+      {
+        "text": "Mehrgeschossig",
+        "style": "blue"
+      }
+    ],
+    "kpis": [
+      {
+        "lab": "Verkaufserlös (GDV)",
+        "val": null,
+        "sub": null,
+        "color": "c-text"
+      },
+      {
+        "lab": "Grundstückswert",
+        "val": null,
+        "sub": null,
+        "color": "c-text"
+      },
+      {
+        "lab": "Baukosten",
+        "val": null,
+        "sub": null,
+        "color": "c-text"
+      },
+      {
+        "lab": "Marge / Entwicklerertrag",
+        "val": null,
+        "sub": null,
+        "color": "c-text"
+      },
+      {
+        "lab": "Wohnfläche",
+        "val": null,
+        "sub": "m²",
+        "color": "c-text"
+      },
+      {
+        "lab": "Verkaufspreis/m²",
+        "val": null,
+        "sub": "€/m²",
+        "color": "c-text"
+      }
+    ],
+    "kosten": [
+      {
+        "lab": "Verkaufserlös (GDV)",
+        "sub": null,
+        "val": null,
+        "pct": 0,
+        "color": "#4a9898"
+      },
+      {
+        "lab": "Kosten (Architektenansatz)",
+        "sub": null,
+        "val": null,
+        "pct": 0,
+        "color": "#c8a04e"
+      },
+      {
+        "lab": "Kosten (Investoren-Vollkosten)",
+        "sub": null,
+        "val": null,
+        "pct": 0,
+        "color": "#9478ac"
+      }
+    ],
+    "flaechen": {
+      "bgf": null,
+      "items": []
+    },
+    "baukosten_detail": [],
+    "eckdaten": [
+      {
+        "k": "Adresse",
+        "v": "Klosterweg, 94130 Obernzell"
+      },
+      {
+        "k": "Projektbestandteile",
+        "v": "Altenheim Gesamt (4 Geschosse), Mitteltrakt (4 Geschosse), Kloster (3 Geschosse)"
+      },
+      {
+        "k": "Planungsstand",
+        "v": "Baupläne (A1-Format), Lageplan, Fassaden, Schnitte"
+      },
+      {
+        "k": "Maßstab",
+        "v": "1:100 (Schnitte, Fassaden)"
+      }
+    ],
+    "risiken": [
+      {
+        "level": "orange",
+        "t": "Denkmalschutzauflagen",
+        "d": "Klostergebäude unterliegt Denkmalschutz, mögliche Einschränkungen bei Umbauten."
+      },
+      {
+        "level": "green",
+        "t": "Zentrale Lage",
+        "d": "Gute Anbindung und Infrastruktur in Obernzell."
+      }
+    ],
+    "dokumente": [
+      {
+        "nr": "A00",
+        "name": "Lageplan",
+        "quelle": "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf | Seite 1",
+        "seiten": "1",
+        "status": "ok",
+        "hinweis": null
+      },
+      {
+        "nr": "A01-A05",
+        "name": "Altenheim Gesamt (Kellergeschoss bis 3. OG)",
+        "quelle": "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf | Seiten 3-7",
+        "seiten": "3-7",
+        "status": "ok",
+        "hinweis": null
+      },
+      {
+        "nr": "A06-A10",
+        "name": "Mitteltrakt (Kellergeschoss bis 3. OG)",
+        "quelle": "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf | Seiten 8-12",
+        "seiten": "8-12",
+        "status": "ok",
+        "hinweis": null
+      },
+      {
+        "nr": "A11-A14",
+        "name": "Kloster (Kellergeschoss bis 2. OG)",
+        "quelle": "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf | Seiten 13-15",
+        "seiten": "13-15",
+        "status": "ok",
+        "hinweis": null
+      },
+      {
+        "nr": "S01",
+        "name": "Abschnitte",
+        "quelle": "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf | Seite 16",
+        "seiten": "16",
+        "status": "ok",
+        "hinweis": null
+      },
+      {
+        "nr": "F01-F02",
+        "name": "Fassaden (West, Ost, Nord, Süd)",
+        "quelle": "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf | Seiten 17-18",
+        "seiten": "17-18",
+        "status": "ok",
+        "hinweis": null
+      }
+    ],
+    "lage_info": [
+      {
+        "ico": "location",
+        "t": "Standort",
+        "d": "Das Projekt befindet sich in Obernzell, Bayern, am Klosterweg. Die Lage ist zentral und gut angebunden."
+      },
+      {
+        "ico": "infrastructure",
+        "t": "Infrastruktur",
+        "d": "Nähere Angaben zur Infrastruktur (ÖPNV, Einkaufsmöglichkeiten, medizinische Versorgung) sind nicht enthalten, aber aufgrund der zentralen Lage in Obernzell als gut anzunehmen."
+      },
+      {
+        "ico": "environment",
+        "t": "Umgebung",
+        "d": "Das Grundstück umfasst ein bestehendes Klostergebäude sowie Erweiterungsflächen für das Altenheim. Die Umgebung ist geprägt von historischer Bausubstanz."
+      }
+    ],
+    "konzept_architektur": [
+      {
+        "icon": "building",
+        "h": "Gebäudestruktur",
+        "p": [
+          "Drei Gebäudeteile: Altenheim (4 Geschosse), Mitteltrakt (4 Geschosse), Kloster (3 Geschosse).",
+          "Kellergeschoss in allen Gebäudeteilen vorhanden.",
+          "Moderne Erweiterung (Altenheim und Mitteltrakt) mit Anbindung an historisches Klostergebäude."
+        ]
+      },
+      {
+        "icon": "design",
+        "h": "Gestaltung",
+        "p": [
+          "Fassadenplanung für alle Himmelsrichtungen (West, Ost, Nord, Süd) vorhanden.",
+          "Schnitte in Maßstab 1:100 dokumentiert.",
+          "Wahrung des historischen Charakters des Klostergebäudes bei gleichzeitiger Integration moderner Pflegeeinrichtungen."
+        ]
+      },
+      {
+        "icon": "functionality",
+        "h": "Nutzungskonzept",
+        "p": [
+          "Altenheim mit mehreren Geschossen für stationäre Pflege.",
+          "Mögliche Nutzung des Klostergebäudes für Gemeinschaftsflächen, Verwaltung oder besondere Wohnformen.",
+          "Keine detaillierten Raumprogramme in den Plänen enthalten."
+        ]
+      }
+    ],
+    "konzept_mobilitaet": [
+      {
+        "t": "Verkehrsanbindung",
+        "d": "Keine spezifischen Angaben zur Verkehrsanbindung. Aufgrund der zentralen Lage in Obernzell ist von einer guten Erschließung durch den Individualverkehr auszugehen. ÖPNV-Anbindung nicht dokumentiert."
+      },
+      {
+        "t": "Parkplätze und Erschließung",
+        "d": "Keine Angaben zu Parkplätzen oder barrierefreier Erschließung in den vorliegenden Plänen enthalten."
+      }
+    ],
+    "methodik": "Verarbeitet wurde die Datei '02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf' (Seiten 1-18). Es wurden ausschließlich architektonische Pläne (Lageplan, Grundrisse, Schnitte, Fassaden) analysiert. Keine finanziellen Kennzahlen, Flächenangaben oder Kostenberechnungen in den Plänen enthalten.",
+    "_meta_raw": {
+      "projekt_name": "Altenheim Gesamt mit Mitteltrakt und Kloster",
+      "ort": "Obernzell",
+      "bundesland": "Bayern",
+      "architekt": null,
+      "datum_mappe": "06.11.2025",
+      "objekttyp": "Altenheim / Pflegeeinrichtung",
+      "projektstatus": null,
+      "untertitel": null
+    }
   }
 ]
