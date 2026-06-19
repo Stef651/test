@@ -763,5 +763,297 @@
       "projektstatus": null,
       "untertitel": null
     }
+  },
+  {
+    "id": "cavallino",
+    "token": "rf-cavallino-2026",
+    "ordner_name": "Cavallino",
+    "ordner_path": "/#thirdskin/5001 datenräume automation braun/automation projektmanagement und dynamic dashboarding/cavallino",
+    "generiert_am": "2026-06-19T22:36:43.194Z",
+    "quelle_dateien": [
+      "2021.07.27 - QPA Domus_Sondrio Rinnova_ACCETTAZIONE SIGNED.pdf"
+    ],
+    "extraction_version": "3.0",
+    "name": "Domus S.r.l. - Zentrum für Seniorensozialdienste",
+    "untertitel": "Akquisition und Umnutzung einer Immobilie für Seniorenpflege und betreutes Wohnen",
+    "ort": "Cavallino-Treporti (VE), Italien",
+    "architekt": null,
+    "status": "Vereinbarung unter aufschiebenden Bedingungen",
+    "datum": "2021-07-27",
+    "quelle": "2021.07.27 - QPA Domus_Sondrio Rinnova_ACCETTAZIONE SIGNED.pdf",
+    "chips": [
+      {
+        "text": "100 Plätze RSA",
+        "style": "green"
+      },
+      {
+        "text": "60 betreute Wohnungen",
+        "style": "green"
+      },
+      {
+        "text": "Bedingte Vereinbarung",
+        "style": "gold"
+      },
+      {
+        "text": "Potenzielle Steuerlast 115.000 €",
+        "style": "red"
+      },
+      {
+        "text": "Änderung der Nutzungsart erforderlich",
+        "style": "blue"
+      }
+    ],
+    "kpis": [
+      {
+        "lab": "Verkaufserlös (GDV)",
+        "val": "7.050.000 €",
+        "sub": "Enterprise Value",
+        "color": "c-green"
+      },
+      {
+        "lab": "Grundstückswert",
+        "val": "7.050.000 €",
+        "sub": "Enterprise Value (indirekt)",
+        "color": "c-text"
+      },
+      {
+        "lab": "Baukosten",
+        "val": null,
+        "sub": "Nicht spezifiziert",
+        "color": "c-text"
+      },
+      {
+        "lab": "Marge/Entwicklerertrag",
+        "val": null,
+        "sub": "Nicht berechenbar",
+        "color": "c-text"
+      },
+      {
+        "lab": "Wohnfläche",
+        "val": null,
+        "sub": "Nicht spezifiziert",
+        "color": "c-text"
+      },
+      {
+        "lab": "Verkaufspreis/m²",
+        "val": null,
+        "sub": "Nicht anwendbar",
+        "color": "c-text"
+      }
+    ],
+    "kosten": [
+      {
+        "lab": "Verkaufserlös (GDV)",
+        "sub": "Enterprise Value",
+        "val": 7050000,
+        "pct": 100,
+        "color": "#4a9898"
+      },
+      {
+        "lab": "Kosten Architektenansatz",
+        "sub": "Nicht spezifiziert",
+        "val": null,
+        "pct": 0,
+        "color": "#c8a04e"
+      },
+      {
+        "lab": "Kosten Investoren-Vollkosten",
+        "sub": "Preis nach PFN-Anpassung",
+        "val": 6841136.84,
+        "pct": 97.04,
+        "color": "#9478ac"
+      }
+    ],
+    "flaechen": {
+      "bgf": null,
+      "items": []
+    },
+    "baukosten_detail": [],
+    "eckdaten": [
+      {
+        "k": "Projektgesellschaft",
+        "v": "Domus S.r.l."
+      },
+      {
+        "k": "Standort",
+        "v": "Via Fausta 274, 30013 Cavallino-Treporti (VE), Italien"
+      },
+      {
+        "k": "Katasterangaben",
+        "v": "Foglio 21, mappale 45, sub 2, 3 (CAT B/1), sub 8, 9 (CAT C/2)"
+      },
+      {
+        "k": "Aktuelle Nutzung",
+        "v": "Ehemaliges Ferienhaus 'Regina Mundi' (derzeit keine aktive Nutzung)"
+      },
+      {
+        "k": "Geplante Nutzung",
+        "v": "100 Pflegeplätze (RSA) + 60 betreute Wohnungen für Senioren"
+      },
+      {
+        "k": "Kaufpreis (provisorisch)",
+        "v": "6.841.136,84 € (Enterprise Value 7.050.000 € - PFN 208.863,16 €)"
+      },
+      {
+        "k": "Anzahlung",
+        "v": "200.000 € (treuhänderisch hinterlegt)"
+      },
+      {
+        "k": "Garantierückbehalt",
+        "v": "400.000 € (24-60 Monate nach Vollzug)"
+      },
+      {
+        "k": "Vollzugsdatum (geplant)",
+        "v": "29. Oktober 2021 (abhängig von Bedingungen)"
+      },
+      {
+        "k": "Verkäufer",
+        "v": "Diözese von Vicenza"
+      },
+      {
+        "k": "Käufer",
+        "v": "Sondrio Rinnova S.r.l. (Korian-Gruppe)"
+      },
+      {
+        "k": "Nettofinanzposition (PFN)",
+        "v": "-208.863,16 € (Stand: 30.06.2021)"
+      },
+      {
+        "k": "Franchise für Garantiefälle",
+        "v": "5.000 €"
+      },
+      {
+        "k": "Maximale Garantiesumme",
+        "v": "6.841.136,84 € (entspricht Kaufpreis)"
+      }
+    ],
+    "risiken": [
+      {
+        "level": "red",
+        "t": "Ausstehende Nutzungsänderung",
+        "d": "Die Umnutzung der Immobilie ist abhängig von der Genehmigung des Abkommens mit der Gemeinde Cavallino-Treporti. Ohne diese Genehmigung ist das Projekt nicht durchführbar."
+      },
+      {
+        "level": "red",
+        "t": "Steuerrisiko",
+        "d": "Ungeklärte Steuerposition (Interpello bei der Steuerbehörde) mit potenzieller Belastung von 115.000 € bei Ablehnung der Befreiung von der 'Gesellschaft für steuerliche Zwecke'-Regelung."
+      },
+      {
+        "level": "orange",
+        "t": "Bedingte Vereinbarung",
+        "d": "Der Kaufvertrag steht unter aufschiebenden Bedingungen (Genehmigungen, Nutzungsänderung). Bei Nichteintritt der Bedingungen wird die Anzahlung zurückerstattet, aber das Projekt scheitert."
+      },
+      {
+        "level": "orange",
+        "t": "Unklare Baukosten",
+        "d": "Die Projektmappe enthält keine Angaben zu geplanten Baukosten oder Flächenangaben für den Umbau. Eine wirtschaftliche Bewertung ist ohne diese Daten nicht möglich."
+      },
+      {
+        "level": "green",
+        "t": "Garantierückbehalt",
+        "d": "Ein Rückbehalt von 400.000 € sichert Ansprüche des Käufers für 24-60 Monate nach Vollzug ab und reduziert das Risiko von Nachträgen."
+      }
+    ],
+    "dokumente": [
+      {
+        "nr": "1",
+        "name": "2021.07.27 - QPA Domus_Sondrio Rinnova_ACCETTAZIONE SIGNED.pdf",
+        "quelle": "Vertragsdokument",
+        "seiten": "1-33",
+        "status": "ok",
+        "hinweis": "Enthält den Rahmenvertrag, Anlagen und Planimetrien. Widersprüchliche Seitenangaben in den Plänen (z. B. Seite 4 mit mehreren Versionen)."
+      },
+      {
+        "nr": "2",
+        "name": "Allegato B - Planimetria Immobile",
+        "quelle": "Anlage zum Vertrag",
+        "seiten": "17-26",
+        "status": "ok",
+        "hinweis": "Katasterpläne der Immobilie. Keine detaillierten Flächenangaben oder Nutzungsaufteilungen für das geplante Projekt."
+      },
+      {
+        "nr": "3",
+        "name": "Allegato 3.1 - Situazione patrimoniale contabile di Domus al 30.06.2021",
+        "quelle": "Anlage zum Vertrag",
+        "seiten": "28-29",
+        "status": "ok",
+        "hinweis": "Finanzielle Ausgangslage der Domus S.r.l. mit negativer Nettofinanzposition (PFN)."
+      },
+      {
+        "nr": "4",
+        "name": "Allegato F - Potenzielle Passiva",
+        "quelle": "Anlage zum Vertrag",
+        "seiten": "27",
+        "status": "ok",
+        "hinweis": "Auflistung offener Risikopositionen (Steuerrisiko, professionelle Honorare)."
+      }
+    ],
+    "lage_info": [
+      {
+        "ico": "location_city",
+        "t": "Standort in Küstennähe",
+        "d": "Die Immobilie liegt in Cavallino-Treporti (VE), einer Gemeinde in der Lagune von Venedig mit touristischem Charakter. Die Umgebung ist geprägt von Ferienhäusern und touristischen Einrichtungen."
+      },
+      {
+        "ico": "directions_car",
+        "t": "Verkehrsanbindung",
+        "d": "Die Via Fausta ist eine lokale Verbindungsstraße. Die Anbindung an den öffentlichen Nahverkehr oder Hauptverkehrsachsen ist nicht dokumentiert, aber typisch für die Region sind Busverbindungen und Wassertaxis."
+      },
+      {
+        "ico": "nature_people",
+        "t": "Sozialinfrastruktur",
+        "d": "Die Gemeinde Cavallino-Treporti verfügt über eine grundlegende Infrastruktur für Tourismus, aber keine spezifische Senioreninfrastruktur. Das geplante Projekt würde eine Lücke in der regionalen Versorgung schließen."
+      },
+      {
+        "ico": "gavel",
+        "t": "Genehmigungsrisiko",
+        "d": "Die Umsetzung des Projekts ist abhängig von der Genehmigung des Abkommens mit der Gemeinde zur Nutzungsänderung. Die politische Unterstützung für das Projekt ist nicht dokumentiert."
+      }
+    ],
+    "konzept_architektur": [
+      {
+        "icon": "elderly",
+        "h": "Nutzungskonzept für Senioren",
+        "p": [
+          "Umnutzung des bestehenden Gebäudes (ehemaliges Ferienhaus 'Regina Mundi') zu einem Zentrum für Seniorensozialdienste.",
+          "Geplante Kapazitäten: 100 Pflegeplätze (RSA) und 60 betreute Wohnungen für autosuffiziente oder teilweise autosuffiziente Senioren.",
+          "Keine detaillierten Angaben zu Raumprogrammen, Flächenaufteilungen oder architektonischen Anpassungen für Barrierefreiheit."
+        ]
+      },
+      {
+        "icon": "handyman",
+        "h": "Umbau und Anpassungen",
+        "p": [
+          "Erforderliche Änderungen der Immobilie zur Erfüllung der Anforderungen für Pflegeeinrichtungen (z. B. Brandschutz, Barrierefreiheit, Hygienevorschriften).",
+          "Neubau von 60 betreuten Wohnungen auf dem Grundstück (Flächenangaben fehlen).",
+          "Keine Angaben zu geplanten Baukosten, Zeitplänen oder architektonischen Konzepten."
+        ]
+      },
+      {
+        "icon": "account_balance",
+        "h": "Rechtliche Rahmenbedingungen",
+        "p": [
+          "Abhängigkeit von der Genehmigung des Abkommens mit der Gemeinde Cavallino-Treporti zur Nutzungsänderung (Art. 6 Legge Regionale 11/2004).",
+          "Keine Hinweise auf bestehende Baugenehmigungen oder Machbarkeitsstudien."
+        ]
+      }
+    ],
+    "konzept_mobilitaet": [
+      {
+        "t": "Mobilitätskonzept nicht dokumentiert",
+        "d": "Die Projektmappe enthält keine Angaben zu Mobilitätskonzepten, Parkplätzen, Anbindungen an den öffentlichen Nahverkehr oder barrierefreien Zugängen. Dies ist für eine Senioreneinrichtung kritisch, aber nicht spezifiziert."
+      }
+    ],
+    "methodik": "Verarbeitet wurde die Datei '2021.07.27 - QPA Domus_Sondrio Rinnova_ACCETTAZIONE SIGNED.pdf' (Seiten 1-33). Widersprüche: Mehrfachnennung von 'Seite 4' in den Plänen (verschiedene Inhalte). Keine Baukosten- oder Flächenangaben trotz Projektumfang. Finanzielle Kennzahlen basieren auf dem Enterprise Value und der Nettofinanzposition (PFN) der Domus S.r.l.",
+    "_meta_raw": {
+      "projekt_name": "Domus S.r.l. - Zentrum für Seniorensozialdienste",
+      "ort": "Cavallino-Treporti",
+      "bundesland": "Veneto",
+      "architekt": null,
+      "datum_mappe": "2021-07-27",
+      "objekttyp": "Sozialimmobilie (RSA und betreutes Wohnen)",
+      "projektstatus": "Vereinbarung unter aufschiebenden Bedingungen",
+      "untertitel": "Akquisition des 100%igen Anteils an Domus S.r.l. zur Umnutzung der Immobilie in ein Zentrum für Seniorensozialdienste"
+    }
   }
 ]
