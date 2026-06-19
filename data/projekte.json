@@ -356,5 +356,172 @@
       "projektstatus": "Wettbewerbssieger, Bauantrag in Vorbereitung",
       "untertitel": "An der Burg Alzenau"
     }
+  },
+  {
+    "id": "test-projekt-und-dashboard-2",
+    "token": "rf-test-projekt-2-2026",
+    "ordner_name": "Test Projekt und Dashboard 2",
+    "ordner_path": "/#thirdskin/5001 datenräume automation braun/automation projektmanagement und dynamic dashboarding/test projekt und dashboard 2",
+    "generiert_am": "2026-06-19T22:17:18.893Z",
+    "quelle_dateien": [
+      "Altlastenauskunft.pdf"
+    ],
+    "extraction_version": "3.0",
+    "name": "Test Projekt und Dashboard 2",
+    "untertitel": "",
+    "ort": "Düsseldorf",
+    "architekt": null,
+    "status": "ok",
+    "datum": "2026-02-12",
+    "quelle": "Landeshauptstadt Düsseldorf, Amt für Umwelt- und Verbraucherschutz",
+    "chips": [
+      {
+        "text": "Keine Altablagerung",
+        "style": "green"
+      },
+      {
+        "text": "Kein Altstandort bekannt",
+        "style": "green"
+      },
+      {
+        "text": "CKW-Grundwasserverunreinigung in Nähe",
+        "style": "orange"
+      }
+    ],
+    "kpis": [
+      {
+        "lab": "Verkaufserlös (GDV)",
+        "val": null,
+        "sub": null,
+        "color": "c-text"
+      },
+      {
+        "lab": "Grundstückswert",
+        "val": null,
+        "sub": null,
+        "color": "c-text"
+      },
+      {
+        "lab": "Baukosten",
+        "val": null,
+        "sub": null,
+        "color": "c-text"
+      },
+      {
+        "lab": "Marge/Entwicklerertrag",
+        "val": null,
+        "sub": null,
+        "color": "c-text"
+      },
+      {
+        "lab": "Wohnfläche",
+        "val": null,
+        "sub": null,
+        "color": "c-text"
+      },
+      {
+        "lab": "Verkaufspreis/m²",
+        "val": null,
+        "sub": null,
+        "color": "c-text"
+      }
+    ],
+    "kosten": [
+      {
+        "lab": "Verkaufserlös (GDV)",
+        "sub": null,
+        "val": null,
+        "pct": null,
+        "color": null
+      },
+      {
+        "lab": "Kosten Architektenansatz",
+        "sub": null,
+        "val": null,
+        "pct": null,
+        "color": null
+      },
+      {
+        "lab": "Kosten Investoren-Vollkosten",
+        "sub": null,
+        "val": null,
+        "pct": null,
+        "color": null
+      }
+    ],
+    "flaechen": {
+      "bgf": null,
+      "items": []
+    },
+    "baukosten_detail": [],
+    "eckdaten": [
+      {
+        "k": "Grundstück",
+        "v": "Gemarkung Flingern, Flur 21, Flurstück 118, Hoffeldstraße 93"
+      },
+      {
+        "k": "Altlastenstatus",
+        "v": "Keine Altablagerung, kein Altstandort bekannt"
+      },
+      {
+        "k": "Grundwasser",
+        "v": "CKW-Verunreinigung in Nähe (keine unmittelbare Gefährdung, gesonderte Betrachtung bei Bauwasserhaltungen erforderlich)"
+      },
+      {
+        "k": "Auskunftsdatum",
+        "v": "12.02.2026"
+      },
+      {
+        "k": "Auskunftsgebühren",
+        "v": "Gebührenpflichtig"
+      }
+    ],
+    "risiken": [
+      {
+        "level": "orange",
+        "t": "Grundwasserverunreinigung mit CKW",
+        "d": "Keine unmittelbare Gefährdung, aber gesonderte wasserwirtschaftliche Betrachtungen bei Baumaßnahmen mit Grundwasserentnahmen erforderlich."
+      }
+    ],
+    "dokumente": [
+      {
+        "nr": "1",
+        "name": "Altlastenauskunft.pdf",
+        "quelle": "Landeshauptstadt Düsseldorf, Amt für Umwelt- und Verbraucherschutz",
+        "seiten": "2",
+        "status": "ok",
+        "hinweis": "Auskunft zu Altablagerungen, Altstandorten und Grundwasserverunreinigung (CKW)."
+      }
+    ],
+    "lage_info": [
+      {
+        "ico": "location",
+        "t": "Lage und Umgebung",
+        "d": "Grundstück in Düsseldorf-Flingern, Nähe zu einer großflächigen Grundwasserverunreinigung mit chlorierten Kohlenwasserstoffen (CKW). Öffentliche Verkehrsanbindung über Bus, Bahn und U-Bahn (Haltestellen: Auf 'm Hennekamp, Feuerbachstraße, Uni-Kliniken)."
+      },
+      {
+        "ico": "warning",
+        "t": "Umweltbedingungen",
+        "d": "Keine Altlasten oder Altstandorte bekannt, jedoch Grundwasserverunreinigung in der Nähe, die bei Baumaßnahmen mit Grundwasserentnahmen zusätzliche wasserwirtschaftliche Prüfungen erfordert."
+      }
+    ],
+    "konzept_architektur": [],
+    "konzept_mobilitaet": [
+      {
+        "t": "Öffentliche Verkehrsanbindung",
+        "d": "Gute Anbindung an den öffentlichen Nahverkehr mit Bus-, Bahn- und U-Bahn-Haltestellen in unmittelbarer Nähe (Auf 'm Hennekamp, Feuerbachstraße, Uni-Kliniken)."
+      }
+    ],
+    "methodik": "Verarbeitet wurde die Datei 'Altlastenauskunft.pdf' (Seiten 1-2).",
+    "_meta_raw": {
+      "projekt_name": null,
+      "ort": "Düsseldorf",
+      "bundesland": "Nordrhein-Westfalen",
+      "architekt": null,
+      "datum_mappe": "2026-02-12",
+      "objekttyp": null,
+      "projektstatus": null,
+      "untertitel": null
+    }
   }
 ]
