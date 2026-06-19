@@ -1,7 +1,7 @@
 [
   {
     "id": "test-projekt-und-dashboard-1",
-    "token": "rf-test-projekt-un-2026",
+    "token": "rf-test-projekt-1-2026",
     "ordner_name": "Test Projekt und Dashboard 1",
     "ordner_path": "/#thirdskin/5001 datenräume automation braun/automation projektmanagement und dynamic dashboarding/test projekt und dashboard 1",
     "generiert_am": "2026-06-17T16:36:14.835Z",
@@ -179,68 +179,18 @@
       {
         "k": "Stellplätze",
         "v": "51 (ebenerdig)"
-      },
-      {
-        "k": "Fahrradabstellplätze",
-        "v": "Ausreichend, überdacht"
-      },
-      {
-        "k": "E-Ladestationen",
-        "v": "Vorhanden"
-      },
-      {
-        "k": "Carsharing",
-        "v": "Elektrofahrzeuge"
-      },
-      {
-        "k": "Bauweise",
-        "v": "Massivbau, Holzbau, Modulelemente"
-      },
-      {
-        "k": "Dachbegrünung",
-        "v": "Ja, inkl. Photovoltaik-Option"
-      },
-      {
-        "k": "Barrierefreiheit",
-        "v": "Alle Wohnungen"
-      },
-      {
-        "k": "Gewerbeflächen",
-        "v": "850 m² (Apotheke, Arztpraxen, Gastronomie)"
-      },
-      {
-        "k": "Kaufkraftkennziffer",
-        "v": "124,1"
-      },
-      {
-        "k": "Fahrzeit Frankfurt a.M.",
-        "v": "40 Minuten (Auto)"
-      },
-      {
-        "k": "ÖPNV-Anbindung",
-        "v": "Kahlgrundbahn, Busbahnhof (4 Min. Fußweg)"
       }
     ],
     "risiken": [
       {
         "level": "orange",
         "t": "Bodenbeschaffenheit",
-        "d": "Felsiger Untergrund könnte Baukosten erhöhen (Tiefgarage verworfen)."
+        "d": "Felsiger Untergrund könnte Baukosten erhöhen."
       },
       {
         "level": "green",
         "t": "Stadtunterstützung",
-        "d": "Schnelle Genehmigung und Befreiungen von Bebauungsplan zugesichert."
-      },
-      {
-        "level": "orange",
-        "t": "Nachfrage Risiko",
-        "d": "Hoher Bedarf an altersgerechtem Wohnen, aber Marktvolatilität möglich."
-      },
-      {
-        "level": "green",
-        "t": "Flächenreserve",
-        "d": "GFZ noch nicht ausgeschöpft (2,3 < 3,0), Erweiterungsmöglichkeit."
+        "d": "Schnelle Genehmigung zugesichert."
       }
     ],
     "dokumente": [
@@ -250,103 +200,17 @@
         "quelle": "PDF",
         "seiten": "1–21",
         "status": "ok",
-        "hinweis": "Enthält Projektbeschreibung, Architekturkonzept, Mobilitätskonzept, Zahlen und Fakten."
+        "hinweis": ""
       }
     ],
-    "lage_info": [
-      {
-        "ico": "location-city",
-        "t": "Zentrale Innenstadtlage",
-        "d": "Direkt in Alzenau, fußläufig zur Burg (1 Min.), Marktplatz (1 Min.), Generationenpark (4 Min.) und Supermarkt (3 Min.)."
-      },
-      {
-        "ico": "directions-transit",
-        "t": "Exzellente ÖPNV-Anbindung",
-        "d": "Kahlgrundbahn (4 Min.), Busbahnhof (gegenüber), Anbindung an RMV (Hanau/Frankfurt). Autobahnanschlüsse (A45, A3, A66) in 10–15 km Entfernung."
-      },
-      {
-        "ico": "local-hospital",
-        "t": "Infrastruktur",
-        "d": "Schulen, Internat, Kindergärten, medizinische Versorgung, Apotheken, Einkaufsmöglichkeiten und Wochenmarkt in unmittelbarer Nähe."
-      },
-      {
-        "ico": "nature-people",
-        "t": "Freizeit & Kultur",
-        "d": "Hallen-/Freibad, Sportanlagen, Rad-/Wanderwege, Bibliothek, Musikschule, Kleinkunstbühne."
-      },
-      {
-        "ico": "business-center",
-        "t": "Wirtschaftsstandort",
-        "d": "Technologie-Standort im Grünen mit Unternehmen aus Umwelttechnik, Elektronik und Maschinenbau."
-      }
-    ],
-    "konzept_architektur": [
-      {
-        "icon": "account-balance",
-        "h": "Städtebauliche Einbindung",
-        "p": [
-          "Drei Häuser auf Sockel in Hanglage, Maßstab an ortsübliche Bebauung angepasst.",
-          "Hofgärten mit Grünflächen zwischen Gebäuden, Wohnungen öffnen sich über Loggien/Glasfassaden.",
-          "Fassaden: Holzkonstruktion (Innenhöfe), verputzt/farbig (Stadtseite, bayerischer Barock).",
-          "Arkadengang im Sockelgeschoss als Vorbereich für Café/Gewerbe."
-        ]
-      },
-      {
-        "icon": "home-modern",
-        "h": "Wohnkonzept",
-        "p": [
-          "Barrierefreie Wohnungen (60–90 m²), Aufzüge und Balkone/Loggien für alle Einheiten.",
-          "Gemeinschaftsflächen für betreutes Wohnen im Sockelgeschoss.",
-          "Nachhaltige Bauweise: Massivbau, Holzbau, Modulelemente (kürzere Bauzeit, gesundes Raumklima)."
-        ]
-      },
-      {
-        "icon": "nature",
-        "h": "Grün- und Umweltkonzept",
-        "p": [
-          "Begrünte Höfe, Dächer und Terrassen für besseres Mikroklima.",
-          "Vertikalbegrünter Sichtschutz zur Bahnstrecke, Baumreihe entlang der Straße.",
-          "Photovoltaik-Option auf Dachflächen."
-        ]
-      }
-    ],
-    "konzept_mobilitaet": [
-      {
-        "t": "ÖPNV-Anbindung",
-        "d": "Kahlgrundbahn (4 Min. Fußweg) und Busbahnhof (gegenüber) ermöglichen Anbindung an RMV (Hanau/Frankfurt) und regionale Ziele (Aschaffenburg, Kahl)."
-      },
-      {
-        "t": "Fahrradinfrastruktur",
-        "d": "Überdachte Fahrradabstellplätze und Bike-Station im Untergeschoss für praktische Nutzung und Leihangebote."
-      },
-      {
-        "t": "Carsharing & E-Mobilität",
-        "d": "Carsharing-Station mit Elektrofahrzeugen (z. B. mobileeee.de) und Ladepunkte für E-Autos an Parkplätzen."
-      },
-      {
-        "t": "Ebenerdige Parkgarage",
-        "d": "Kostengünstige, barrierefreie Lösung ohne Tiefbau, natürliche Belüftung, geringere Wartungskosten und höhere Sicherheit."
-      },
-      {
-        "t": "Fußläufige Erreichbarkeit",
-        "d": "Alle wesentlichen Einrichtungen (Supermärkte, Arztpraxen, Freizeitangebote) sind zu Fuß, per Fahrrad oder E-Roller erreichbar."
-      }
-    ],
-    "methodik": "Verarbeitet wurde die Datei 'Alzenau-Mappe-aktuell-05-05-2026-Landes-korrekt.pdf' (Seiten 1–21). Widersprüche: Keine. Fehlende Werte (z. B. genaue Wohneinheitenanzahl) wurden als 'null' oder geschätzt gekennzeichnet.",
-    "_meta_raw": {
-      "projekt_name": "Wohnen an der Burg",
-      "ort": "Alzenau",
-      "bundesland": "Bayern",
-      "architekt": "Michael Landes Architekt",
-      "datum_mappe": "2026-05-05",
-      "objekttyp": "Wohnanlage mit Service (Betreutes Wohnen) und Gewerbeflächen",
-      "projektstatus": "Wettbewerbsgewinner, Bauantrag in Vorbereitung",
-      "untertitel": "An der Burg Alzenau"
-    }
+    "lage_info": [],
+    "konzept_architektur": [],
+    "konzept_mobilitaet": [],
+    "methodik": "Verarbeitet: Alzenau-Mappe-aktuell-05-05-2026-Landes-korrekt.pdf"
   },
   {
     "id": "test-projekt-und-dashboard-2",
-    "token": "rf-test-projekt-un-2026",
+    "token": "rf-test-projekt-2-2026",
     "ordner_name": "Test Projekt und Dashboard 2",
     "ordner_path": "/#thirdskin/5001 datenräume automation braun/automation projektmanagement und dynamic dashboarding/test projekt und dashboard 2",
     "generiert_am": "2026-06-17T16:43:00.696Z",
@@ -369,18 +233,6 @@
       {
         "text": "Genehmigungsfrei §250 BauGB",
         "style": "green"
-      },
-      {
-        "text": "Mietspiegel +6,4 % YoY",
-        "style": "green"
-      },
-      {
-        "text": "Energieklasse C",
-        "style": "red"
-      },
-      {
-        "text": "24 Monate Projektlaufzeit",
-        "style": "blue"
       }
     ],
     "kpis": [
@@ -438,7 +290,7 @@
       },
       {
         "lab": "Kosten (Investoren-Vollkosten)",
-        "sub": "(inkl. Finanzierung, Steuern)",
+        "sub": "(inkl. Finanzierung)",
         "val": 2550000,
         "pct": 94.8,
         "color": "#6b84c4"
@@ -461,33 +313,7 @@
         }
       ]
     },
-    "baukosten_detail": [
-      {
-        "pos": "EG-Umwandlung (Gewerbe → 2 Wohnungen)",
-        "formel": "277 T€",
-        "wert": 277000
-      },
-      {
-        "pos": "WEG-Aufteilung (Notar, Pläne)",
-        "formel": "37 T€",
-        "wert": 37000
-      },
-      {
-        "pos": "Nachgenehmigung (Bauantrag, Nachweise)",
-        "formel": "15 T€",
-        "wert": 15000
-      },
-      {
-        "pos": "Stellplatzablöse (2 SP × 13,5 T€)",
-        "formel": "27 T€",
-        "wert": 27000
-      },
-      {
-        "pos": "Mietentwicklung (Modernisierungsanreize)",
-        "formel": "21 T€",
-        "wert": 21000
-      }
-    ],
+    "baukosten_detail": [],
     "eckdaten": [
       {
         "k": "Baujahr",
@@ -498,73 +324,24 @@
         "v": "C"
       },
       {
-        "k": "Bestandseinheiten",
-        "v": "11 Wohnungen + 1 Gewerbe (138 m²)"
-      },
-      {
         "k": "Zielzustand",
-        "v": "13 Wohnungen (708 m² Wohnfläche)"
-      },
-      {
-        "k": "Projektlaufzeit",
-        "v": "24 Monate"
-      },
-      {
-        "k": "LTC (Loan-to-Cost)",
-        "v": "70 %"
+        "v": "13 Wohnungen (708 m²)"
       },
       {
         "k": "EK-ROI (p.a.)",
-        "v": "30 % (über 24 Monate)"
-      },
-      {
-        "k": "Mietspiegel Flingern",
-        "v": "12,96 €/m² (SOLL)"
-      },
-      {
-        "k": "Bestandsmiete Ø",
-        "v": "9,12 €/m² (IST)"
-      },
-      {
-        "k": "Hebepotenzial Miete",
-        "v": "+204 % (83.688 € p.a.)"
+        "v": "30 %"
       }
     ],
     "risiken": [
       {
         "level": "red",
         "t": "§250 BauGB-Verschärfung NRW",
-        "d": "Aufteilungsantrag muss vor 31.12.2026 gestellt werden (§878 BGB analog)."
-      },
-      {
-        "level": "orange",
-        "t": "Marktverschiebung Verkaufspreise",
-        "d": "Konservative Kalkulation mit 3.800 €/m² Ø (Sicherheitspuffer 8 %)."
-      },
-      {
-        "level": "orange",
-        "t": "Bauverzögerung EG-Umwandlung",
-        "d": "Vorab-Bauvoranfrage und Festpreis-Generalunternehmer vorgesehen."
-      },
-      {
-        "level": "orange",
-        "t": "Idziak-Bestandsmieter (1993)",
-        "d": "32-jähriges Mietverhältnis, praktisch unkündbar (§574 BGB). Einheit vermietet verkauft, Discount einkalkuliert."
-      },
-      {
-        "level": "orange",
-        "t": "Mieter-Vorkaufsrecht §577 BGB",
-        "d": "Erwartung 0–2 Käufe, Abfindungen einkalkuliert."
-      },
-      {
-        "level": "green",
-        "t": "Marktabsorption 24 Monate",
-        "d": "Vor-Reservierungen vor Vermarktungsstart geplant."
+        "d": "Aufteilungsantrag vor 31.12.2026."
       },
       {
         "level": "green",
         "t": "Genehmigungsfreie Aufteilung",
-        "d": "NRW-Rechtslage aktuell genehmigungsfrei (§250 BauGB)."
+        "d": "NRW aktuell genehmigungsfrei."
       }
     ],
     "dokumente": [
@@ -577,312 +354,9 @@
         "hinweis": ""
       }
     ],
-    "lage_info": [
-      {
-        "ico": "location",
-        "t": "Lage und Anbindung",
-        "d": "Eckhaus Hoffeldstraße/Austraße in Düsseldorf-Flingern Nord. Etablierter Stadtteil mit starkem Mietwachstum (+6,4 % YoY). Hervorragende ÖPNV-Anbindung und urbane Infrastruktur."
-      },
-      {
-        "ico": "building",
-        "t": "Objektcharakteristik",
-        "d": "Mehrfamilienhaus Baujahr 1927/28 mit zwei Schaufensterfronten (Eckhaus). Energieeffizienzklasse C. Aktuell 11 Wohnungen und 1 Gewerbeeinheit (138 m²)."
-      }
-    ],
-    "konzept_architektur": [
-      {
-        "icon": "merge",
-        "h": "Umwandlung Gewerbe zu Wohnraum",
-        "p": [
-          "EG-Ladenlokal (138 m²) wird in 2 separate Wohnungen à ~69 m² umgewandelt.",
-          "Nutzungsänderung mit eigenständigen Eingängen durch Eckhaus-Lage ermöglicht.",
-          "Bauantrag für Nutzungsänderung erforderlich."
-        ]
-      },
-      {
-        "icon": "split",
-        "h": "WEG-Aufteilung",
-        "p": [
-          "Notarielle Teilungserklärung, Aufteilungsplan und Abgeschlossenheitsbescheinigung für 13 Einheiten.",
-          "Aktuell genehmigungsfrei in NRW (§250 BauGB).",
-          "Fristkritisch: Aufteilungsantrag vor 31.12.2026."
-        ]
-      },
-      {
-        "icon": "checklist",
-        "h": "Nachgenehmigung und Auflagen",
-        "p": [
-          "Bauantrag für Nutzungsänderung mit Lärmschutz-, Brandschutz- und Belichtungsnachweisen.",
-          "Stellplatzablöse für 2 zusätzliche Stellplätze (13,5 T€/SP).",
-          "Modernisierungsmaßnahmen zur Mieterhöhung (Ziel: 11,50 €/m²)."
-        ]
-      }
-    ],
-    "konzept_mobilitaet": [
-      {
-        "t": "ÖPNV-Anbindung",
-        "d": "Hervorragende Anbindung an den öffentlichen Nahverkehr in Düsseldorf-Flingern Nord. Kurze Wege zu U-Bahn, Straßenbahn und Buslinien."
-      },
-      {
-        "t": "Stellplatzregelung",
-        "d": "Stellplatzpflicht nach Düsseldorfer Satzung: 1 Stellplatz pro 100 m² Wohnfläche. Aufgrund begrenzter Grundstücksfläche wird eine Ablöse von 13,5 T€ pro Stellplatz gezahlt (insgesamt 2 Stellplätze für EG-Umwandlung)."
-      }
-    ],
-    "methodik": "Verarbeitet wurde die Datei 'Roomflow_Banken-Teaser_Hoffeldstr93.pdf' (Seiten 1-9). Widersprüche: Keine. Fehlende Werte: Detaillierte Baukostenaufschlüsselung (nur Summen), exakte Wohnflächen pro Einheit, Gutachter-Wertgutachten.",
-    "_meta_raw": {
-      "projekt_name": "Hoffeldstraße 93",
-      "ort": "Düsseldorf-Flingern Nord",
-      "bundesland": "Nordrhein-Westfalen",
-      "architekt": "Roomflow",
-      "datum_mappe": "06/2026",
-      "objekttyp": "Mehrfamilienhaus (Aufteiler-Projekt)",
-      "projektstatus": "Finanzierungsanfrage",
-      "untertitel": "Aufteiler-Konzept in der Düsseldorfer Innenstadt"
-    }
-  },
-  {
-    "id": "test-projekt-und-dashboard-3",
-    "token": "rf-test-projekt-un-2026",
-    "ordner_name": "Test Projekt und Dashboard 3",
-    "ordner_path": "/#thirdskin/5001 datenräume automation braun/automation projektmanagement und dynamic dashboarding/test projekt und dashboard 3",
-    "generiert_am": "2026-06-19T21:43:22.809Z",
-    "quelle_dateien": [
-      "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf"
-    ],
-    "extraction_version": "3.0",
-    "name": "Altenheim Gesamt mit Mitteltrakt und Kloster",
-    "untertitel": "",
-    "ort": "Obernzell",
-    "architekt": null,
-    "status": "unvollständig",
-    "datum": "2025-11-06",
-    "quelle": "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf",
-    "chips": [
-      {
-        "text": "Pflegeeinrichtung",
-        "style": "green"
-      },
-      {
-        "text": "Denkmalschutz (Kloster)",
-        "style": "gold"
-      },
-      {
-        "text": "Mehrgeschossig",
-        "style": "blue"
-      }
-    ],
-    "kpis": [
-      {
-        "lab": "Verkaufserlös (GDV)",
-        "val": null,
-        "sub": null,
-        "color": "c-text"
-      },
-      {
-        "lab": "Grundstückswert",
-        "val": null,
-        "sub": null,
-        "color": "c-text"
-      },
-      {
-        "lab": "Baukosten",
-        "val": null,
-        "sub": null,
-        "color": "c-text"
-      },
-      {
-        "lab": "Marge / Entwicklerertrag",
-        "val": null,
-        "sub": null,
-        "color": "c-text"
-      },
-      {
-        "lab": "Wohnfläche",
-        "val": null,
-        "sub": "m²",
-        "color": "c-text"
-      },
-      {
-        "lab": "Verkaufspreis/m²",
-        "val": null,
-        "sub": "€/m²",
-        "color": "c-text"
-      }
-    ],
-    "kosten": [
-      {
-        "lab": "Verkaufserlös (GDV)",
-        "sub": null,
-        "val": null,
-        "pct": 0,
-        "color": "#4a9898"
-      },
-      {
-        "lab": "Kosten (Architektenansatz)",
-        "sub": null,
-        "val": null,
-        "pct": 0,
-        "color": "#c8a04e"
-      },
-      {
-        "lab": "Kosten (Investoren-Vollkosten)",
-        "sub": null,
-        "val": null,
-        "pct": 0,
-        "color": "#9478ac"
-      }
-    ],
-    "flaechen": {
-      "bgf": null,
-      "items": []
-    },
-    "baukosten_detail": [],
-    "eckdaten": [
-      {
-        "k": "Adresse",
-        "v": "Klosterweg, 94130 Obernzell"
-      },
-      {
-        "k": "Projektbestandteile",
-        "v": "Altenheim Gesamt (4 Geschosse), Mitteltrakt (4 Geschosse), Kloster (3 Geschosse)"
-      },
-      {
-        "k": "Planungsstand",
-        "v": "Baupläne (A1-Format), Lageplan, Fassaden, Schnitte"
-      },
-      {
-        "k": "Maßstab",
-        "v": "1:100 (Schnitte, Fassaden)"
-      }
-    ],
-    "risiken": [
-      {
-        "level": "orange",
-        "t": "Denkmalschutzauflagen",
-        "d": "Klostergebäude unterliegt Denkmalschutz, mögliche Einschränkungen bei Umbauten."
-      },
-      {
-        "level": "green",
-        "t": "Zentrale Lage",
-        "d": "Gute Anbindung und Infrastruktur in Obernzell."
-      }
-    ],
-    "dokumente": [
-      {
-        "nr": "A00",
-        "name": "Lageplan",
-        "quelle": "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf | Seite 1",
-        "seiten": "1",
-        "status": "ok",
-        "hinweis": null
-      },
-      {
-        "nr": "A01-A05",
-        "name": "Altenheim Gesamt (Kellergeschoss bis 3. OG)",
-        "quelle": "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf | Seiten 3-7",
-        "seiten": "3-7",
-        "status": "ok",
-        "hinweis": null
-      },
-      {
-        "nr": "A06-A10",
-        "name": "Mitteltrakt (Kellergeschoss bis 3. OG)",
-        "quelle": "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf | Seiten 8-12",
-        "seiten": "8-12",
-        "status": "ok",
-        "hinweis": null
-      },
-      {
-        "nr": "A11-A14",
-        "name": "Kloster (Kellergeschoss bis 2. OG)",
-        "quelle": "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf | Seiten 13-15",
-        "seiten": "13-15",
-        "status": "ok",
-        "hinweis": null
-      },
-      {
-        "nr": "S01",
-        "name": "Abschnitte",
-        "quelle": "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf | Seite 16",
-        "seiten": "16",
-        "status": "ok",
-        "hinweis": null
-      },
-      {
-        "nr": "F01-F02",
-        "name": "Fassaden (West, Ost, Nord, Süd)",
-        "quelle": "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf | Seiten 17-18",
-        "seiten": "17-18",
-        "status": "ok",
-        "hinweis": null
-      }
-    ],
-    "lage_info": [
-      {
-        "ico": "location",
-        "t": "Standort",
-        "d": "Das Projekt befindet sich in Obernzell, Bayern, am Klosterweg. Die Lage ist zentral und gut angebunden."
-      },
-      {
-        "ico": "infrastructure",
-        "t": "Infrastruktur",
-        "d": "Nähere Angaben zur Infrastruktur (ÖPNV, Einkaufsmöglichkeiten, medizinische Versorgung) sind nicht enthalten, aber aufgrund der zentralen Lage in Obernzell als gut anzunehmen."
-      },
-      {
-        "ico": "environment",
-        "t": "Umgebung",
-        "d": "Das Grundstück umfasst ein bestehendes Klostergebäude sowie Erweiterungsflächen für das Altenheim. Die Umgebung ist geprägt von historischer Bausubstanz."
-      }
-    ],
-    "konzept_architektur": [
-      {
-        "icon": "building",
-        "h": "Gebäudestruktur",
-        "p": [
-          "Drei Gebäudeteile: Altenheim (4 Geschosse), Mitteltrakt (4 Geschosse), Kloster (3 Geschosse).",
-          "Kellergeschoss in allen Gebäudeteilen vorhanden.",
-          "Moderne Erweiterung (Altenheim und Mitteltrakt) mit Anbindung an historisches Klostergebäude."
-        ]
-      },
-      {
-        "icon": "design",
-        "h": "Gestaltung",
-        "p": [
-          "Fassadenplanung für alle Himmelsrichtungen (West, Ost, Nord, Süd) vorhanden.",
-          "Schnitte in Maßstab 1:100 dokumentiert.",
-          "Wahrung des historischen Charakters des Klostergebäudes bei gleichzeitiger Integration moderner Pflegeeinrichtungen."
-        ]
-      },
-      {
-        "icon": "functionality",
-        "h": "Nutzungskonzept",
-        "p": [
-          "Altenheim mit mehreren Geschossen für stationäre Pflege.",
-          "Mögliche Nutzung des Klostergebäudes für Gemeinschaftsflächen, Verwaltung oder besondere Wohnformen.",
-          "Keine detaillierten Raumprogramme in den Plänen enthalten."
-        ]
-      }
-    ],
-    "konzept_mobilitaet": [
-      {
-        "t": "Verkehrsanbindung",
-        "d": "Keine spezifischen Angaben zur Verkehrsanbindung. Aufgrund der zentralen Lage in Obernzell ist von einer guten Erschließung durch den Individualverkehr auszugehen. ÖPNV-Anbindung nicht dokumentiert."
-      },
-      {
-        "t": "Parkplätze und Erschließung",
-        "d": "Keine Angaben zu Parkplätzen oder barrierefreier Erschließung in den vorliegenden Plänen enthalten."
-      }
-    ],
-    "methodik": "Verarbeitet wurde die Datei '02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf' (Seiten 1-18). Es wurden ausschließlich architektonische Pläne (Lageplan, Grundrisse, Schnitte, Fassaden) analysiert. Keine finanziellen Kennzahlen, Flächenangaben oder Kostenberechnungen in den Plänen enthalten.",
-    "_meta_raw": {
-      "projekt_name": "Altenheim Gesamt mit Mitteltrakt und Kloster",
-      "ort": "Obernzell",
-      "bundesland": "Bayern",
-      "architekt": null,
-      "datum_mappe": "06.11.2025",
-      "objekttyp": "Altenheim / Pflegeeinrichtung",
-      "projektstatus": null,
-      "untertitel": null
-    }
+    "lage_info": [],
+    "konzept_architektur": [],
+    "konzept_mobilitaet": [],
+    "methodik": "Verarbeitet: Roomflow_Banken-Teaser_Hoffeldstr93.pdf"
   }
 ]
