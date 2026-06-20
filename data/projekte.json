@@ -764,5 +764,288 @@
         "reason": "Datei zu groß für automatische OCR (0 MB > 40 MB). Bitte manuell prüfen."
       }
     ]
+  },
+  {
+    "id": "test-projekt-und-dashboard-3",
+    "token": "rf-test-projekt-3-2026",
+    "ordner_name": "Test Projekt und Dashboard 3",
+    "ordner_path": "/#thirdskin/5001 datenräume automation braun/automation projektmanagement und dynamic dashboarding/test projekt und dashboard 3",
+    "generiert_am": "2026-06-20T11:47:33.408Z",
+    "quelle_dateien": [
+      "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf",
+      "01 - WOHNEINHEIT - A1 Sheet - 06.11.2025.pdf"
+    ],
+    "extraction_version": "3.0",
+    "name": "Altenheim Gesamt - Klosterweg Obernzell",
+    "untertitel": "Moderne Erweiterung und Sanierung eines historischen Klosterareals",
+    "ort": "Obernzell",
+    "architekt": null,
+    "status": "unvollständig",
+    "datum": "2025-11-06",
+    "quelle": "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf; 01 - WOHNEINHEIT - A1 Sheet - 06.11.2025.pdf",
+    "chips": [
+      {
+        "text": "Historisches Klosterareal",
+        "style": "gold"
+      },
+      {
+        "text": "Mehrgeschossiger Neubau",
+        "style": "green"
+      },
+      {
+        "text": "Barrierefreie Wohnkonzepte",
+        "style": "green"
+      },
+      {
+        "text": "Keine Kostendaten verfügbar",
+        "style": "red"
+      }
+    ],
+    "kpis": [
+      {
+        "lab": "Verkaufserlös (GDV)",
+        "val": null,
+        "sub": null,
+        "color": "c-text"
+      },
+      {
+        "lab": "Grundstückswert",
+        "val": null,
+        "sub": null,
+        "color": "c-text"
+      },
+      {
+        "lab": "Baukosten",
+        "val": null,
+        "sub": null,
+        "color": "c-text"
+      },
+      {
+        "lab": "Marge/Entwicklerertrag",
+        "val": null,
+        "sub": null,
+        "color": "c-text"
+      },
+      {
+        "lab": "Wohnfläche",
+        "val": null,
+        "sub": null,
+        "color": "c-text"
+      },
+      {
+        "lab": "Verkaufspreis/m²",
+        "val": null,
+        "sub": null,
+        "color": "c-text"
+      }
+    ],
+    "kosten": [
+      {
+        "lab": "Verkaufserlös (GDV)",
+        "sub": null,
+        "val": null,
+        "pct": 0,
+        "color": "c-text"
+      },
+      {
+        "lab": "Kosten (Architektenansatz)",
+        "sub": null,
+        "val": null,
+        "pct": 0,
+        "color": "c-text"
+      },
+      {
+        "lab": "Kosten (Investoren-Vollkosten)",
+        "sub": null,
+        "val": null,
+        "pct": 0,
+        "color": "c-text"
+      }
+    ],
+    "flaechen": {
+      "bgf": null,
+      "items": []
+    },
+    "baukosten_detail": [],
+    "eckdaten": [
+      {
+        "k": "Adresse",
+        "v": "Klosterweg 94130 Obernzell"
+      },
+      {
+        "k": "Projektart",
+        "v": "Sanierung und Neubau eines Altenheims"
+      },
+      {
+        "k": "Bauabschnitte",
+        "v": "Altbau (Kloster), Mittelbau, Neubau (Altenheim Gesamt)"
+      },
+      {
+        "k": "Geschosse",
+        "v": "Kellergeschoss bis 3. Obergeschoss (variiert nach Bauabschnitt)"
+      },
+      {
+        "k": "Planungsstand",
+        "v": "Modellpläne (M 1:100)"
+      },
+      {
+        "k": "Fassaden",
+        "v": "West-, Ost-, Nord- und Südfassaden dokumentiert"
+      }
+    ],
+    "risiken": [
+      {
+        "level": "orange",
+        "t": "Fehlende Kostendaten",
+        "d": "Keine Angaben zu Baukosten, Verkaufserlös oder Wirtschaftlichkeitsberechnungen in den Plänen."
+      },
+      {
+        "level": "orange",
+        "t": "Denkmalschutz",
+        "d": "Historisches Klosterareal könnte Denkmalschutzauflagen unterliegen, die Planung und Kosten beeinflussen."
+      },
+      {
+        "level": "green",
+        "t": "Barrierefreie Konzeption",
+        "d": "Altenheimgerechte Planung als Chance für hohe Nutzungsqualität."
+      }
+    ],
+    "dokumente": [
+      {
+        "nr": "A00",
+        "name": "Lageplan",
+        "quelle": "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf | Seite 1",
+        "seiten": "1",
+        "status": "ok",
+        "hinweis": null
+      },
+      {
+        "nr": "A01-A05",
+        "name": "Altenheim Gesamt (Keller- bis 3. Obergeschoss)",
+        "quelle": "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf | Seiten 3-6",
+        "seiten": "3-6",
+        "status": "ok",
+        "hinweis": null
+      },
+      {
+        "nr": "A06-A10",
+        "name": "Mitteltrakt (Keller- bis 3. Obergeschoss)",
+        "quelle": "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf | Seiten 7-9",
+        "seiten": "7-9",
+        "status": "ok",
+        "hinweis": null
+      },
+      {
+        "nr": "A11-A14",
+        "name": "Kloster Gesamt (Keller- bis 2. Obergeschoss)",
+        "quelle": "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf | Seiten 13-15",
+        "seiten": "13-15",
+        "status": "ok",
+        "hinweis": null
+      },
+      {
+        "nr": "S01",
+        "name": "Abschnitte (A-A' bis D-D')",
+        "quelle": "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf | Seite 16",
+        "seiten": "16",
+        "status": "ok",
+        "hinweis": null
+      },
+      {
+        "nr": "F01-F02",
+        "name": "Fassaden (West, Ost, Nord, Süd)",
+        "quelle": "02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf | Seiten 17-18",
+        "seiten": "17-18",
+        "status": "ok",
+        "hinweis": null
+      },
+      {
+        "nr": "Z00-Z03",
+        "name": "Wohneinheiten (Erdgeschoss bis 3. Obergeschoss)",
+        "quelle": "01 - WOHNEINHEIT - A1 Sheet - 06.11.2025.pdf | Seiten 1-4",
+        "seiten": "1-4",
+        "status": "ok",
+        "hinweis": "Keine detaillierten Flächenangaben extrahierbar."
+      }
+    ],
+    "lage_info": [
+      {
+        "ico": "location",
+        "t": "Lage im historischen Kontext",
+        "d": "Das Projekt befindet sich im Klosterweg in Obernzell, Bayern. Die Lage ist geprägt durch ein bestehendes Klosterareal, das saniert und durch einen Neubau erweitert wird. Die Umgebung ist ländlich mit historischer Bausubstanz."
+      },
+      {
+        "ico": "accessibility",
+        "t": "Verkehrsanbindung",
+        "d": "Keine expliziten Angaben zur Verkehrsanbindung in den Plänen. Die Erschließung erfolgt über den Klosterweg."
+      },
+      {
+        "ico": "surroundings",
+        "t": "Umgebungsnutzung",
+        "d": "Das Areal ist eingebettet in eine bestehende Klosteranlage, die vermutlich öffentliche oder halböffentliche Nutzungen (z. B. Kirche, Verwaltung) umfasst. Keine Angaben zu weiteren Nutzungen in der direkten Umgebung."
+      }
+    ],
+    "konzept_architektur": [
+      {
+        "icon": "building",
+        "h": "Bauabschnitte und Struktur",
+        "p": [
+          "Drei Hauptbauabschnitte: Historisches Kloster (KG), Mittelbau (MG) und Neubau (Altenheim Gesamt, AG).",
+          "Kellergeschoss bis 3. Obergeschoss (variiert nach Abschnitt), wobei das Kloster nur bis zum 2. Obergeschoss reicht.",
+          "Moderne Erweiterung des Altbaus mit klarer Trennung der Baukörper, aber gestalterischer Anpassung an den historischen Kontext."
+        ]
+      },
+      {
+        "icon": "floorplan",
+        "h": "Grundrisskonzept",
+        "p": [
+          "Funktionale Trennung der Bereiche: Altenheim (AG), Mittelbau (MG) und Kloster (KG) mit eigenen Erschließungskernen.",
+          "Wiederkehrende Grundrissstrukturen in den Obergeschossen des Altenheims, angepasst an Pflege- und Wohnnutzung.",
+          "Barrierefreie Gestaltung mit breiten Fluren und großzügigen Gemeinschaftsbereichen (vermutet, basierend auf Plangrafik)."
+        ]
+      },
+      {
+        "icon": "facade",
+        "h": "Fassadengestaltung",
+        "p": [
+          "Dokumentation aller vier Fassaden (West, Ost, Nord, Süd) mit detaillierten Ansichten im Maßstab 1:100.",
+          "Moderne Materialien und Fensterformate im Neubau, angelehnt an die Proportionen des historischen Klosters.",
+          "Fassaden des Altbaus werden saniert und in das Gesamtkonzept integriert."
+        ]
+      },
+      {
+        "icon": "sustainability",
+        "h": "Nachhaltigkeit und Barrierefreiheit",
+        "p": [
+          "Keine expliziten Angaben zu Nachhaltigkeitsstandards (z. B. Energieeffizienz, Materialien).",
+          "Barrierefreie Planung als zentrales Konzept für Altenheimnutzung, inklusive Aufzügen und schwellenfreien Übergängen."
+        ]
+      }
+    ],
+    "konzept_mobilitaet": [
+      {
+        "t": "Erschließung und Parken",
+        "d": "Keine detaillierten Angaben zu Parkplätzen, Fahrradstellplätzen oder Anbindung an ÖPNV. Die Erschließung erfolgt über den Klosterweg, der als Hauptzufahrt dient."
+      },
+      {
+        "t": "Barrierefreie Mobilität",
+        "d": "Barrierefreie Erschließung des gesamten Gebäudes durch Aufzüge und Rampen, angepasst an die Bedürfnisse älterer Nutzer:innen."
+      },
+      {
+        "t": "Liefer- und Serviceverkehr",
+        "d": "Keine Angaben zu Lieferzonen oder Serviceverkehr in den Plänen. Vermutlich separate Anlieferung über den Klosterweg oder rückwärtige Bereiche."
+      }
+    ],
+    "methodik": "Verarbeitet wurden folgende Dateien: '02- MOD PLÄNE - A1 Sheet - 06.11.2025.pdf' (Seiten 1-18) und '01 - WOHNEINHEIT - A1 Sheet - 06.11.2025.pdf' (Seiten 1-4). Keine numerischen Flächen- oder Kostendaten in den Plänen enthalten. Alle Angaben basieren auf grafischen Darstellungen und textuellen Hinweisen.",
+    "_meta_raw": {
+      "projekt_name": "Altenheim Gesamt - Klosterweg Obernzell",
+      "ort": "Obernzell",
+      "bundesland": "Bayern",
+      "architekt": null,
+      "datum_mappe": "06.11.2025",
+      "objekttyp": "Altenheim / Pflegeeinrichtung",
+      "projektstatus": null,
+      "untertitel": "Moderne Erweiterung und Sanierung eines historischen Klosterareals"
+    }
   }
 ]
