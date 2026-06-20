@@ -1047,5 +1047,529 @@
       "projektstatus": null,
       "untertitel": "Moderne Erweiterung und Sanierung eines historischen Klosterareals"
     }
+  },
+  {
+    "id": "cavallino",
+    "token": "rf-cavallino-2026",
+    "ordner_name": "Cavallino",
+    "ordner_path": "/#thirdskin/5001 datenräume automation braun/automation projektmanagement und dynamic dashboarding/cavallino",
+    "generiert_am": "2026-06-20T12:13:15.546Z",
+    "quelle_dateien": [
+      "2021.07.27 - QPA Domus_Sondrio Rinnova_ACCETTAZIONE SIGNED.pdf",
+      "2021.11.16 - compravendita strada, atto 29264_1T.pdf",
+      "2021.11.16 - convenzione, atto 29639_1T.pdf",
+      "Visura storica sub. 8 cat. C2 - Via Fausta N. 274 Piano T Cavallino-Treporti (VENEZIA).pdf",
+      "2022.04.26 - Verbali a Libro per Tesoreria.pdf",
+      "2023.11.30 - Centro anziani Regina Mundi.pdf",
+      "Addendum Accordo Quadro 31.03.2022.pdf",
+      "COM-VE.REGISTRO UFFICIALE.2020.0018633.pdf",
+      "COM-VE.REGISTRO UFFICIALE.2020.0027141.pdf",
+      "Cessione contratto SONDRIO RINNOVA - SEGESTA 7.04.2022.pdf",
+      "Contabili pagamento DOMUS S.r.l. 11.04.2022.pdf",
+      "Estratto di mappa - Via Fausta N. 274 Piano T-1 - 2-3 - 4-5 Cavallino-Treporti (VENEZIA).pdf",
+      "Ltr. dimissioni amministratori.pdf",
+      "PDC.pdf",
+      "Parere favorevole ULSS.pdf",
+      "Verbale assemblea DOMUS S.r.l._11.04.2022.pdf",
+      "Visura storica Sub 3 cat. B1 - Via Fausta N. 274 Piano T-1 - 2 Cavallino-Treporti (VENEZIA).pdf",
+      "Visura storica sub. 2 cat. B1 - Via Fausta N. 274 Piano T-1 - 2-3 - 4-5 Cavallino-Treporti (VENEZIA).pdf",
+      "Visura storica sub. 7 (noName) - Via Fausta N. 274 Piano T Cavallino-Treporti (VENEZIA).pdf",
+      "Visura storica sub. 9 cat. C2 - Via Fausta N. 274 Piano T Cavallino-Treporti (VENEZIA).pdf"
+    ],
+    "extraction_version": "3.0",
+    "name": "Centro Servizi Anziani Regina Mundi",
+    "untertitel": "Ristrutturazione e ampliamento di immobile esistente per la realizzazione di un polo per servizi socio-assistenziali per anziani",
+    "ort": "Cavallino-Treporti (VE)",
+    "architekt": "R4M Engineering S.R.L. (Arch. Carlo Bacchini)",
+    "status": "completed",
+    "datum": "2024-06-10",
+    "quelle": "Documentazione fornita da Roomflow su progetto \"Centro Servizi Anziani Regina Mundi\" a Cavallino-Treporti (VE).",
+    "chips": [
+      {
+        "text": "RSA 100 posti letto",
+        "style": "green"
+      },
+      {
+        "text": "64 Appartamenti Protetti",
+        "style": "green"
+      },
+      {
+        "text": "Accordo Pubblico-Privato",
+        "style": "gold"
+      },
+      {
+        "text": "Riuso e riqualificazione",
+        "style": "blue"
+      },
+      {
+        "text": "Sostenibilità ambientale",
+        "style": "blue"
+      },
+      {
+        "text": "Condizioni sospensive",
+        "style": "red"
+      }
+    ],
+    "kpis": [
+      {
+        "lab": "Verkaufserlös (GDV)",
+        "val": "7.050.000 €",
+        "sub": "Enterprise Value",
+        "color": "c-green"
+      },
+      {
+        "lab": "Grundstückswert",
+        "val": "40.000 €",
+        "sub": "Acquisto strada (2021)",
+        "color": "c-green"
+      },
+      {
+        "lab": "Baukosten",
+        "val": "23.500.000 €",
+        "sub": "CAPEX (IVA incl.)",
+        "color": "c-gold"
+      },
+      {
+        "lab": "Marge/Entwicklerertrag",
+        "val": "N/A",
+        "sub": "Non determinabile",
+        "color": "c-text"
+      },
+      {
+        "lab": "Wohnfläche",
+        "val": "11.583 m²",
+        "sub": "Superficie totale lorda",
+        "color": "c-green"
+      },
+      {
+        "lab": "Verkaufspreis/m²",
+        "val": "N/A",
+        "sub": "Non applicabile",
+        "color": "c-text"
+      }
+    ],
+    "kosten": [
+      {
+        "lab": "Verkaufserlös (GDV)",
+        "sub": "Enterprise Value",
+        "val": 7050000,
+        "pct": 100,
+        "color": "#4a9898"
+      },
+      {
+        "lab": "Kosten Architektenansatz",
+        "sub": "Baukosten + Grundstück",
+        "val": 23540000,
+        "pct": 333.9,
+        "color": "#c8a04e"
+      },
+      {
+        "lab": "Kosten Investoren-Vollkosten",
+        "sub": "Non disponibile",
+        "val": null,
+        "pct": 0,
+        "color": "#9478ac"
+      }
+    ],
+    "flaechen": {
+      "bgf": 11583,
+      "items": [
+        {
+          "name": "RSA (Residenza Sanitaria Assistenziale)",
+          "m2": 4391,
+          "pct": 37.9,
+          "color": "#4a9898"
+        },
+        {
+          "name": "Appartamenti Protetti",
+          "m2": 5065,
+          "pct": 43.7,
+          "color": "#6b84c4"
+        },
+        {
+          "name": "Parking e Servizi",
+          "m2": 2227,
+          "pct": 19.2,
+          "color": "#9478ac"
+        },
+        {
+          "name": "Aree esterne e accessi",
+          "m2": null,
+          "pct": 0,
+          "color": "#c8a04e"
+        }
+      ]
+    },
+    "baukosten_detail": [
+      {
+        "pos": "Costi di costruzione (CAPEX)",
+        "formel": "IVA inclusa",
+        "wert": 23500000
+      },
+      {
+        "pos": "Acquisto terreno (strada)",
+        "formel": "Via Fausta - Ca' di Valle",
+        "wert": 40000
+      },
+      {
+        "pos": "Oneri di urbanizzazione",
+        "formel": "Primaria + Secondaria",
+        "wert": 187145.75
+      },
+      {
+        "pos": "Costo di costruzione",
+        "formel": "Contributo concessorio",
+        "wert": 224409.32
+      }
+    ],
+    "eckdaten": [
+      {
+        "k": "Proprietario attuale",
+        "v": "DOMUS S.r.l. (Gruppo Korian tramite SEGESTA S.p.A.)"
+      },
+      {
+        "k": "Investitore/Developer",
+        "v": "Sondrio Rinnova S.r.l. (Gruppo Korian) / SEGESTA S.p.A."
+      },
+      {
+        "k": "Destinazione d'uso precedente",
+        "v": "Casa per ferie \"Regina Mundi\""
+      },
+      {
+        "k": "Destinazione d'uso attuale",
+        "v": "Residenza Sanitaria Assistenziale (RSA) e Appartamenti Protetti per Anziani"
+      },
+      {
+        "k": "Numero piani",
+        "v": "5 piani fuori terra"
+      },
+      {
+        "k": "Posti letto RSA",
+        "v": "100"
+      },
+      {
+        "k": "Numero appartamenti",
+        "v": "64"
+      },
+      {
+        "k": "Superficie totale lorda",
+        "v": "11.583 m²"
+      },
+      {
+        "k": "Data inizio lavori",
+        "v": "Post 19.05.2022 (PDC)"
+      },
+      {
+        "k": "Data prevista completamento",
+        "v": "Entro 3 anni dall'inizio lavori (2025)"
+      },
+      {
+        "k": "Permesso di Costruire (PDC)",
+        "v": "N. 2020/0166 del 19.05.2022"
+      },
+      {
+        "k": "Accordo Pubblico-Privato",
+        "v": "Ex art. 6 L.R. 11/2004, approvato con DCC n. 33 del 28.07.2020"
+      },
+      {
+        "k": "Beneficio pubblico",
+        "v": "Realizzazione strada carrabile e ciclopedonale (accesso al mare n. 26)"
+      },
+      {
+        "k": "Valore beneficio pubblico",
+        "v": "604.812 €"
+      },
+      {
+        "k": "Autorizzazione sanitaria",
+        "v": "Protocollo n. 1313 del 24.01.2022 (Regione Veneto)"
+      },
+      {
+        "k": "Parere Vigili del Fuoco",
+        "v": "Protocollo n. 0027141 del 02.10.2020"
+      },
+      {
+        "k": "Autorizzazione Paesaggistica",
+        "v": "N. 2021/0121 del 17.05.2021"
+      }
+    ],
+    "risiken": [
+      {
+        "level": "red",
+        "t": "Condizioni sospensive non avverate",
+        "d": "Mancato ottenimento delle autorizzazioni comunali per il cambio di destinazione d'uso e la realizzazione di 100 posti letto RSA e 60 appartamenti protetti entro la Data di Esecuzione (30.04.2022)."
+      },
+      {
+        "level": "red",
+        "t": "Condizioni risolutive",
+        "d": "Risoluzione, recesso o invalidità dell'Accordo di Programma con il Comune di Cavallino-Treporti o rifiuto delle autorizzazioni necessarie."
+      },
+      {
+        "level": "orange",
+        "t": "Rischio normativo e autorizzativo",
+        "d": "Modifiche normative in materia di edilizia sanitaria, prevenzione incendi o antisismica durante la realizzazione."
+      },
+      {
+        "level": "orange",
+        "t": "Rischio costi aggiuntivi",
+        "d": "Maggiori costi derivanti da rettifiche della Posizione Finanziaria Netta (PFN) o da modifiche progettuali richieste dagli enti."
+      },
+      {
+        "level": "orange",
+        "t": "Rischio ritardi",
+        "d": "Ritardi nei lavori per cause impreviste (es. ritrovamenti archeologici, condizioni geologiche avverse)."
+      },
+      {
+        "level": "green",
+        "t": "Riuso immobiliare",
+        "d": "Riqualificazione di un immobile esistente con limitazione del consumo di suolo."
+      },
+      {
+        "level": "green",
+        "t": "Beneficio pubblico",
+        "d": "Realizzazione di un'opera pubblica (strada e accesso ciclopedonale) a costo zero per il Comune."
+      },
+      {
+        "level": "green",
+        "t": "Occupazione e indotto",
+        "d": "Creazione di 70-80 posti di lavoro stabili e indotto economico locale."
+      }
+    ],
+    "dokumente": [
+      {
+        "nr": "1",
+        "name": "Accordo Quadro Preliminare di Compravendita",
+        "quelle": "2021.07.27 - QPA Domus_Sondrio Rinnova_ACCETTAZIONE SIGNED.pdf",
+        "seiten": "33",
+        "status": "ok",
+        "hinweis": "Accordo tra Diocesi di Vicenza e Sondrio Rinnova per la cessione del 100% di DOMUS S.r.l."
+      },
+      {
+        "nr": "2",
+        "name": "Addendum all'Accordo Quadro",
+        "quelle": "Addendum Accordo Quadro 31.03.2022.pdf",
+        "seiten": "4",
+        "status": "ok",
+        "hinweis": "Aggiornamento Prezzo Provisorio e PFN al 09.03.2022, proroga Data di Esecuzione al 30.04.2022."
+      },
+      {
+        "nr": "3",
+        "name": "Cessione del Contratto",
+        "quelle": "Cessione contratto SONDRIO RINNOVA - SEGESTA 7.04.2022.pdf",
+        "seiten": "2",
+        "status": "ok",
+        "hinweis": "Cessione dell'Accordo Quadro da Sondrio Rinnova a SEGESTA S.p.A."
+      },
+      {
+        "nr": "4",
+        "name": "Atto di Compravendita Strada",
+        "quelle": "2021.11.16 - compravendita strada, atto 29264_1T.pdf",
+        "seiten": "16",
+        "status": "ok",
+        "hinweis": "Acquisto da Diocesi Patriarcato di Venezia di terreno per la realizzazione della strada (40.000 €)."
+      },
+      {
+        "nr": "5",
+        "name": "Accordo Pubblico-Privato",
+        "quelle": "2021.11.16 - convenzione, atto 29639_1T.pdf",
+        "seiten": "21",
+        "status": "ok",
+        "hinweis": "Accordo ex art. 6 L.R. 11/2004 per la realizzazione del polo anziani e opere pubbliche."
+      },
+      {
+        "nr": "6",
+        "name": "Permesso di Costruire (PDC)",
+        "quelle": "PDC.pdf",
+        "seiten": "6",
+        "status": "ok",
+        "hinweis": "PDC n. 2020/0166 del 19.05.2022 per ristrutturazione e ampliamento."
+      },
+      {
+        "nr": "7",
+        "name": "Parere Vigili del Fuoco",
+        "quelle": [
+          "COM-VE.REGISTRO UFFICIALE.2020.0018633.pdf",
+          "COM-VE.REGISTRO UFFICIALE.2020.0027141.pdf"
+        ],
+        "seiten": "4",
+        "status": "ok",
+        "hinweis": "Parere favorevole con prescrizioni (protocollo 0027141 del 02.10.2020)."
+      },
+      {
+        "nr": "8",
+        "name": "Parere Igienico-Sanitario ULSS",
+        "quelle": "Parere favorevole ULSS.pdf",
+        "seiten": "1",
+        "status": "ok",
+        "hinweis": "Parere favorevole ULSS4 con prescrizioni (protocollo 56053/A del 21.10.2020)."
+      },
+      {
+        "nr": "9",
+        "name": "Autorizzazione Sanitaria Regione Veneto",
+        "quelle": "Non allegato",
+        "seiten": "N/A",
+        "status": "ok",
+        "hinweis": "Protocollo n. 1313 del 24.01.2022 per 100 posti letto RSA."
+      },
+      {
+        "nr": "10",
+        "name": "Verbali Assemblea e CdA DOMUS S.r.l.",
+        "quelle": [
+          "Verbale assemblea DOMUS S.r.l._11.04.2022.pdf",
+          "2022.04.26 - Verbali a Libro per Tesoreria.pdf"
+        ],
+        "seiten": "11",
+        "status": "ok",
+        "hinweis": "Nomina nuovo CdA e Amministratore Delegato (Federico Guidoni)."
+      },
+      {
+        "nr": "11",
+        "name": "Visure Catastali",
+        "quelle": [
+          "Visura storica sub. 2 cat. B1 - Via Fausta N. 274 Piano T-1 - 2-3 - 4-5 Cavallino-Treporti (VENEZIA).pdf",
+          "Visura storica sub. 3 cat. B1 - Via Fausta N. 274 Piano T-1 - 2 Cavallino-Treporti (VENEZIA).pdf",
+          "Visura storica sub. 8 cat. C2 - Via Fausta N. 274 Piano T Cavallino-Treporti (VENEZIA).pdf",
+          "Visura storica sub. 9 cat. C2 - Via Fausta N. 274 Piano T Cavallino-Treporti (VENEZIA).pdf"
+        ],
+        "seiten": "8",
+        "status": "ok",
+        "hinweis": "Consistenza catastale immobile: Foglio 21, mappali 45 sub. 2, 3, 8, 9."
+      },
+      {
+        "nr": "12",
+        "name": "Progetto Esecutivo Centro Anziani",
+        "quelle": "2023.11.30 - Centro anziani Regina Mundi.pdf",
+        "seiten": "20",
+        "status": "ok",
+        "hinweis": "Layout, rendering, CAPEX e stato avanzamento lavori (SAL)."
+      },
+      {
+        "nr": "13",
+        "name": "Estratto di Mappa",
+        "quelle": "Estratto di mappa - Via Fausta N. 274 Piano T-1 - 2-3 - 4-5 Cavallino-Treporti (VENEZIA).pdf",
+        "seiten": "1",
+        "status": "ok",
+        "hinweis": "Ubicazione immobile e particelle catastali."
+      },
+      {
+        "nr": "14",
+        "name": "Contabili Pagamento",
+        "quelle": "Contabili pagamento DOMUS S.r.l. 11.04.2022.pdf",
+        "seiten": "2",
+        "status": "ok",
+        "hinweis": "Pagamento Prezzo Provisorio (6.724.734,34 €) da SEGESTA a Diocesi di Vicenza."
+      }
+    ],
+    "lage_info": [
+      {
+        "ico": "location-city",
+        "t": "Ubicazione strategica",
+        "d": "L'immobile è situato in Via Fausta 274, Cavallino-Treporti (VE), in prossimità del mare e ben collegato tramite mezzi pubblici. La zona è caratterizzata da una vocazione turistica e residenziale, con presenza di servizi e aree verdi."
+      },
+      {
+        "ico": "directions-car",
+        "t": "Accessibilità",
+        "d": "L'area è servita da Via Fausta, strada principale che collega Cavallino-Treporti a Jesolo e Venezia. È prevista la realizzazione di una nuova strada carrabile e ciclopedonale (accesso al mare n. 26) come beneficio pubblico dell'Accordo Pubblico-Privato."
+      },
+      {
+        "ico": "nature-people",
+        "t": "Contesto ambientale",
+        "d": "L'immobile è inserito in un'area verde alberata, con presenza di vincoli paesaggistici e archeologici. La zona è soggetta a tutela ambientale e idrogeologica, con limitazioni all'edificabilità e obblighi di invarianza idraulica."
+      },
+      {
+        "ico": "local-hospital",
+        "t": "Servizi socio-sanitari",
+        "d": "La realizzazione di una RSA e di appartamenti protetti risponde alla crescente domanda di servizi socio-assistenziali per anziani nel territorio, integrandosi con le strutture sanitarie esistenti dell'ULSS4 Veneto Orientale."
+      },
+      {
+        "ico": "beach-access",
+        "t": "Prossimità al mare",
+        "d": "La vicinanza alla spiaggia e all'arenile demaniale rappresenta un valore aggiunto per la struttura, offrendo opportunità di svago e benessere per gli ospiti. È previsto un accesso ciclopedonale diretto alla spiaggia."
+      },
+      {
+        "ico": "account-balance",
+        "t": "Vincoli urbanistici",
+        "d": "L'area è soggetta a vincoli derivanti dal PAT (Piano di Assetto del Territorio) e dal PI (Piano degli Interventi), con destinazione d'uso Fb (Attrezzature di interesse comune). Sono presenti vincoli paesaggistici, archeologici e sismici."
+      }
+    ],
+    "konzept_architektur": [
+      {
+        "icon": "home-repair-service",
+        "h": "Ristrutturazione e ampliamento",
+        "p": [
+          "Riuso e riqualificazione dell'immobile esistente (ex casa per ferie \"Regina Mundi\") con ampliamento volumetrico per adeguamento agli standard RSA.",
+          "Mantenimento della struttura portante esistente e rifacimento delle finiture interne ed esterne.",
+          "Realizzazione di 5 piani fuori terra con distribuzione funzionale: RSA ai piani inferiori, appartamenti protetti ai piani superiori."
+        ]
+      },
+      {
+        "icon": "elderly",
+        "h": "Progettazione per anziani",
+        "p": [
+          "Layout progettato secondo gli standard regionali (DGRV n. 84/2007) per RSA e appartamenti protetti, con spazi comuni e camere singole/doppie dotate di servizi igienici accessibili.",
+          "Aree comuni per attività ricreative, fisioterapia e socializzazione, con particolare attenzione all'accessibilità e alla sicurezza.",
+          "Impianti tecnologici dedicati (montalettighe antincendio, impianti di climatizzazione, sistemi di chiamata)."
+        ]
+      },
+      {
+        "icon": "eco",
+        "h": "Sostenibilità ambientale",
+        "p": [
+          "Progetto ad alta sostenibilità ambientale con limitazione del consumo di suolo e preservazione della qualità ambientale.",
+          "Impiego di materiali ecosostenibili e tecnologie per il risparmio energetico (pannelli fotovoltaici, isolamento termico).",
+          "Sistema di raccolta e gestione delle acque meteoriche per l'invarianza idraulica."
+        ]
+      },
+      {
+        "icon": "security",
+        "h": "Sicurezza e normativa",
+        "p": [
+          "Progettazione conforme alle normative antisismiche (DGR n. 3645/2003), antincendio (D.M. 18/09/2002) e di accessibilità (L. 13/1989).",
+          "Compartimentazione antincendio e vie di esodo dimensionate secondo normativa.",
+          "Impianti elettrici e speciali progettati secondo DM 37/2008 e normative CEI."
+        ]
+      },
+      {
+        "icon": "landscape",
+        "h": "Inserimento paesaggistico",
+        "p": [
+          "Progetto architettonico integrato nel contesto paesaggistico, con attenzione alla mitigazione dell'impatto visivo.",
+          "Sistemazione delle aree esterne con percorsi pedonali, aree verdi e parcheggi.",
+          "Realizzazione di un'area giochi e spazi aperti per attività ricreative."
+        ]
+      }
+    ],
+    "konzept_mobilitaet": [
+      {
+        "t": "Accessibilità veicolare",
+        "d": "L'immobile è raggiungibile tramite Via Fausta, strada provinciale che collega Cavallino-Treporti a Jesolo e Venezia. È prevista la realizzazione di una nuova strada carrabile (accesso al mare n. 26) che migliorerà la viabilità locale e l'accesso alla struttura."
+      },
+      {
+        "t": "Mobilità ciclopedonale",
+        "d": "Realizzazione di una pista ciclopedonale che collega Via della Mosa alla spiaggia, integrata nel sistema dei percorsi ciclabili comunali. La struttura sarà dotata di parcheggi per biciclette e aree pedonali sicure."
+      },
+      {
+        "t": "Collegamenti pubblici",
+        "d": "La zona è servita da linee di trasporto pubblico locale (autobus) che collegano Cavallino-Treporti a Venezia, Mestre e Jesolo. La fermata più vicina è situata in prossimità dell'immobile."
+      },
+      {
+        "t": "Parcheggi",
+        "d": "Realizzazione di parcheggi interni alla struttura per ospiti, visitatori e personale, con posti auto riservati ai disabili. È prevista un'area di sosta per mezzi di soccorso e carico/scarico."
+      },
+      {
+        "t": "Mobilità sostenibile",
+        "d": "Incentivazione della mobilità dolce (a piedi e in bicicletta) attraverso la realizzazione di percorsi dedicati e la vicinanza alla spiaggia e alle aree verdi. La struttura sarà dotata di colonnine per la ricarica di veicoli elettrici."
+      }
+    ],
+    "methodik": "Analisi effettuata sui seguenti documenti: 2021.07.27 - QPA Domus_Sondrio Rinnova_ACCETTAZIONE SIGNED.pdf (33 pagine), Addendum Accordo Quadro 31.03.2022.pdf (4 pagine), Cessione contratto SONDRIO RINNOVA - SEGESTA 7.04.2022.pdf (2 pagine), 2021.11.16 - compravendita strada, atto 29264_1T.pdf (16 pagine), 2021.11.16 - convenzione, atto 29639_1T.pdf (21 pagine), PDC.pdf (6 pagine), COM-VE.REGISTRO UFFICIALE.2020.0018633.pdf e COM-VE.REGISTRO UFFICIALE.2020.0027141.pdf (4 pagine), Parere favorevole ULSS.pdf (1 pagina), Verbale assemblea DOMUS S.r.l._11.04.2022.pdf e 2022.04.26 - Verbali a Libro per Tesoreria.pdf (11 pagine), Visure catastali (8 pagine), 2023.11.30 - Centro anziani Regina Mundi.pdf (20 pagine), Estratto di mappa (1 pagina), Contabili pagamento DOMUS S.r.l. 11.04.2022.pdf (2 pagine). Widersprüche riscontrati: Prezzo Provisorio aggiornato nell'Addendum (6.724.734,34 €) rispetto all'Accordo Quadro originale (6.841.136,84 €).",
+    "_meta_raw": {
+      "projekt_name": "Centro Servizi Anziani Regina Mundi",
+      "ort": "Cavallino-Treporti",
+      "bundesland": "Veneto",
+      "architekt": "R4M Engineering S.R.L. (Arch. Carlo Bacchini)",
+      "datum_mappe": "2023-11-30",
+      "objekttyp": "Residenza Sanitaria Assistenziale (RSA) e Appartamenti Protetti per Anziani",
+      "projektstatus": "In Realisierung",
+      "untertitel": "Ristrutturazione e ampliamento di immobile esistente per la realizzazione di un polo per servizi socio-assistenziali per anziani"
+    }
   }
 ]
