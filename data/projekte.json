@@ -404,5 +404,365 @@
       "projektstatus": "Wettbewerbsgewinner, Bauantrag in Vorbereitung",
       "untertitel": "An der Burg Alzenau"
     }
+  },
+  {
+    "id": "test-projekt-und-dashboard-2",
+    "token": "rf-test-projekt-2-2026",
+    "ordner_name": "Test Projekt und Dashboard 2",
+    "ordner_path": "/#thirdskin/5001 datenräume automation braun/automation projektmanagement und dynamic dashboarding/test projekt und dashboard 2",
+    "generiert_am": "2026-06-20T11:45:35.392Z",
+    "quelle_dateien": [
+      "Altlastenauskunft.pdf",
+      "Duesseldorf_Flingern_4825.pdf",
+      "EG_1.OG_2.OG_3.OG.pdf",
+      "Energieausweis-ENERGIE-26-009676.pdf",
+      "Flurkarte_Hoffeldstraße.pdf",
+      "Hoffeldstr Dachgeschoss DG Grundriss.pdf",
+      "Hoffeldstr-Flächenberechnung-Architekt-unterschrieben-2017.pdf",
+      "Ihr Exposé.pdf",
+      "Mietaufstellung.pdf"
+    ],
+    "extraction_version": "3.0",
+    "name": "Mehrfamilienhaus Hoffeldstraße 93",
+    "untertitel": "Solides Mehrfamilienhaus mit großem Zukunftspotenzial in Düsseldorf-Flingern",
+    "ort": "Düsseldorf",
+    "architekt": "Josef van de Locht",
+    "status": "Analyse abgeschlossen",
+    "datum": "2026-02-12",
+    "quelle": "OCR-Volltext aus Architekten-Projektmappe (mehrere PDF-Dateien)",
+    "chips": [
+      {
+        "text": "11 Wohneinheiten + 1 Gewerbeeinheit",
+        "style": "green"
+      },
+      {
+        "text": "Dachgeschoss ausbaufähig",
+        "style": "gold"
+      },
+      {
+        "text": "Grundwasserverunreinigung (CKW)",
+        "style": "red"
+      },
+      {
+        "text": "Gute ÖPNV-Anbindung",
+        "style": "blue"
+      },
+      {
+        "text": "Voll unterkellert",
+        "style": "green"
+      },
+      {
+        "text": "Gasetagenheizung",
+        "style": "blue"
+      }
+    ],
+    "kpis": [
+      {
+        "lab": "Verkaufserlös (GDV)",
+        "val": "1.900.000 €",
+        "sub": "Kaufpreis",
+        "color": "c-green"
+      },
+      {
+        "lab": "Grundstückswert",
+        "val": null,
+        "sub": null,
+        "color": "c-text"
+      },
+      {
+        "lab": "Baukosten",
+        "val": null,
+        "sub": "Nicht angegeben",
+        "color": "c-text"
+      },
+      {
+        "lab": "Marge/Entwicklerertrag",
+        "val": "4,62 %",
+        "sub": "Rendite nach Mietanpassung",
+        "color": "c-gold"
+      },
+      {
+        "lab": "Wohnfläche",
+        "val": "757,84 m²",
+        "sub": "inkl. Gewerbe und DG-Potenzial",
+        "color": "c-green"
+      },
+      {
+        "lab": "Verkaufspreis/m²",
+        "val": "2.507 €/m²",
+        "sub": "Kaufpreis/Wohnfläche (ca.)",
+        "color": "c-blue"
+      }
+    ],
+    "kosten": [
+      {
+        "lab": "Verkaufserlös (GDV)",
+        "sub": "Kaufpreis",
+        "val": 1900000,
+        "pct": 100,
+        "color": "#4a9898"
+      },
+      {
+        "lab": "Kosten Architektenansatz",
+        "sub": null,
+        "val": null,
+        "pct": 0,
+        "color": "#c8a04e"
+      },
+      {
+        "lab": "Kosten Investoren-Vollkosten",
+        "sub": null,
+        "val": null,
+        "pct": 0,
+        "color": "#9478ac"
+      }
+    ],
+    "flaechen": {
+      "bgf": 757.84,
+      "items": [
+        {
+          "name": "Wohnfläche (11 WE)",
+          "m2": 584,
+          "pct": 77.06,
+          "color": "#4a9898"
+        },
+        {
+          "name": "Gewerbefläche (EG)",
+          "m2": 163.12,
+          "pct": 21.52,
+          "color": "#c8a04e"
+        },
+        {
+          "name": "Dachgeschoss (ausbaufähig)",
+          "m2": 123.6,
+          "pct": 16.31,
+          "color": "#6b84c4"
+        },
+        {
+          "name": "Kellerfläche",
+          "m2": null,
+          "pct": 0,
+          "color": "#9478ac"
+        }
+      ]
+    },
+    "baukosten_detail": [],
+    "eckdaten": [
+      {
+        "k": "Grundstücksfläche",
+        "v": "261 m²"
+      },
+      {
+        "k": "Grundbuchblatt",
+        "v": "Flingern Blatt 4825"
+      },
+      {
+        "k": "Gemarkung/Flur/Flurstück",
+        "v": "Flingern / 21 / 118"
+      },
+      {
+        "k": "Baujahr",
+        "v": "Nicht explizit angegeben (Bestandsgebäude)"
+      },
+      {
+        "k": "Energieausweis",
+        "v": "Verbrauchsausweis (100,54 kWh/(m²·a), Gültig bis 01.02.2036)"
+      },
+      {
+        "k": "Heizungsart",
+        "v": "Gasetagenheizung"
+      },
+      {
+        "k": "Ausbaupotenzial",
+        "v": "Dachgeschoss (ca. 123,6 m²)"
+      },
+      {
+        "k": "Mietertrag aktuell",
+        "v": "Nicht explizit angegeben (Faktor 21,6 nach Mietanpassung)"
+      },
+      {
+        "k": "Altlastenstatus",
+        "v": "Keine Altablagerung/Altstandort, aber CKW-Grundwasserverunreinigung"
+      }
+    ],
+    "risiken": [
+      {
+        "level": "red",
+        "t": "Grundwasserverunreinigung (CKW)",
+        "d": "Großflächige Grundwasserverunreinigung mit chlorierten Kohlenwasserstoffen in der Nähe. Keine unmittelbare Gefährdung, aber gesonderte wasserwirtschaftliche Betrachtungen bei Baumaßnahmen mit Grundwasserentnahme erforderlich."
+      },
+      {
+        "level": "orange",
+        "t": "Ausbaupotenzial Dachgeschoss",
+        "d": "Dachgeschossausbau erfordert zusätzliche Genehmigungen und Investitionen. Wirtschaftlichkeit und Machbarkeit sind im Detail zu prüfen."
+      },
+      {
+        "level": "green",
+        "t": "Stabile Vermietbarkeit",
+        "d": "Hohe Nachfrage nach 2-3 Zimmer-Wohnungen in Düsseldorf-Flingern. Gute Infrastruktur und zentrale Lage sichern langfristige Vermietbarkeit."
+      }
+    ],
+    "dokumente": [
+      {
+        "nr": "1",
+        "name": "Altlastenauskunft.pdf",
+        "quelle": "Landeshauptstadt Düsseldorf, Amt für Umwelt- und Verbraucherschutz",
+        "seiten": "2",
+        "status": "ok",
+        "hinweis": "Keine Altlasten, aber CKW-Grundwasserverunreinigung in der Nähe."
+      },
+      {
+        "nr": "2",
+        "name": "Duesseldorf_Flingern_4825.pdf",
+        "quelle": "Amtsgericht Düsseldorf, Grundbuch von Flingern Blatt 4825",
+        "seiten": "14",
+        "status": "ok",
+        "hinweis": "Grundbuchauszug mit Bestandsverzeichnis und Abteilungen I-III."
+      },
+      {
+        "nr": "3",
+        "name": "EG_1.OG_2.OG_3.OG.pdf",
+        "quelle": "Architektenplan (H. Pütter, Architekt B.D.A.)",
+        "seiten": "4",
+        "status": "ok",
+        "hinweis": "Grundrisse Erd- bis 3. Obergeschoss (historische Pläne, teilweise unleserlich)."
+      },
+      {
+        "nr": "4",
+        "name": "Energieausweis-ENERGIE-26-009676.pdf",
+        "quelle": "Immoticket24.de GmbH",
+        "seiten": "5",
+        "status": "ok",
+        "hinweis": "Energieverbrauchsausweis mit Endenergieverbrauch 91,40 kWh/(m²·a)."
+      },
+      {
+        "nr": "5",
+        "name": "Flurkarte_Hoffeldstraße.pdf",
+        "quelle": "Stadt Düsseldorf, Katasteramt",
+        "seiten": "1",
+        "status": "ok",
+        "hinweis": "Flurkarte mit Flurstück 118, Flur 21, Gemarkung Flingern."
+      },
+      {
+        "nr": "6",
+        "name": "Hoffeldstr Dachgeschoss DG Grundriss.pdf",
+        "quelle": "Architektenplan",
+        "seiten": "1",
+        "status": "ok",
+        "hinweis": "Grundriss Dachgeschoss (unvollständig, nur Übersichtszeichnung)."
+      },
+      {
+        "nr": "7",
+        "name": "Hoffeldstr-Flächenberechnung-Architekt-unterschrieben-2017.pdf",
+        "quelle": "Josef van de Locht, Architekt",
+        "seiten": "4",
+        "status": "ok",
+        "hinweis": "Detaillierte Wohn- und Gewerbeflächenberechnung (757,84 m² Gesamtfläche)."
+      },
+      {
+        "nr": "8",
+        "name": "Ihr Exposé.pdf",
+        "quelle": "Evernest GmbH / Immoriya Projektentwicklung GmbH",
+        "seiten": "14",
+        "status": "ok",
+        "hinweis": "Exposé mit Objektbeschreibung, Lage, Fotos und Fakten."
+      },
+      {
+        "nr": "9",
+        "name": "Mietaufstellung.pdf",
+        "quelle": "Nicht im OCR-Text enthalten",
+        "seiten": "1",
+        "status": "err",
+        "hinweis": "Tabelle nicht lesbar, keine Daten extrahierbar."
+      }
+    ],
+    "lage_info": [
+      {
+        "ico": "location_city",
+        "t": "Zentrale Lage in Düsseldorf-Flingern",
+        "d": "Beliebter Stadtteil mit urbanem Flair, hoher Lebensqualität und guter Infrastruktur. Nah an der Düsseldorfer Innenstadt und mit exzellenter Anbindung an den öffentlichen Nahverkehr (U-Bahn, Straßenbahn, Bus)."
+      },
+      {
+        "ico": "shopping_cart",
+        "t": "Einkaufsmöglichkeiten und Dienstleistungen",
+        "d": "Supermärkte, Bäckereien, Ärzte, Apotheken, Cafés, Restaurants und Boutiquen fußläufig erreichbar. Ideal für den täglichen Bedarf."
+      },
+      {
+        "ico": "directions_car",
+        "t": "Verkehrsanbindung",
+        "d": "Schnelle Erreichbarkeit der Autobahnen A46 und A52. Gute Anbindung für Pendler und Innenstadtbesucher."
+      },
+      {
+        "ico": "school",
+        "t": "Bildung und Freizeit",
+        "d": "Kindergärten, Schulen, Parks, Fitnessstudios und kulturelle Einrichtungen in unmittelbarer Nähe. Attraktiv für Familien und junge Berufstätige."
+      },
+      {
+        "ico": "warning",
+        "t": "Umweltbelastung",
+        "d": "Grundwasserverunreinigung mit CKW in der Nähe. Keine unmittelbare Gefährdung, aber besondere Auflagen bei Baumaßnahmen mit Grundwasserentnahme."
+      }
+    ],
+    "konzept_architektur": [
+      {
+        "icon": "home",
+        "h": "Bestandsgebäude mit Ausbaupotenzial",
+        "p": [
+          "Mehrfamilienhaus mit 11 Wohneinheiten und 1 Gewerbeeinheit im Erdgeschoss.",
+          "Dachgeschoss bietet Potenzial für zusätzlichen Wohn- oder Büroflächenausbau (ca. 123,6 m²).",
+          "Vollständig unterkellert, Gasetagenheizung für individuelle Heizkostenabrechnung."
+        ]
+      },
+      {
+        "icon": "design_services",
+        "h": "Grundrisse und Flächenverteilung",
+        "p": [
+          "Erdgeschoss: Gewerbefläche (163,12 m²) mit Verkaufsraum, Lager, Kühlraum und WC.",
+          "Obergeschosse 1-3: Je 3 Wohnungen pro Etage (ca. 55-60 m² pro Wohnung).",
+          "Dachgeschoss: Zwei unausgebaute Einheiten (69,10 m² und 54,50 m²).",
+          "Balkone in allen Wohneinheiten zur Steigerung des Wohnkomforts."
+        ]
+      },
+      {
+        "icon": "history_edu",
+        "h": "Historische Bausubstanz",
+        "p": [
+          "Pläne aus dem Jahr 1917 (Architekt H. Pütter) deuten auf historische Bausubstanz hin.",
+          "Modernisierungsbedarf bei Energieeffizienz (Energieverbrauch 91,40 kWh/(m²·a))."
+        ]
+      }
+    ],
+    "konzept_mobilitaet": [
+      {
+        "t": "Öffentlicher Nahverkehr",
+        "d": "Exzellente Anbindung durch U-Bahn, Straßenbahn und Busse. Schnelle Verbindung zur Düsseldorfer Innenstadt und zum Hauptbahnhof."
+      },
+      {
+        "t": "Individualverkehr",
+        "d": "Gute Erreichbarkeit der Autobahnen A46 und A52. Geeignet für Pendler und Autofahrer."
+      },
+      {
+        "t": "Fuß- und Radverkehr",
+        "d": "Fußläufige Erreichbarkeit aller wichtigen Einrichtungen (Einkauf, Bildung, Freizeit). Attraktiv für Fußgänger und Radfahrer durch urbane Infrastruktur."
+      }
+    ],
+    "methodik": "Verarbeitete Dateien: Altlastenauskunft.pdf (2 Seiten), Duesseldorf_Flingern_4825.pdf (14 Seiten), EG_1.OG_2.OG_3.OG.pdf (4 Seiten), Energieausweis-ENERGIE-26-009676.pdf (5 Seiten), Flurkarte_Hoffeldstraße.pdf (1 Seite), Hoffeldstr Dachgeschoss DG Grundriss.pdf (1 Seite), Hoffeldstr-Flächenberechnung-Architekt-unterschrieben-2017.pdf (4 Seiten), Ihr Exposé.pdf (14 Seiten). Widersprüche: Wohnfläche im Exposé (584 m²) vs. Architektenberechnung (757,84 m²) – Exposé bezieht sich vermutlich nur auf reine Wohnfläche ohne Gewerbe und DG-Potenzial. Energieausweis basiert auf Verbrauchsdaten, nicht auf Bedarfsberechnung.\n\nNICHT VERARBEITET (zu groß für OCR): Hausakten Hoffeldstr. 93.pdf (0 MB) – Bitte manuell prüfen.",
+    "_meta_raw": {
+      "projekt_name": "Mehrfamilienhaus Hoffeldstraße 93",
+      "ort": "Düsseldorf",
+      "bundesland": "Nordrhein-Westfalen",
+      "architekt": "Josef van de Locht",
+      "datum_mappe": "2026-02-12",
+      "objekttyp": "Mehrfamilienhaus mit Gewerbeeinheit",
+      "projektstatus": "Bestand (mit Ausbaupotenzial)",
+      "untertitel": "Solides Mehrfamilienhaus mit großem Zukunftspotenzial in Düsseldorf-Flingern"
+    },
+    "skipped_dateien": [
+      {
+        "name": "Hausakten Hoffeldstr. 93.pdf",
+        "size_mb": 0,
+        "reason": "Datei zu groß für automatische OCR (0 MB > 40 MB). Bitte manuell prüfen."
+      }
+    ]
   }
 ]
