@@ -1,1 +1,346 @@
-[]
+[
+  {
+    "id": "test-projekt-und-dashboard-1",
+    "token": "rf-test-projekt-1-2026",
+    "ordner_name": "Test Projekt und Dashboard 1",
+    "ordner_path": "/#thirdskin/5001 datenräume automation braun/automation projektmanagement und dynamic dashboarding/test projekt und dashboard 1",
+    "generiert_am": "2026-06-21T20:07:27.955Z",
+    "quelle_dateien": [
+      "Alzenau-Mappe-aktuell-05-05-2026-Landes-korrekt.pdf"
+    ],
+    "extraction_version": "3.0",
+    "name": "Wohnen an der Burg",
+    "untertitel": "An der Burg Alzenau",
+    "ort": "Alzenau",
+    "architekt": "Michael Landes",
+    "status": "Wettbewerbssieger, Bauantrag in Vorbereitung",
+    "datum": "2026-05-05",
+    "quelle": "Alzenau-Mappe-aktuell-05-05-2026-Landes-korrekt.pdf",
+    "chips": [
+      {
+        "text": "Betreutes Wohnen",
+        "style": "green"
+      },
+      {
+        "text": "Gewerbeflächen im Sockel",
+        "style": "gold"
+      },
+      {
+        "text": "Barrierefrei",
+        "style": "green"
+      },
+      {
+        "text": "Nachhaltige Bauweise",
+        "style": "green"
+      },
+      {
+        "text": "Städtische Förderung",
+        "style": "blue"
+      },
+      {
+        "text": "GFZ-Potenzial (2,3/3,0)",
+        "style": "gold"
+      }
+    ],
+    "kpis": [
+      {
+        "lab": "Verkaufserlös (GDV)",
+        "val": "28.575.000 €",
+        "sub": "Wohnen + Gewerbe",
+        "color": "c-green"
+      },
+      {
+        "lab": "Grundstückswert",
+        "val": "1.650.000 €",
+        "sub": "3.000 m² × 550 €/m²",
+        "color": "c-text"
+      },
+      {
+        "lab": "Baukosten",
+        "val": "20.350.000 €",
+        "sub": "BGF gesamt",
+        "color": "c-gold"
+      },
+      {
+        "lab": "Marge/Entwicklerertrag",
+        "val": "6.575.000 €",
+        "sub": "GDV - (Grundstück + Baukosten)",
+        "color": "c-green"
+      },
+      {
+        "lab": "Wohnfläche",
+        "val": "5.500 m²",
+        "sub": "Verkaufsfläche",
+        "color": "c-text"
+      },
+      {
+        "lab": "Verkaufspreis/m²",
+        "val": "4.500 €",
+        "sub": "Wohnen",
+        "color": "c-text"
+      }
+    ],
+    "kosten": [
+      {
+        "lab": "Verkaufserlös (GDV)",
+        "sub": "Wohnen + Gewerbe",
+        "val": 28575000,
+        "pct": 100,
+        "color": "#4a9898"
+      },
+      {
+        "lab": "Kosten Architektenansatz",
+        "sub": "Grundstück + Baukosten",
+        "val": 22000000,
+        "pct": 77,
+        "color": "#c8a04e"
+      },
+      {
+        "lab": "Kosten Investoren-Vollkosten",
+        "sub": "inkl. Nebenkosten (angenommen +10%)",
+        "val": 24200000,
+        "pct": 85,
+        "color": "#9478ac"
+      }
+    ],
+    "flaechen": {
+      "bgf": 9750,
+      "items": [
+        {
+          "name": "Wohnen",
+          "m2": 6500,
+          "pct": 66.7,
+          "color": "#c8a04e"
+        },
+        {
+          "name": "Gewerbe",
+          "m2": 850,
+          "pct": 8.7,
+          "color": "#4a9898"
+        },
+        {
+          "name": "Parken",
+          "m2": 1550,
+          "pct": 15.9,
+          "color": "#6b84c4"
+        },
+        {
+          "name": "Dachterrasse",
+          "m2": 850,
+          "pct": 8.7,
+          "color": "#9478ac"
+        }
+      ]
+    },
+    "baukosten_detail": [
+      {
+        "pos": "Wohnen",
+        "formel": "6.500 m² × 2.500 €/m²",
+        "wert": 16250000
+      },
+      {
+        "pos": "Gewerbe",
+        "formel": "850 m² × 2.000 €/m²",
+        "wert": 1700000
+      },
+      {
+        "pos": "Parken",
+        "formel": "1.550 m² × 1.000 €/m²",
+        "wert": 1550000
+      },
+      {
+        "pos": "Dachterrasse",
+        "formel": "850 m² × 1.000 €/m²",
+        "wert": 850000
+      },
+      {
+        "pos": "Bodenaushub (Einsparung)",
+        "formel": "Schutt durch Dritte",
+        "wert": -150000
+      }
+    ],
+    "eckdaten": [
+      {
+        "k": "Grundstücksgröße",
+        "v": "3.000 m²"
+      },
+      {
+        "k": "Bodenrichtwert",
+        "v": "550 €/m²"
+      },
+      {
+        "k": "GFZ (ausgenutzt/max.)",
+        "v": "2,3 / 3,0"
+      },
+      {
+        "k": "Wohneinheiten",
+        "v": "ca. 80–100 (geschätzt)"
+      },
+      {
+        "k": "Stellplätze",
+        "v": "51 (ebenerdig)"
+      },
+      {
+        "k": "Fahrradabstellplätze",
+        "v": "Ausreichend, überdacht"
+      },
+      {
+        "k": "E-Ladestationen",
+        "v": "Vorhanden"
+      },
+      {
+        "k": "Carsharing",
+        "v": "Elektrofahrzeuge"
+      },
+      {
+        "k": "Bauweise",
+        "v": "Massivbau, Holzbau, Modulelemente"
+      },
+      {
+        "k": "Dachbegrünung",
+        "v": "Ja, inkl. Photovoltaik-Option"
+      },
+      {
+        "k": "Barrierefreiheit",
+        "v": "Alle Wohnungen"
+      },
+      {
+        "k": "Kaufkraftkennziffer",
+        "v": "124,1"
+      },
+      {
+        "k": "Fahrzeit Frankfurt a.M.",
+        "v": "40 Minuten (Auto)"
+      },
+      {
+        "k": "ÖPNV-Anbindung",
+        "v": "Kahlgrundbahn, Busbahnhof (1–4 Min. Fußweg)"
+      }
+    ],
+    "risiken": [
+      {
+        "level": "orange",
+        "t": "Bodenbeschaffenheit",
+        "d": "Felsiger Untergrund könnte Aushubkosten erhöhen, Einsparung durch Schuttverwertung fraglich."
+      },
+      {
+        "level": "green",
+        "t": "Städtische Unterstützung",
+        "d": "Schnelle Genehmigung und Reduzierung der Stellplatzpflicht als Chance."
+      },
+      {
+        "level": "orange",
+        "t": "Vermietung Gewerbe",
+        "d": "Abhängigkeit von lokaler Nachfrage, Leerstandsrisiko bei Apotheken/Arztpraxen."
+      },
+      {
+        "level": "green",
+        "t": "GFZ-Potenzial",
+        "d": "Möglichkeit zur Flächenaufstockung (2,3 → 3,0) für höhere Erträge."
+      }
+    ],
+    "dokumente": [
+      {
+        "nr": "1",
+        "name": "Alzenau-Mappe-aktuell-05-05-2026-Landes-korrekt.pdf",
+        "quelle": "Architektenmappe",
+        "seiten": "1–21",
+        "status": "ok",
+        "hinweis": "Enthält Projektbeschreibung, Lageplan, Grundrisse, Visualisierungen, Konzepte, Kennzahlen."
+      }
+    ],
+    "lage_info": [
+      {
+        "ico": "location_city",
+        "t": "Zentrale Innenstadtlage",
+        "d": "Direkt am historischen Stadtkern von Alzenau, fußläufig zur Burg (1 Min.), Marktplatz, Rathaus, Kirche, Stadtbibliothek und Wochenmarkt. Nah an Einkaufsmöglichkeiten, Cafés, Restaurants und Apotheken."
+      },
+      {
+        "ico": "nature_people",
+        "t": "Naherholung und Freizeit",
+        "d": "Generationpark (Landesgartenschau 2015) und Kahlal-Naherholungsgebiet in 4 Min. Fußweg erreichbar. Hallenbad, Freibad, Sportanlagen, Rad- und Wanderwege in unmittelbarer Nähe."
+      },
+      {
+        "ico": "local_hospital",
+        "t": "Infrastruktur",
+        "d": "Vollsortiment-Supermarkt (3 Min.), Arztpraxen, Schulen, Internat, Kindergärten und medizinische Versorgung vor Ort. Hohe Lebensqualität durch kulturelle Einrichtungen (Bibliothek, Musikschule, Kleinkunstbühne)."
+      },
+      {
+        "ico": "business",
+        "t": "Wirtschaftsstandort",
+        "d": "Technologie-Standort im Grünen mit Unternehmen aus Umwelttechnik, Elektronik und Maschinenbau. Kaufkraftkennziffer von 124,1 (überdurchschnittlich)."
+      }
+    ],
+    "konzept_architektur": [
+      {
+        "icon": "account_balance",
+        "h": "Städtebauliche Einbindung",
+        "p": [
+          "Drei Häuser auf Sockel in Hanglage, Maßstab an ortsübliche Bebauung angepasst.",
+          "Hofgärten mit Grünflächen zwischen den Gebäuden, Wohnungen öffnen sich über Loggien und Glasfassaden.",
+          "Fassaden zur Stadt verputzt und farbig (Anlehnung an bayerischen Barock), Holzkonstruktion für innere Fassaden.",
+          "Arkadengang im Sockelgeschoss als Vorbereich für Café und Gewerberäume (Apotheken, Arztpraxen)."
+        ]
+      },
+      {
+        "icon": "apartment",
+        "h": "Wohnkonzept",
+        "p": [
+          "Barrierefreie Wohnungen (60–90 m²), alle mit Balkon/Loggia und Aufzugsanbindung.",
+          "Gemeinschaftsflächen für betreutes Wohnen im Sockelgeschoss.",
+          "Zeitgenössisches Design mit hohen französischen Fenstern für viel Tageslicht."
+        ]
+      },
+      {
+        "icon": "eco",
+        "h": "Nachhaltigkeit und Bauweise",
+        "p": [
+          "Mischkonstruktion aus Massivbau, Holzbau und Modulelementen für kurze Bauzeit und gesundes Raumklima.",
+          "Begrünte Dächer und Höfe, Photovoltaik-Option auf Dachflächen.",
+          "Vertikalbegrünter Sichtschutz zur Bahnstrecke, Baumreihe entlang der Straße."
+        ]
+      },
+      {
+        "icon": "directions_car",
+        "h": "Mobilitätsinfrastruktur",
+        "p": [
+          "Ebenerdige Parkgarage mit 51 Stellplätzen, überdachte Fahrradabstellplätze, E-Ladestationen und Carsharing (Elektrofahrzeuge).",
+          "Keine Tiefgarage (Kosteneinsparung, bessere Belüftung, barrierefreier Zugang)."
+        ]
+      }
+    ],
+    "konzept_mobilitaet": [
+      {
+        "t": "ÖPNV-Anbindung",
+        "d": "Haltestelle der Kahlgrundbahn und Busbahnhof in 1–4 Min. Fußweg. Anbindung an RMV-Netz (Hanau, Frankfurt a.M.), Citybus-Linien zu allen Stadtteilen und überregionalen Zielen (Aschaffenburg, Kahl, Karlstein)."
+      },
+      {
+        "t": "Fahrradfreundlichkeit",
+        "d": "Überdachte Fahrradabstellplätze und Bike-Station im Untergeschoss. Förderung des Fahrrads als bevorzugtes Verkehrsmittel für kurze Wege in der Stadt."
+      },
+      {
+        "t": "Carsharing und E-Mobilität",
+        "d": "Carsharing-Station mit Elektrofahrzeugen (z.B. Anbieter mobileeee.de). Ladepunkte für E-Fahrzeuge an ausgewählten Parkplätzen zur Unterstützung nachhaltiger Antriebe."
+      },
+      {
+        "t": "Fußläufige Erreichbarkeit",
+        "d": "Alle wesentlichen Einrichtungen (Supermärkte, Arztpraxen, Freizeitangebote) in Alzenau sind zu Fuß, mit dem Fahrrad oder Elektroroller erreichbar. Reduzierung des Pkw-Verkehrs durch attraktive Alternativen."
+      },
+      {
+        "t": "Vorteile ebenerdiger Parkgarage",
+        "d": "Kostengünstiger Bau (keine Tiefbauarbeiten), natürliche Belüftung, barrierefreier Zugang, geringerer Energie- und Wartungsaufwand. Geringeres Risiko für Einbrüche/Vandalismus."
+      }
+    ],
+    "methodik": "Verarbeitet wurde die Datei 'Alzenau-Mappe-aktuell-05-05-2026-Landes-korrekt.pdf' (Seiten 1–21). Fehlende Werte (z.B. genaue Wohneinheitenanzahl, detaillierte Nebenkosten) wurden aus dem Kontext geschätzt oder als null markiert. Widersprüche: Keine identifiziert. Flächenangaben wurden aus den Baukostenberechnungen abgeleitet (BGF Wohnen/Gewerbe/Parken/Dachterrasse).",
+    "_meta_raw": {
+      "projekt_name": "Wohnen an der Burg",
+      "ort": "Alzenau",
+      "bundesland": "Bayern",
+      "architekt": "Michael Landes",
+      "datum_mappe": "2026-05-05",
+      "objekttyp": "Wohnanlage mit Service (Betreutes Wohnen) und Gewerbeflächen",
+      "projektstatus": "Wettbewerbssieger, Bauantrag in Vorbereitung",
+      "untertitel": "An der Burg Alzenau"
+    }
+  }
+]
